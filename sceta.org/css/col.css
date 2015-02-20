@@ -1,0 +1,40 @@
+
+/* ===== Sections ===== */
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* ===== Grouping ===== */
+.group:before, .group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1; /* For IE 6/7 (Trigger hasLayout) */
+}
+
+/* ===== Grid Column Setup ===== */
+
+.col {
+	display: block;
+	float: left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { 
+	margin-left: 0; /* All Browsers Except IE6 and Lower */
+} 
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0; /* Remove Margins as All Go Full Width at 480 Pixels */
+	}
+}
