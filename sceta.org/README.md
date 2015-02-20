@@ -1,2 +1,2 @@
-# SCETA / Website
-This branch is the repository foundation of the SCETA website intended for authorized administrators only. If you are viewing this repository without authorization, please consult our current webmaster at webmaster@sceta.org.
+# SCETA / sceta.org
+This component representing the main SCETA website content is intended for authorized administrators only. If you are viewing this repository without authorization, please consult our current webmaster at webmaster@sceta.org.
