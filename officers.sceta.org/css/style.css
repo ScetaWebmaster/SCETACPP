@@ -1,0 +1,70 @@
+/* ===== Font Imports ===== */
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+body { 
+	margin: 0 auto;
+	padding: 0;
+	font: 100%/1.4 'Lato', 'lucida sans unicode', 'lucida grande', 'Trebuchet MS', verdana, arial, helvetica, helve, sans-serif; 	
+	color: #000; 
+	text-align: center;
+	background: #ededed;
+	background: -ms-linear-gradient(top, #ededed 0%, #efefef 100%);
+	background: -moz-linear-gradient(top, #ededed 0%, #efefef 100%);
+	background: -o-linear-gradient(top, #ededed 0%, #efefef 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ededed), color-stop(1, #efefef));
+	background: -webkit-linear-gradient(top, #ededed 0%, #efefef 100%);
+	background: linear-gradient(top, #ededed 0%, #efefef 100%);
+}
+
+img {
+	max-width: 8em;
+}
+
+.bodycontainer {
+	width: 100%;
+}
+
+	.maincontainer {
+		margin: 0 auto;
+		margin-top: 4em;
+		max-width: 480px;
+		background: #FFFFFF;
+		border: 4px solid black;
+	}
+
+		h4 {
+			color: #55a5c6;
+			margin: 0 auto;
+			padding: 0.5em;
+		}
+
+		ul {
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			margin: 0 auto;
+		}
+
+		input {
+			margin: 0;
+			border: 1px solid #ccc;
+			font-size: 1em;
+			padding: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			background: #fff;
+			-moz-box-shadow: inset 0px 0px 6px #ccc;
+			-webkit-box-shadow: inset 0px 1px 6px #ccc;
+			box-shadow: inset 0px 1px 6px #ccc;
+		}
+
+		p {
+			padding: 1px;
+		}
+
+		p.error {
+			color: red;
+		}
