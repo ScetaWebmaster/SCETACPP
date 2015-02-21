@@ -1,0 +1,2 @@
+# SCETA / officers.sceta.org
+This component representing the officer control panel is intended for authorized administrators only. If you are viewing this repository without authorization, please consult our current webmaster at webmaster@sceta.org.
