@@ -68,3 +68,8 @@ img {
 		p.error {
 			color: red;
 		}
+
+		b.success:before {
+			color:green;
+			content: 'SUCCESS! ';
+		}
