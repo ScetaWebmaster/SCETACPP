@@ -27,9 +27,16 @@ img {
 	.maincontainer {
 		margin: 0 auto;
 		margin-top: 4em;
-		max-width: 480px;
+		max-width: 97%;
 		background: #FFFFFF;
 		border: 4px solid black;
+	}
+
+	@media only screen and (max-width: 480px) {
+		.maincontainer {
+			width: 97%;
+			margin: 0 auto;
+		}
 	}
 
 		h4 {
