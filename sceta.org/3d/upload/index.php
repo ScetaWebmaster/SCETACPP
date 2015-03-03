@@ -89,10 +89,15 @@
 								<li>
 									Please enter a color of choice for your print. Only certain colors are available for certain filaments.
 									<ul>
+										<li>All Materials
+											<ul>
+												<li>Red</li>
+												<li>Green</li>
+											</ul>
+										</li>
 										<li>ABS
 											<ul>
 												<li>Black</li>
-												<li>Green</li>
 												<li>Orange</li>
 											</ul>
 										</li>
@@ -101,8 +106,7 @@
 												<li>Sky Blue</li>
 												<li>Silver</li>
 												<li>Pink</li>
-												<li>Red</li>
-												<li>Clear</li>
+												<li>Natural</li>
 											</ul>
 										</li>
 									</ul>
@@ -159,14 +163,14 @@
 									<p>
 										<b>Color: </b>
 										<select name="color" id="color">
+											<option value="Green">Green (ALL)</option>
+											<option value="Red">Red (ALL)</option>
 											<option value="Black">Black (ABS)</option>
-											<option value="Green">Green (ABS)</option>
 											<option value="Orange">Orange (ABS)</option>
 											<option value="Sky Blue">Sky Blue (PLA)</option>
 											<option value="Silver">Silver (PLA)</option>
 											<option value="Pink">Pink (PLA)</option>
-											<option value="Red">Red (PLA)</option>
-											<option value="Clear">Clear (PLA)</option>
+											<option value="Natural">Natural (PLA)</option>
 										</select>
 									</p>
 
