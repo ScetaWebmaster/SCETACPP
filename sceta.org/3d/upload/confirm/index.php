@@ -125,13 +125,13 @@
 
 										function checkMaterialColor($mat, $col) {
 											if ($mat == "ABS") {
-												if ($col == "Sky Blue" || $col == "Silver" || $col == "Pink" || $col == "Red" || $col == "Clear") {
+												if ($col == "Sky Blue" || $col == "Silver" || $col == "Pink" || $col == "Natural") {
 													return false;
 												}
 											}
 
 											if ($mat == "PLA") {
-												if ($col == "Black" || $col == "Green" || $col == "Orange") {
+												if ($col == "Black" || $col == "Orange") {
 													return false;
 												}
 											}
