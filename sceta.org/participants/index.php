@@ -92,7 +92,7 @@
 						    <ul>
 						    	<li><a href="javascript:void(0);" id="btn_event1">Opto22 Tour (03/06/15) ***</a></li>
 						    	<li><a href="javascript:void(0);" id="btn_event2">GRID Alternatives Solar Spring Break 2015 (03/23/15) ***</a></li>
-						    	<li><a href="javascript:void(0);" id="btn_event3">Show Taping Social/Fundraiser (03/27/15)</a></li>
+						    	<li><a href="javascript:void(0);" id="btn_event3">Show Taping Social/Fundraiser (03/26/15)</a></li>
 						    	<li><a href="javascript:void(0);" id="btn_event4">Power Supply Workshop (TBA) ***</a></li>
 						    </ul>
 
@@ -280,7 +280,7 @@
 								</script>
 							</ol>
 
-							<h4 class="event3">Show Taping Social/Fundraiser (03/27/15)</h4>
+							<h4 class="event3">Show Taping Social/Fundraiser (03/26/15)</h4>
 							<ol class="event3">
 								<li style="list-style: none;"><img src="../img/ic_loading.gif"></li>
 								<script>
