@@ -74,6 +74,7 @@
 							<ul>
 								<li><a href="javascript:void(0);" id="btn_gallery_2014">2014 - 2015</a>
 									<ul class="gallery_2014">
+										<li><a href="2015/02/members-only-bowling-social/">Feb. 12, 2015 - SCETA Members-Only Bowling Social</a></li>
 										<li><a href="2015/01/2015-consumer-electronics-show/">Jan. 8, 2015 - 2015 Consumer Electronics Show</a></li>
 									</ul>
 								</li>
