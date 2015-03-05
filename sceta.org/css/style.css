@@ -945,11 +945,6 @@ textarea:invalid {
 					text-align: center;
 				}
 
-					.leadership img {
-						max-width: 15em;
-						display: none;
-					}
-
 					.leadership ul {
 						list-style: none;
 					}
