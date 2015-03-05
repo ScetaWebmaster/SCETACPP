@@ -112,7 +112,7 @@
 
 								<div class="leadership officers_president">
 									<ul>
-										<!--<li><img src="../img/leadership/president.jpg"></li>-->
+										<li><img src="../img/leadership/president.jpg"></li>
 										<li>Jeremy Bonsall</li>
 										<li><a href="mailto:president@sceta.org">president@sceta.org</a></li>
 									</ul>
@@ -127,7 +127,7 @@
 
 								<div class="leadership officers_vp">
 									<ul>
-										<!--<li><img src="../img/leadership/vicepresident.jpg"></li>-->
+										<li><img src="../img/leadership/vicepresident.jpg"></li>
 										<li>Tyler Myers</li>
 										<li><a href="mailto:vp@sceta.org">vp@sceta.org</a></li>
 									</ul>
@@ -142,7 +142,7 @@
 
 								<div class="leadership officers_secretary">
 									<ul>
-										<!--<li><img src="../img/leadership/secretary.jpg"></li>-->
+										<li><img src="../img/leadership/secretary.jpg"></li>
 										<li>Elizabeth Romo</li>
 										<li><a href="mailto:secretary@sceta.org">secretary@sceta.org</a></li>
 									</ul>
@@ -157,7 +157,7 @@
 
 								<div class="leadership officers_treasurer">
 									<ul>
-										<!--<li><img src="../img/leadership/treasurer.jpg"></li>-->
+										<li><img src="../img/leadership/treasurer.jpg"></li>
 										<li>Sean Kennedy</li>
 										<li><a href="mailto:treasurer@sceta.org">treasurer@sceta.org</a></li>
 									</ul>
@@ -205,7 +205,7 @@
 
 								<div class="leadership officers_webmaster">
 									<ul>
-										<!--<li><img src="../img/leadership/webmaster.jpg"></li>-->
+										<li><img src="../img/leadership/webmaster.jpg"></li>
 										<li>Byron Phung</li>
 										<li><a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a></li>
 									</ul>
@@ -221,7 +221,7 @@
 
 								<div class="section group officers_media leadership">
 									<div class="col span_1_of_2">
-										<!--<img src="../img/leadership/media1.jpg">-->
+										<img src="../img/leadership/media1.jpg">
 										<p>
 											Nicole Diaz<br>
 											<a href="mailto:media@sceta.org">media@sceta.org</a>
@@ -229,7 +229,7 @@
 									</div>
 
 									<div class="col span_1_of_2">
-										<!--<img src="../img/leadership/media2.jpg">-->
+										<img src="../img/leadership/media2.jpg">
 										<p>
 											Julian Larregui<br>
 											<a href="mailto:media@sceta.org">media@sceta.org</a>
@@ -255,7 +255,7 @@
 									</div>
 
 									<div class="col span_1_of_3">
-										<!--<img src="../img/leadership/tech3d2.jpg">-->
+										<img src="../img/leadership/tech3d2.jpg">
 										<p>
 											Javier Estevez<br>
 											<a href="mailto:3d@sceta.org">3d@sceta.org</a>
@@ -263,7 +263,7 @@
 									</div>
 
 									<div class="col span_1_of_3">
-										<!--<img src="../img/leadership/tech3d3.jpg">-->
+										<img src="../img/leadership/tech3d3.jpg">
 										<p>
 											Michael Oleata<br>
 											<a href="mailto:3d@sceta.org">3d@sceta.org</a>
