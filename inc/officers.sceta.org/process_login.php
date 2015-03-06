@@ -10,12 +10,12 @@
 
 		if (login($user, $password, $mysqli) == true) {
 			// Login success.
-			header('Location: ../index.php');
+			header('Location: ../../officers.sceta.org/index.php');
 		}
 
 		else {
 			// Login failed.
-			header('Location: ../login.php?error=1');
+			header('Location: ../../officers.sceta.org/login.php?error=1');
 		}
 	}
 

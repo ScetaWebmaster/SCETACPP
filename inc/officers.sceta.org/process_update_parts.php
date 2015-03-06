@@ -9,7 +9,7 @@
     <head>
         <meta charset="UTF-8">
         <title>SCETA Officers: Control Panel</title>
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../../officers.sceta.org/css/style.css">
     </head>
 
     <body>
@@ -17,8 +17,8 @@
             <div class="maincontainer">
             	<h4>Update Parts</h4>
             	<hr>
-            	<p><a href="../index.php">Return to Control Panel Home</a></p>
-                <p>Logged in as <?php echo htmlentities($_SESSION['username']); ?>! (<a href="inc/logout.php">Logout</a>)</p>
+            	<p><a href="../../officers.sceta.org/index.php">Return to Control Panel Home</a></p>
+                <p>Logged in as <?php echo htmlentities($_SESSION['username']); ?>! (<a href="logout.php">Logout</a>)</p>
                 <hr>
 
 				<?php
@@ -178,7 +178,7 @@
 	                        }
 	                    }
 
-	                    echo "<p><a href='../update_parts.php'>Return to Parts List</a></p>";
+	                    echo "<p><a href='../../officers.sceta.org/update_parts.php'>Return to Parts List</a></p>";
 					}
 
 					else {

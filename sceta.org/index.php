@@ -71,7 +71,7 @@
 		<!-- Main Body Wrapper -->
 		<div id="wrapper">
 			<!-- Main Header w/ SCETA Logo/Title & Main Menu -->
-			<?php include 'inc/header_0.php'; ?>
+			<?php include '../inc/sceta.org/header_0.php'; ?>
 			
 			<!-- Top Row of Main Content -->
 			<div id="mainbarcontainer">
@@ -198,7 +198,7 @@
 			</div>
 
 			<!-- Website Footer -->
-			<?php include 'inc/footer_home.php'; ?>
+			<?php include '../inc/sceta.org/footer_home.php'; ?>
 
 			<!-- Back to Top -->
 			<a href="#top" class="cd-top">Top</a>

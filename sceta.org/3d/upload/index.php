@@ -56,7 +56,7 @@
 		<!-- Main Body Wrapper -->
 		<div id="wrapper">
 			<!-- Main Header w/ SCETA Logo/Title & Main Menu -->
-			<?php include '../../inc/header_2.php'; ?>
+			<?php include '../../../inc/sceta.org/header_2.php'; ?>
 
 			<!-- Main Body Content -->
 			<div id="maincontentcontainer">
@@ -64,7 +64,7 @@
 					<div class="section group">
 						<div class="col span_1_of_4">
 							<div>
-								<?php include '../../inc/sidemenu_services_3d_upload.php'; ?>
+								<?php include '../../../inc/sceta.org/sidemenu_services_3d_upload.php'; ?>
 							</div>
 						</div>
 
@@ -203,7 +203,7 @@
 			</div>
 
 			<!-- Main Footer -->
-			<?php include '../../inc/footer_main_2.php'; ?>
+			<?php include '../../../inc/sceta.org/footer_main_2.php'; ?>
 
 			<!-- Back to Top -->
 			<a href="#top" class="cd-top">Top</a>

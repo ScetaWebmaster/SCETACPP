@@ -1,6 +1,6 @@
 <?php
-    include_once 'inc/db_connect.php';
-    include_once 'inc/functions.php';
+    include_once '../inc/officers.sceta.org/db_connect.php';
+    include_once '../inc/officers.sceta.org/functions.php';
     sec_session_start();
 
     if (login_check($mysqli) == FALSE) {
@@ -26,7 +26,7 @@
                             <hr>
                             <p>Welcome ";
                 echo htmlentities($_SESSION['username']);
-                echo '! (<a href="inc/logout.php">Logout</a>)</p>
+                echo '! (<a href="../inc/officers.sceta.org/logout.php">Logout</a>)</p>
                             <hr>
                             <p>
                                 <b>Available Actions</b>

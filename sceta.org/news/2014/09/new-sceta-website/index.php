@@ -55,14 +55,14 @@
 		<!-- Main Body Wrapper -->
 		<div id="wrapper">
 			<!-- Main Header w/ SCETA Logo/Title & Main Menu -->
-			<?php include '../../../../inc/header_4.php'; ?>
+			<?php include '../../../../../inc/sceta.org/header_4.php'; ?>
 
 			<!-- Main Body Content -->
 			<div id="maincontentcontainer">
 				<div id="maincontent">
 					<div class="section group">
 						<div class="col span_1_of_4">
-							<?php include '../../../../inc/sidemenu_members_news_4.php'; ?>
+							<?php include '../../../../../inc/sceta.org/sidemenu_members_news_4.php'; ?>
 						</div>
 
 						<div class="col span_3_of_4 post">
@@ -102,7 +102,7 @@
 			</div>
 
 			<!-- Main Footer -->
-			<?php include '../../../../inc/footer_main_4.php'; ?>
+			<?php include '../../../../../inc/sceta.org/footer_main_4.php'; ?>
 
 			<!-- Back to Top -->
 			<a href="#top" class="cd-top">Top</a>

@@ -1,6 +1,6 @@
 <?php
-    include_once 'inc/db_connect.php';
-    include_once 'inc/functions.php';
+    include_once '../inc/officers.sceta.org/db_connect.php';
+    include_once '../inc/officers.sceta.org/functions.php';
     sec_session_start();
 ?>
 
@@ -20,7 +20,7 @@
                 <h4>Update Parts</h4>
                 <hr>
                 <p><a href="index.php">Return to Control Panel Home</a></p>
-                <p>Logged in as <?php echo htmlentities($_SESSION['username']); ?>! (<a href="inc/logout.php">Logout</a>)</p>
+                <p>Logged in as <?php echo htmlentities($_SESSION['username']); ?>! (<a href="../inc/officers.sceta.org/logout.php">Logout</a>)</p>
                 <hr>
 
                 <!-- If no part was selected, display the list of parts to chose from. -->
@@ -35,7 +35,7 @@
                     <ul>
                         <?php 
                             // Connect to the parts database.
-                            include_once 'inc/connect_parts.php'; 
+                            include_once '../inc/officers.sceta.org/connect_parts.php'; 
                             // Query select all items from RegularParts table.
                             $sql = "SELECT * FROM RegularParts";
                             // Gather that into the $result variable.
@@ -92,12 +92,12 @@
                     <a href="update_parts.php">Back to Parts List</a>
                 </p>
 
-                <form action="inc/process_update_parts.php" method="post" name="update_parts_form">
+                <form action="../inc/officers.sceta.org/process_update_parts.php" method="post" name="update_parts_form">
 
                 <?php if($_GET["db"] == 0) : ?>
                     <?php 
                         // Connect to the parts database.
-                        include_once 'inc/connect_parts.php'; 
+                        include_once '../inc/officers.sceta.org/connect_parts.php'; 
                         $id = $_GET["id"];
                         // Query select all items from RegularParts table.
                         $sql = "SELECT * FROM RegularParts WHERE id = $id";
@@ -142,7 +142,7 @@
                 <?php else : ?>
                     <?php 
                         // Connect to the parts database.
-                        include_once 'inc/connect_parts.php'; 
+                        include_once '../inc/officers.sceta.org/connect_parts.php'; 
                         $id = $_GET["id"];
                         // Query select all items from RegularParts table.
                         $sql = "SELECT * FROM DollarParts WHERE id = $id";

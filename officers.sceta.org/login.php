@@ -1,6 +1,6 @@
 <?php
-	include_once 'inc/db_connect.php';
-	include_once 'inc/functions.php';
+	include_once '../inc/officers.sceta.org/db_connect.php';
+	include_once '../inc/officers.sceta.org/functions.php';
 
 	sec_session_start();
 
@@ -45,7 +45,7 @@
 				?>
 
                 <p>
-                    <form action="inc/process_login.php" method="post" name="login_form">
+                    <form action="../inc/officers.sceta.org/process_login.php" method="post" name="login_form">
 						User ID: <input type="text" name="user"><br><br>
 						Password: <input type="password" name="password" id="password"><br><br>
 						<input type="button" value="Login" onclick="formhash(this.form, this.form.password);">

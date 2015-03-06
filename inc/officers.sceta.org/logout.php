@@ -18,5 +18,5 @@
 
 	// Destroy session.
 	session_destroy();
-	header('Location: ../index.php');
+	header('Location: ../../officers.sceta.org/index.php');
 ?>

@@ -52,14 +52,14 @@
 		<!-- Main Body Wrapper -->
 		<div id="wrapper">
 			<!-- Main Header w/ SCETA Logo/Title & Main Menu -->
-			<?php include '../inc/header_1.php'; ?>
+			<?php include '../../inc/sceta.org/header_1.php'; ?>
 
 			<!-- Main Body Content -->
 			<div id="maincontentcontainer">
 				<div id="maincontent">
 					<div class="section group">
 						<div class="col span_1_of_4">
-							<?php include '../inc/sidemenu_services_parts.php'; ?>
+							<?php include '../../inc/sceta.org/sidemenu_services_parts.php'; ?>
 						</div>
 
 						<div class="col span_3_of_4">
@@ -111,7 +111,7 @@
 
 								<?php 
 									// Connect to the parts database.
-									include_once '../inc/connect_parts.php'; 
+									include_once '../../inc/sceta.org/connect_parts.php'; 
 									// Query select all items from RegularParts table.
 									$sql = "SELECT * FROM RegularParts";
 									// Gather that into the $result variable.
@@ -203,7 +203,7 @@
 			</div>
 
 			<!-- Main Footer -->
-			<?php include '../inc/footer_main_1.php'; ?>
+			<?php include '../../inc/sceta.org/footer_main_1.php'; ?>
 
 			<!-- Back to Top -->
 			<a href="#top" class="cd-top">Top</a>

@@ -1,6 +1,6 @@
 <?php
-	include_once 'inc/register.inc.php';
-	include_once 'inc/functions.php';
+	include_once '../inc/officers.sceta.org/register.inc.php';
+	include_once '../inc/officers.sceta.org/functions.php';
 ?>
 
 <!DOCTYPE html>
