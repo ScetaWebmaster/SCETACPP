@@ -20,6 +20,11 @@
 		<link rel="stylesheet" href="../css/style.css">
 		<script type="text/JavaScript" src="../js/sha512.js"></script>
 		<script type="text/JavaScript" src="../js/forms.js"></script>
+
+		<!-- Responsive and Mobile Friendly Stuff -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body>
@@ -51,8 +56,8 @@
 						<input type="button" value="Login" onclick="formhash(this.form, this.form.password);">
 					</form>
                 </p>
-            </div>
-        </div>
-        <?php endif; ?>
+			</div>
+		</div>
+    	<?php endif; ?>
 	</body>
 </html>

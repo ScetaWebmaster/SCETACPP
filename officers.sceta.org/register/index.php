@@ -11,6 +11,11 @@
 		<script type="text/JavaScript" src="../js/sha512.js"></script>
 		<script type="text/JavaScript" src="../js/forms.js"></script>
 		<link rel="stylesheet" href="../css/style.css">
+
+		<!-- Responsive and Mobile Friendly Stuff -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body>
