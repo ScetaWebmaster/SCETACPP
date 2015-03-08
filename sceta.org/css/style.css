@@ -926,21 +926,6 @@ textarea:invalid {
 					margin: 0 auto;
 				}
 
-				/*
-				#maincontent .span_3_of_4 .officers_advisors,
-				#maincontent .span_3_of_4 .officers_president,
-				#maincontent .span_3_of_4 .officers_vp,
-				#maincontent .span_3_of_4 .officers_secretary,
-				#maincontent .span_3_of_4 .officers_treasurer,
-				#maincontent .span_3_of_4 .officers_ecouncilrep,
-				#maincontent .span_3_of_4 .officers_development,
-				#maincontent .span_3_of_4 .officers_webmaster,
-				#maincontent .span_3_of_4 .officers_media,
-				#maincontent .span_3_of_4 .officers_3d {
-					display: none;
-				}
-				*/
-
 				.leadership {
 					text-align: center;
 				}
@@ -1074,6 +1059,14 @@ textarea:invalid {
 					#maincontent .faq ul.answers ul li {
 						padding: 0;
 					}
+
+			ul.materials li.green {
+				color: green;
+			}
+
+			ul.materials li.red {
+				color: red;
+			}
 
 			/* ~ Parts Page ~ */
 			table.parts,
