@@ -89,44 +89,13 @@
 								<li>
 									Please enter a color of choice for your print. Only certain colors are available for certain filaments.
 									<ul class="materials">
-										<li>All Materials
-											<ul>
-												<?php 
-													// Connect to the parts database.
-													include_once '../../../inc/sceta.org/connect_3d.php'; 
-													// Query select all items from RegularParts table.
-													$sql = "SELECT * FROM Materials WHERE material = 'ALL'";
-													// Gather that into the $result variable.
-													$result = $connection->query($sql);
-
-													// Only echo data if there is at least 1.
-													if ($result->num_rows > 0) {
-														// Identify $row as an object to pull data from.
-														while ($row = $result->fetch_assoc()) {
-															// Show "AVAILABLE" if status is 1.
-															if ($row["status"] == 1) {
-																echo "<li class='green'>" . $row["name"] . " (AVAILABLE)</td>";
-															}
-
-															// Otherwise, display "UNAVAILABLE".
-															else {
-																echo "<li class='red'>" . $row["name"] . " (UNAVAILABLE)</td>";
-															}
-														}
-													}
-
-													// Otherwise, state that there are no materials available.
-													// This is a failsafe condition. Ideally, this should never be reached.
-													else {
-														echo "There are no materials available.";
-													}
-												?>
-											</ul>
-										</li>
 										<li>ABS
 											<ul>
 												<?php 
-													// Query select all items from RegularParts table.
+													// Connect to the 3D database.
+													include_once '../../../inc/sceta.org/connect_3d.php'; 
+
+													// Query select all items from Materials table.
 													$sql = "SELECT * FROM Materials WHERE material = 'ABS'";
 													// Gather that into the $result variable.
 													$result = $connection->query($sql);
@@ -158,7 +127,7 @@
 										<li>PLA
 											<ul>
 												<?php 
-													// Query select all items from RegularParts table.
+													// Query select all items from Materials table.
 													$sql = "SELECT * FROM Materials WHERE material = 'PLA'";
 													// Gather that into the $result variable.
 													$result = $connection->query($sql);

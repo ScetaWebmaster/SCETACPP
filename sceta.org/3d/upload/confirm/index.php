@@ -70,6 +70,38 @@
 
 						<div class="col span_3_of_4">
 							<?php
+								function checkMaterialStatuses($submittedColor, $submittedMaterial) {
+									// Connect to the 3D database.
+									include_once '../../../../inc/sceta.org/connect_3d.php';
+
+									// Query select all items from Materials table.
+									$sql = "SELECT * FROM Materials WHERE name = $submittedColor AND material = $submittedMaterial";
+									// Gather that into the $result variable.
+
+									$result = $connection->query($sql);
+									// Only echo data if there is at least 1.
+									if ($result->num_rows > 0) {
+										// Identify $row as an object to pull data from.
+										while ($row = $sqlResult->fetch_assoc()) {
+											// Return true if available.
+											if ($row["status"] == 1) {
+												return true;
+											}
+
+											// Otherwise, return false.
+											else {
+												return false;
+											}
+										}
+									}
+
+									// Otherwise, return false.
+									// This is a failsafe condition. Ideally, this should never be reached.
+									else {
+										return false;
+									}
+								}
+
 								$allowedExts = array("stl", "STL", "stL", "sTL", "sTl", "Stl", "StL", "STl"); // Just to make sure, ja feel? (Yes, I feel.)
 								$temp = explode(".", $_FILES["file"]["name"]);
 								$extension = end($temp);
@@ -147,6 +179,7 @@
 											$error3 = FALSE;
 											$error4 = FALSE;
 											$error5 = FALSE;
+											$error6 = FALSE;
 
 											if (!isName($_REQUEST['firstname']) || empty($_REQUEST['firstname']) || strlen($_REQUEST['firstname']) > 30) {
 												$message1 = "<li>Please check your first name. Only the letters A-Z are accepted.</li>";
@@ -179,6 +212,11 @@
 												$error5 = TRUE;
 											}
 
+											if (!checkMaterialStatuses($_REQUEST['color'], $_REQUEST['material'])) {
+												$message6 = "<li>Your requested material/color combination is temporarily unavailable. Please select a material/color combination that is currently available.</li>";
+												$form_validated = FALSE;
+												$error6 = TRUE:
+
 											/* Display the error messages if any. */
 											if (!$form_validated) {
 												echo "<h4>We are sorry. There was an error with your submission request.</h4>";
@@ -202,6 +240,10 @@
 
 												if ($error5) {
 													echo $message5;
+												}
+
+												if ($error6) {
+													echo $message6;
 												}
 
 												echo "</ul>";
@@ -234,6 +276,10 @@
 											}
 
 											if (!checkMaterialColor($_REQUEST['material'], $_REQUEST['color'])) {
+												$form_validated = FALSE;
+											}
+
+											if (!checkMaterialStatuses($_REQUEST['color'], $_REQUEST['material'])) {
 												$form_validated = FALSE;
 											}
 
