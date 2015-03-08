@@ -36,7 +36,7 @@
 					// Only perform the update if the login session is still valid.
 					if (login_check($mysqli) == true) {
 						// Connect to the parts database.
-						include_once '../../../inc/officers.sceta.org/connect_parts.php';
+						include_once '../../../inc/sceta.org/connect_parts.php';
 
 						if ($db == 0) {
 							$price_member = $_REQUEST['price_member'];
@@ -100,7 +100,7 @@
 	                                	if ($connection->query($sql1) == TRUE) {
 	                                		echo "<p><b class='success'>Status: ";
 
-	                                		if ($row["name"] == 0) {
+	                                		if ($row["status"] == 0) {
 	                                			echo "OUT OF STOCK was updated to IN STOCK.</b></p>";
 	                                		}
 
@@ -160,7 +160,7 @@
 	                                	if ($connection->query($sql1) == TRUE) {
 	                                		echo "<p><b class='success'>Status: ";
 
-	                                		if ($row["name"] == 0) {
+	                                		if ($row["status"] == 0) {
 	                                			echo "OUT OF STOCK was updated to IN STOCK.</b></p>";
 	                                		}
 

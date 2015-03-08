@@ -40,7 +40,7 @@
                     <ul>
                         <?php 
                             // Connect to the parts database.
-                            include_once '../../inc/officers.sceta.org/connect_parts.php'; 
+                            include_once '../../inc/sceta.org/connect_parts.php'; 
                             // Query select all items from RegularParts table.
                             $sql = "SELECT * FROM RegularParts";
                             // Gather that into the $result variable.
@@ -102,7 +102,7 @@
                 <?php if($_GET["db"] == 0) : ?>
                     <?php 
                         // Connect to the parts database.
-                        include_once '../../inc/officers.sceta.org/connect_parts.php'; 
+                        include_once '../../inc/sceta.org/connect_parts.php'; 
                         $id = $_GET["id"];
                         // Query select all items from RegularParts table.
                         $sql = "SELECT * FROM RegularParts WHERE id = $id";
@@ -147,7 +147,7 @@
                 <?php else : ?>
                     <?php 
                         // Connect to the parts database.
-                        include_once '../../inc/officers.sceta.org/connect_parts.php'; 
+                        include_once '../../inc/sceta.org/connect_parts.php'; 
                         $id = $_GET["id"];
                         // Query select all items from RegularParts table.
                         $sql = "SELECT * FROM DollarParts WHERE id = $id";

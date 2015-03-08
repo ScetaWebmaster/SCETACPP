@@ -37,6 +37,7 @@
                                 <b>Available Actions</b>
                                 <ul>
                                     <li><a href="parts/">Update Parts</a></li>
+                                    <li><a href="3d/">Update 3D-Related Features</a></li>
                                 </ul>
                             </p>
                         </div>
