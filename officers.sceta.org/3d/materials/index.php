@@ -41,7 +41,7 @@
                         <?php 
                             // Connect to the 3D database.
                             include_once '../../../inc/sceta.org/connect_3d.php'; 
-                            // Query select all items from RegularParts table.
+                            // Query select all items from Materials table.
                             $sql = "SELECT * FROM Materials";
                             // Gather that into the $result variable.
                             $result = $connection->query($sql);
@@ -78,7 +78,7 @@
                     // Connect to the 3D database.
                     include_once '../../../inc/sceta.org/connect_3d.php'; 
                     $id = $_GET["id"];
-                    // Query select all items from RegularParts table.
+                    // Query select all items from Materials table.
                     $sql = "SELECT * FROM Materials WHERE id = $id";
                     // Gather that into the $result variable.
                     $result = $connection->query($sql);
