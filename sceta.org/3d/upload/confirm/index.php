@@ -70,37 +70,30 @@
 
 						<div class="col span_3_of_4">
 							<?php
-								function checkMaterialStatuses($submittedColor, $submittedMaterial) {
-									// Connect to the 3D database.
-									include_once '../../../../inc/sceta.org/connect_3d.php';
+								$materialColorValid = FALSE;
+								$color = $_REQUEST['color'];
+								$material = $_REQUEST['material'];
 
-									// Query select all items from Materials table.
-									$sql = "SELECT * FROM Materials WHERE name = $submittedColor AND material = $submittedMaterial";
-									// Gather that into the $result variable.
+								// Connect to the 3D database.
+								include_once '../../../../inc/sceta.org/connect_3d.php';
 
-									$result = $connection->query($sql);
-									// Only echo data if there is at least 1.
-									if ($result->num_rows > 0) {
-										// Identify $row as an object to pull data from.
-										while ($row = $sqlResult->fetch_assoc()) {
-											// Return true if available.
-											if ($row["status"] == 1) {
-												return true;
-											}
+								// Query select all items from Materials table.
+								$sql = "SELECT * FROM Materials";
+								// Gather that into the $result variable.
+								$result = $connection->query($sql);
 
-											// Otherwise, return false.
-											else {
-												return false;
-											}
+								// Only echo data if there is at least 1.
+								if ($result->num_rows > 0) {
+									// Identify $row as an object to pull data from.
+									while ($row = $result->fetch_assoc()) {
+										// Return true if available.
+										if ($row["status"] == 1 && $color == $row["name"] && $material == $row["material"]) {
+											$materialColorValid = TRUE;
 										}
 									}
-
-									// Otherwise, return false.
-									// This is a failsafe condition. Ideally, this should never be reached.
-									else {
-										return false;
-									}
 								}
+
+								$connection->close();
 
 								$allowedExts = array("stl", "STL", "stL", "sTL", "sTl", "Stl", "StL", "STl"); // Just to make sure, ja feel? (Yes, I feel.)
 								$temp = explode(".", $_FILES["file"]["name"]);
@@ -172,7 +165,7 @@
 										}
 
 										/* This is the real form validation that checks for valid input. */
-										function validateJoinForm() {
+										function validateJoinForm($materialColorValid) {
 											$form_validated = TRUE;
 											$error1 = FALSE;
 											$error2 = FALSE;
@@ -212,10 +205,11 @@
 												$error5 = TRUE;
 											}
 
-											if (!checkMaterialStatuses($_REQUEST['color'], $_REQUEST['material'])) {
+											if (!$materialColorValid) {
 												$message6 = "<li>Your requested material/color combination is temporarily unavailable. Please select a material/color combination that is currently available.</li>";
 												$form_validated = FALSE;
-												$error6 = TRUE:
+												$error6 = TRUE;
+											}
 
 											/* Display the error messages if any. */
 											if (!$form_validated) {
@@ -255,7 +249,7 @@
 										}
 
 										/* Prevent multiple/repeated error messages. */
-										function validateJoinForm1() {
+										function validateJoinForm1($materialColorValid) {
 											$form_validated = TRUE;
 
 											if (!isName($_REQUEST['firstname']) || empty($_REQUEST['firstname']) || strlen($_REQUEST['firstname']) > 30) {
@@ -279,7 +273,7 @@
 												$form_validated = FALSE;
 											}
 
-											if (!checkMaterialStatuses($_REQUEST['color'], $_REQUEST['material'])) {
+											if (!$materialColorValid) {
 												$form_validated = FALSE;
 											}
 
@@ -353,7 +347,7 @@
 										$headers = $mime->headers($headers);
 
 										// If the form is valid, send the e-mail out.
-										if (validateJoinForm()) {
+										if (validateJoinForm($materialColorValid)) {
 											// Prevent spam e-mails based on previous spam with first name equaling last name.
 											if (!empty($_REQUEST['name2'])) {
 												// Trick the spammer into thinking they by-passed the filter when they really didn't.
@@ -404,7 +398,7 @@
 										$headers = $mime->headers($headers);
 
 										// If the form is valid, send the e-mail out.
-										if (validateJoinForm1()) {
+										if (validateJoinForm1($materialColorValid)) {
 											// Prevent spam e-mails based on previous spam with first name equaling last name.
 											if (!empty($_REQUEST['name2'])) {
 												// Trick the spammer into thinking they by-passed the filter when they really didn't.
