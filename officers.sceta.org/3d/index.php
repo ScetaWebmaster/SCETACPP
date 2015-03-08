@@ -22,7 +22,7 @@
         <?php if (login_check($mysqli) == true) : ?>
         <div class="bodycontainer">
             <div class="maincontainer">
-                <h4>Update Parts</h4>
+                <h4>Update 3D-Related Features</h4>
                 <hr>
                 <p><a href="../">Return to Control Panel Home</a></p>
                 <p>Logged in as <?php echo htmlentities($_SESSION['username']); ?>! (<a href="../logout/">Logout</a>)</p>

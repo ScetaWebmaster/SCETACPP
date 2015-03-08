@@ -22,7 +22,7 @@
         <?php if (login_check($mysqli) == true) : ?>
         <div class="bodycontainer">
             <div class="maincontainer">
-                <h4>Update Parts</h4>
+                <h4>Update 3D-Related Features</h4>
                 <hr>
                 <p><a href="../../">Return to Control Panel Home</a></p>
                 <p>Logged in as <?php echo htmlentities($_SESSION['username']); ?>! (<a href="../../logout/">Logout</a>)</p>
@@ -41,8 +41,29 @@
                         <?php 
                             // Connect to the 3D database.
                             include_once '../../../inc/sceta.org/connect_3d.php'; 
+
                             // Query select all items from Materials table.
-                            $sql = "SELECT * FROM Materials";
+                            $sql = "SELECT * FROM Materials WHERE material = 'ABS'";
+                            // Gather that into the $result variable.
+                            $result = $connection->query($sql);
+
+                            // Only echo data if there is at least 1.
+                            if ($result->num_rows > 0) {
+                                // Identify $row as an object to pull data from.
+                                while ($row = $result->fetch_assoc()) {
+                                    // Display standard data.
+                                    echo "<li><a href='?id=" . $row["id"] . "'>" . $row["name"] . " (" . $row["material"] . ")</a></li>";
+                                }
+                            }
+
+                            // Otherwise, state that there are no parts available.
+                            // This is a failsafe condition. Ideally, this should never be reached.
+                            else {
+                                echo "<li>Not Available</li>";
+                            }
+
+                            // Query select all items from Materials table.
+                            $sql = "SELECT * FROM Materials WHERE material = 'PLA'";
                             // Gather that into the $result variable.
                             $result = $connection->query($sql);
 
