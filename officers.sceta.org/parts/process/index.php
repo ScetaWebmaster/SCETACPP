@@ -184,6 +184,8 @@
 	                    }
 
 	                    echo "<p><a href='../'>Return to Parts List</a></p>";
+
+	                    $connection->close();
 					}
 
 					else {

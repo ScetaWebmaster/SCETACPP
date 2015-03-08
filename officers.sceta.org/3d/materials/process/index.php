@@ -34,7 +34,7 @@
 
 					// Only perform the update if the login session is still valid.
 					if (login_check($mysqli) == true) {
-						// Connect to the parts database.
+						// Connect to the 3D database.
 						include_once '../../../../inc/sceta.org/connect_3d.php';
 
 						// Select the data.
@@ -90,6 +90,8 @@
 	                    }
 
 	                    echo "<p><a href='../'>Return to Materials List</a></p>";
+
+	                    $connection->close();
 					}
 
 					else {

@@ -39,7 +39,7 @@
                     <b>Available Materials</b>
                     <ul>
                         <?php 
-                            // Connect to the parts database.
+                            // Connect to the 3D database.
                             include_once '../../../inc/sceta.org/connect_3d.php'; 
                             // Query select all items from RegularParts table.
                             $sql = "SELECT * FROM Materials";
@@ -60,6 +60,8 @@
                             else {
                                 echo "<li>Not Available</li>";
                             }
+
+                            $connection->close();
                         ?>
                     </ul>
                 </p>
@@ -73,7 +75,7 @@
                 <form action="process/" method="post" name="update_3d_materials_form">
 
                 <?php 
-                    // Connect to the parts database.
+                    // Connect to the 3D database.
                     include_once '../../../inc/sceta.org/connect_3d.php'; 
                     $id = $_GET["id"];
                     // Query select all items from RegularParts table.
@@ -112,6 +114,8 @@
                     else {
                         echo "<p>Not Available</p>";
                     }
+
+                    $connection->close();
                 ?>
 
                 <?php echo '<input type="hidden" name="id" value="' . $_GET["id"] . '">'; ?>

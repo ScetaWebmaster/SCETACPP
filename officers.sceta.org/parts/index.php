@@ -87,6 +87,8 @@
                             else {
                                 echo "<li>Not Available</li>";
                             }
+
+                            $connection->close();
                         ?>
                     </ul>
                 </p>
@@ -142,6 +144,8 @@
                         else {
                             echo "<p>Not Available</p>";
                         }
+
+                        $connection->close();
                     ?>
 
                 <?php else : ?>
@@ -185,6 +189,8 @@
                         else {
                             echo "<p>Not Available</p>";
                         }
+
+                        $connection->close();
                     ?>
 
                 <?php endif; ?>
