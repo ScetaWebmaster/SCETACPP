@@ -4,7 +4,7 @@
     sec_session_start();
 
     if (login_check($mysqli) == FALSE) {
-        header('Location: login.php');
+        header('Location: login/');
     }
 ?>
 
@@ -26,12 +26,12 @@
                             <hr>
                             <p>Welcome ";
                 echo htmlentities($_SESSION['username']);
-                echo '! (<a href="../inc/officers.sceta.org/logout.php">Logout</a>)</p>
+                echo '! (<a href="logout/">Logout</a>)</p>
                             <hr>
                             <p>
                                 <b>Available Actions</b>
                                 <ul>
-                                    <li><a href="update_parts.php">Update Parts</a></li>
+                                    <li><a href="parts/">Update Parts</a></li>
                                 </ul>
                             </p>
                         </div>
