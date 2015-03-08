@@ -90,23 +90,22 @@
 						-->
 
 						    <ul>
-						    	<li><a href="javascript:void(0);" id="btn_event1">Opto22 Tour (03/06/15) ***</a></li>
-						    	<li><a href="javascript:void(0);" id="btn_event2">GRID Alternatives Solar Spring Break 2015 (03/23/15) ***</a></li>
-						    	<li><a href="javascript:void(0);" id="btn_event3">Show Taping Social/Fundraiser (03/26/15)</a></li>
-						    	<li><a href="javascript:void(0);" id="btn_event4">Power Supply Workshop (TBA) ***</a></li>
+						    	<li><a href="javascript:void(0);" id="btn_event1">GRID Alternatives Solar Spring Break 2015 (03/23/15) ***</a></li>
+						    	<li><a href="javascript:void(0);" id="btn_event2">Show Taping Social/Fundraiser (03/26/15)</a></li>
+						    	<li><a href="javascript:void(0);" id="btn_event3">Power Supply Workshop (TBA) ***</a></li>
 						    </ul>
 
 						    <p>
 								[<a href="javascript:void(0);" id="btn_showEvents">Show All</a>] / [<a href="javascript:void(0);" id="btn_hideEvents">Hide All</a>]
 							</p>
 
-							<h4 class="event1">Opto22 Tour (03/06/15) ***</h4>
+							<h4 class="event1">GRID Alternatives Solar Spring Break 2015 (03/23/15) ***</h4>
 							<ol class="event1">
 								<li style="list-style: none;"><img src="../img/ic_loading.gif"></li>
 								<script>
 									jQuery(function() {
 										// Get the list of upcoming events formatted in JSON.
-										jQuery.getJSON("https://spreadsheets.google.com/feeds/list/10MMe2cNRkBYwon72T4GC6LzZl7foiepxBNwtvRH1Mmo/1/public/values?alt=json&prettyprint=true", function(data) {
+										jQuery.getJSON("https://spreadsheets.google.com/feeds/list/111xRKeXjdcVf40NtMENaKshJXXp_3F30pTqROTgvUYY/1/public/values?alt=json&prettyprint=true", function(data) {
 											// Utility method to pad a string on the left.
 											// Source: http://sajjadhossain.com/2008/10/31/javascript-string-trimming-and-padding/.
 											function lpad(str, pad_string, length) {
@@ -190,13 +189,13 @@
 								</script>
 							</ol>
 
-							<h4 class="event2">GRID Alternatives Solar Spring Break 2015 (03/23/15) ***</h4>
+							<h4 class="event2">Show Taping Social/Fundraiser (03/26/15)</h4>
 							<ol class="event2">
 								<li style="list-style: none;"><img src="../img/ic_loading.gif"></li>
 								<script>
 									jQuery(function() {
 										// Get the list of upcoming events formatted in JSON.
-										jQuery.getJSON("https://spreadsheets.google.com/feeds/list/111xRKeXjdcVf40NtMENaKshJXXp_3F30pTqROTgvUYY/1/public/values?alt=json&prettyprint=true", function(data) {
+										jQuery.getJSON("https://spreadsheets.google.com/feeds/list/1VA2hrXi8PsNs22poTfogNCAgvPv2hFqZf_WtiezkXF4/1/public/values?alt=json&prettyprint=true", function(data) {
 											// Utility method to pad a string on the left.
 											// Source: http://sajjadhossain.com/2008/10/31/javascript-string-trimming-and-padding/.
 											function lpad(str, pad_string, length) {
@@ -280,13 +279,13 @@
 								</script>
 							</ol>
 
-							<h4 class="event3">Show Taping Social/Fundraiser (03/26/15)</h4>
+							<h4 class="event3">Power Supply Workshop (TBA) ***</h4>
 							<ol class="event3">
 								<li style="list-style: none;"><img src="../img/ic_loading.gif"></li>
 								<script>
 									jQuery(function() {
 										// Get the list of upcoming events formatted in JSON.
-										jQuery.getJSON("https://spreadsheets.google.com/feeds/list/1VA2hrXi8PsNs22poTfogNCAgvPv2hFqZf_WtiezkXF4/1/public/values?alt=json&prettyprint=true", function(data) {
+										jQuery.getJSON("https://spreadsheets.google.com/feeds/list/19N8HD_uiOtnuMeXf-e-ezQMtKrfsMS_8_7tC0AEskoo/1/public/values?alt=json&prettyprint=true", function(data) {
 											// Utility method to pad a string on the left.
 											// Source: http://sajjadhossain.com/2008/10/31/javascript-string-trimming-and-padding/.
 											function lpad(str, pad_string, length) {
@@ -362,96 +361,6 @@
 												});
 
 												jQuery(".event3 li").first().before(
-													"<p style='margin-left: -24px;'>Last Updated: " + date + " at " + time + "</p>"
-												);
-											}
-										});
-									});
-								</script>
-							</ol>
-
-							<h4 class="event4">Power Supply Workshop (TBA) ***</h4>
-							<ol class="event4">
-								<li style="list-style: none;"><img src="../img/ic_loading.gif"></li>
-								<script>
-									jQuery(function() {
-										// Get the list of upcoming events formatted in JSON.
-										jQuery.getJSON("https://spreadsheets.google.com/feeds/list/19N8HD_uiOtnuMeXf-e-ezQMtKrfsMS_8_7tC0AEskoo/1/public/values?alt=json&prettyprint=true", function(data) {
-											// Utility method to pad a string on the left.
-											// Source: http://sajjadhossain.com/2008/10/31/javascript-string-trimming-and-padding/.
-											function lpad(str, pad_string, length) {
-												var str = new String(str);
-												while (str.length < length)
-													str = pad_string + str;
-												return str;
-											};
-
-											// Convert the day integer to its string value.
-											function dayToString(day) {
-												var days = ["Sun.", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."];
-												return days[day];
-											};
-
-											// Convert the month integer to its string value. Keep note that months are listed starting from 0 - 11.
-											function monthToString(month) {
-												var months = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
-												return months[month];
-											};
-
-											var date = '';
-											var time = '';
-
-											if (data.feed.entry == null) {
-												jQuery(".event4 li").first().hide();
-												jQuery(".event4 li").last().before(
-													"There is no available list of participants. Please stay tuned for any future announcements."
-												);
-											}
-
-											else {
-												// Parse and render each event.
-												jQuery.each(data.feed.entry, function(i, item) {
-													// If there is at least 1 participant, then hide the "no participants" message.
-													if (i == 0) {
-														jQuery(".event4 li").first().hide();
-													};
-
-													// Retrieve the event title & its link.
-													var event_header = item.gsx$name.$t;
-
-													// Retrieve the raw date of the last update and format it.
-													var rawDate = new Date(item.updated.$t);
-													date = dayToString(rawDate.getDay()) + ", " + monthToString(rawDate.getMonth()) + " " + rawDate.getDate() + ", " + rawDate.getFullYear();
-
-													// Retrieve the time and reformat it to AM/PM format.
-													time = '';
-													var hour = rawDate.getHours();
-													var hour_ampm = 'AM';
-
-													// Convert to 12-hour time format and change the AMPM tag to "PM".
-													if (hour > 12) {
-														hour = hour - 12;
-														hour_ampm = 'PM';
-													};
-
-													// Except for 12:00 PM. 12:00 PM will have to be changed to PM manually.
-													if (hour == 12) {
-														hour_ampm = 'PM';
-													}
-
-													// Pad the minutes with 0s if it's less than 2 digits.
-													var min = lpad(rawDate.getMinutes(), '0', 2);
-
-													// Put together all the time formats.
-													time = hour + ":" + min + " " + hour_ampm;
-
-													// Render the event.
-													jQuery(".event4 li").last().before(
-														"<li>" + event_header + "</li>"
-													);
-												});
-
-												jQuery(".event4 li").first().before(
 													"<p style='margin-left: -24px;'>Last Updated: " + date + " at " + time + "</p>"
 												);
 											}
