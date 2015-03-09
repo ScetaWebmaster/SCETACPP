@@ -74,7 +74,7 @@
 								<li><img src="../img/ic_loading.gif"><br><br></li>
 								<li></li>
 							</ul>
-							<script id="gCalFeed" src="../../js/sceta.org/googleCalendarFeed_upcomingEvents.js">
+							<script id="gCalFeed" src="../js/googleCalendarFeed_upcomingEvents.js">
 								{
 									"ID" : "vch69p3l1obvru2bekjk0m53gg@group.calendar.google.com",
 									"noneMessage" : "tours"

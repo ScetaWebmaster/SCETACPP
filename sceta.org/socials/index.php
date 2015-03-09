@@ -74,7 +74,7 @@
 								<li><img src="../img/ic_loading.gif"><br><br></li>
 								<li></li>
 							</ul>
-							<script id="gCalFeed" src="../../js/sceta.org/googleCalendarFeed_upcomingEvents.js">
+							<script id="gCalFeed" src="../js/googleCalendarFeed_upcomingEvents.js">
 								{
 									"ID" : "l1hsnna2nlll41k9svc2maj4gk@group.calendar.google.com",
 									"noneMessage" : "socials"

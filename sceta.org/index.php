@@ -137,7 +137,7 @@
 								<li><img src="img/ic_loading.gif"><br><br></li>
 								<li></li>
 							</ul>
-							<script src="../js/sceta.org/googleCalendarFeed_nextMeeting.js"></script>
+							<script src="js/googleCalendarFeed_nextMeeting.js"></script>
 
 							<!-- Live Minimal Feed of Upcoming Events -->
 							<h4>Upcoming Events</h4>
@@ -145,7 +145,7 @@
 								<li><img src="img/ic_loading.gif"><br><br></li>
 								<li></li>
 							</ul>
-							<script src="../js/sceta.org/googleCalendarFeed_upcomingEvents_home.js"></script>
+							<script src="js/googleCalendarFeed_upcomingEvents_home.js"></script>
 							<a href="calendar/" id="more"><img src="img/ic_right-arrow.png"> View the Full Calendar</a><br><br>
 						</div>
 					</div>
