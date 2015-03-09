@@ -75,7 +75,7 @@
 								<li><img src="../img/ic_loading.gif"><br><br></li>
 								<li></li>
 							</ul>
-							<script id="gCalFeed" src="../js/googleCalendarFeed_upcomingEvents.js">
+							<script id="gCalFeed" src="../../js/sceta.org/googleCalendarFeed_upcomingEvents.js">
 								{
 									"ID" : "dph9k67ugpen1947dsbmudnags@group.calendar.google.com",
 									"noneMessage" : "guest speakers"

@@ -73,7 +73,7 @@
 								<li><img src="../img/ic_loading.gif"><br><br></li>
 								<li></li>
 							</ul>
-							<script id="gCalFeed" src="../js/googleCalendarFeed_upcomingEvents.js">
+							<script id="gCalFeed" src="../../js/sceta.org/googleCalendarFeed_upcomingEvents.js">
 								{
 									"ID" : "p50g59pm4162ckfo144ka5ssts@group.calendar.google.com",
 									"noneMessage" : "CPP events"

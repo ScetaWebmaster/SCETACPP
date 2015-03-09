@@ -78,7 +78,7 @@
 								<li><img src="../img/ic_loading.gif"><br><br></li>
 								<li></li>
 							</ul>
-							<script id="gCalFeed" src="../js/googleCalendarFeed_upcomingEvents.js">
+							<script id="gCalFeed" src="../../js/sceta.org/googleCalendarFeed_upcomingEvents.js">
 								{
 									"ID" : "8qik0bgj2o2f6ag7gcag7l96qo@group.calendar.google.com",
 									"noneMessage" : "workshops"
