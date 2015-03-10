@@ -322,7 +322,7 @@
 								    			"'>http://www.sceta.org/3d/stlUploads/" . $_FILES["file"]["name"] . "</a></li>";
 								    		//$email_message .= "<li>Current Order List: <a href='http://www.sceta.org/new/3d/stlUploads/orders.txt' target='_blank'>http://www.sceta.org/new/3d/stlUploads/orders.txt</a></li>";
 										$email_message .= "</ul>";
-										$email_message .= "Best regards,<br>Byron Phung<br><br><hr>Please note that this is an automatically generated message upon submission.<br>Any concerns can be discussed via reply to this e-mail (webmaster@sceta.org), on GroupMe, or in person.";
+										$email_message .= "Best regards,<br>Byron Phung<br><br><hr>Please note that this is an automatically generated message upon submission.<br>Any errors or concerns related to the automated 3D system may be directed towards me via in person, GroupMe, or webmaster@sceta.org.";
 
 										// PEAR Mail Configuration
 										require_once "Mail.php"; // PEAR mail is already installed in the current environment.
@@ -379,12 +379,15 @@
 								    		$email_message1 .= "<li>File Name: " . clean_string($_FILES["file"]["name"]) . "</li>";
 										$email_message1 .= "</ul>";
 										$email_message1 .= "We will contact you again when your order is being processed and completed.<br><br>";
-										$email_message1 .= "If you have any problems with your order or need to correct any information, please e-mail us 3D techs at <a href='mailto:3d@sceta.org'>3d@sceta.org</a>.<br><br>";
-										$email_message1 .= "Thank you,<br>Your SCETA 3D Techs<br><br><hr>This is an automatically generated message upon order placement.<br>Any concerns can be discussed via <a href='mailto:3d@sceta.org'>3d@sceta.org</a> or in-person.";
+										$email_message1 .= "If you have any problems with your order or need to correct any information, simply reply to this email with your questions, comments, or concerns.<br><br>";
+										$email_message1 .= "Thank you,<br>Your SCETA 3D Techs<br><br><hr>This is an automatically generated message upon order placement.<br>Please use this thread to address questions, comments, or concerns about your order simply by replying to this email.";
 
 										// PEAR Mail Configuration
 										$email_to = $email; // Recipient e-mail.
 										$email_subject = "New SCETA 3D Order Placed"; // Subject of the e-mail.
+										$username = "3d@sceta.org"; // Host user.
+										$from_address = "3d@sceta.org"; // Set a from address.
+										$password = "Airwolf7400"; // Password of host user.
 										$reply_to = "3d@sceta.org"; // Reply e-mail.
 
 										// Allow HTML message.
@@ -427,10 +430,10 @@
 													else {
 												    	echo "<b>Size:</b> " . round(($_FILES["file"]["size"] / 1024), 2) . " KB</p>";
 												    }
-												    echo "<p>In addition, you will be receiving an e-mail confirmation shortly for your receipt purposes. 
-												    	If you do not receive it, please check your Junk inbox. If you still have not received our e-mail
+												    echo "<p>You will be receiving an email confirmation shortly for your receipt purposes. 
+												    	If you do not receive it, please check your Junk inbox. However, if you still have not received our email
 												    	 confirmation, then please confirm your order with our 3D techs at <a href='mailto:3d@sceta.org'>3d@sceta.org</a>.</p>
-												    	 <p>Thank you very much again for your order. We will get back to you as soon as possible.</p>";
+												    	 <p>Thank you very much again for your order. We look forward to further satisfying your 3D printing needs!</p>";
 												    echo "<p>Click <a href='../'>here</a> to return to the upload page.</p>";
 
 												    /* Keep If You Still Want to Write Order Info to Text File
