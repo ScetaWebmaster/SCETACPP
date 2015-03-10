@@ -92,7 +92,7 @@
 						    <ul>
 						    	<li><a href="javascript:void(0);" id="btn_event1">GRID Alternatives Solar Spring Break 2015 (03/23/15) ***</a></li>
 						    	<li><a href="javascript:void(0);" id="btn_event2">Show Taping Social/Fundraiser (03/26/15)</a></li>
-						    	<li><a href="javascript:void(0);" id="btn_event3">Power Supply Workshop (TBA) ***</a></li>
+						    	<li><a href="javascript:void(0);" id="btn_event3">Power Supply Workshop (04/11/15) ***</a></li>
 						    </ul>
 
 						    <p>
@@ -279,13 +279,13 @@
 								</script>
 							</ol>
 
-							<h4 class="event3">Power Supply Workshop (TBA) ***</h4>
+							<h4 class="event3">Power Supply Workshop (04/11/15) ***</h4>
 							<ol class="event3">
 								<li style="list-style: none;"><img src="../img/ic_loading.gif"></li>
 								<script>
 									jQuery(function() {
 										// Get the list of upcoming events formatted in JSON.
-										jQuery.getJSON("https://spreadsheets.google.com/feeds/list/19N8HD_uiOtnuMeXf-e-ezQMtKrfsMS_8_7tC0AEskoo/1/public/values?alt=json&prettyprint=true", function(data) {
+										jQuery.getJSON("https://spreadsheets.google.com/feeds/list/1dNxxQjVXiLzumG2lYV8ap9rlO5W1HH6FO-smPzPl8Xo/1/public/values?alt=json&prettyprint=true", function(data) {
 											// Utility method to pad a string on the left.
 											// Source: http://sajjadhossain.com/2008/10/31/javascript-string-trimming-and-padding/.
 											function lpad(str, pad_string, length) {

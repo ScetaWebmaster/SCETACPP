@@ -79,7 +79,7 @@
 							<ul>
 								<li><a href="https://docs.google.com/forms/d/1VLkvcWiJyPWwtAUpI8CiH3eVoTtiOlZ-jLwbuav0yBw/viewform" target="_blank">[03/23/15] GRID Alternatives Solar Spring Break 2015</a></li>
 								<li><a href="https://docs.google.com/forms/d/19l_r_DAxPzbl0jLryebuRfYZ3fEcuN4n5-yARv-Q3uw/viewform" target="_blank">[03/26/15] Show Taping Social/Fundraiser</a></li>
-								<li><a href="https://docs.google.com/forms/d/1W6voVLk_G2aYHSnIKOIc8qy0nIVfgUkStR6dD9Eo7A0/viewform" target="_blank">[TBA] Power Supply Workshop</a></li>
+								<li><a href="https://docs.google.com/forms/d/1W6voVLk_G2aYHSnIKOIc8qy0nIVfgUkStR6dD9Eo7A0/viewform" target="_blank">[04/11/15] Power Supply Workshop</a></li>
 							</ul>
 						</div>
 					</div>
