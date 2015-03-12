@@ -89,7 +89,7 @@
 								For contacting our club advisor:
 								<ul class="contactList">
 									<li>Gerald Herder</li>
-									<li><a href="mailto:gkherder@csupomona.edu">gkherder@csupomona.edu</a></li>
+									<li><a href="mailto:gkherder@cpp.edu">gkherder@cpp.edu</a></li>
 								</ul>
 							</p>
 

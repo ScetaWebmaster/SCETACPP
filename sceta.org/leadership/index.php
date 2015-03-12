@@ -99,7 +99,7 @@
 									<ul>
 										<!--<li><img src="../img/leadership/advisor.jpg"></li>-->
 										<li>Professor Gerald Herder</li>
-										<li><a href="mailto:gkherder@csupomona.edu">gkherder@csupomona.edu</a></li>
+										<li><a href="mailto:gkherder@cpp.edu">gkherder@cpp.edu</a></li>
 									</ul>
 								</div>
 							</p>
