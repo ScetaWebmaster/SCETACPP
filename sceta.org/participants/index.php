@@ -195,7 +195,7 @@
 								<script>
 									jQuery(function() {
 										// Get the list of upcoming events formatted in JSON.
-										jQuery.getJSON("https://spreadsheets.google.com/feeds/list/1VA2hrXi8PsNs22poTfogNCAgvPv2hFqZf_WtiezkXF4/1/public/values?alt=json&prettyprint=true", function(data) {
+										jQuery.getJSON("https://spreadsheets.google.com/feeds/list/1hz2opQvTvV9-PdvZB2OtQV1yrNdrPWEpJX2u92pg2IA/1/public/values?alt=json&prettyprint=true", function(data) {
 											// Utility method to pad a string on the left.
 											// Source: http://sajjadhossain.com/2008/10/31/javascript-string-trimming-and-padding/.
 											function lpad(str, pad_string, length) {
