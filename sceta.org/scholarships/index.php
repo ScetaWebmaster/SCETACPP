@@ -67,9 +67,18 @@
 							<p>
 								Finance is a common dilemma that many college students face. One of our goals here at SCETA is to help ease that problem
 								for all of our student members. Below you will find all the available scholarship opportunties to our knowledge. If you
-								are aware of any scholarship opportunities, please share it with us by e-mailing our webmaster at
+								are aware of any scholarship opportunities, please share it with us by emailing our webmaster at
 								<a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a>.
 							</p>
+
+							<h4>None Currently Available</h4>
+							<p>
+								Unfortunately, all the previous scholarships have passed their deadlines and no new scholarships have been brought to our attention.
+								Please stay tuned for more scholarships as we hear them, and again, if you hear of a scholarship opportunity you would like to share
+								please email our webmaster at <a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a>.
+							</p>
+
+							<!--
 
 							<h4><a href="http://acec-la.org/scholarships.asp" target="_blank">American Council of Engineering Companies (LA County) Scholarship</a></h4>
 							<p><img src="http://acec-la.org/images/acec_banner.jpg"><br></p>
@@ -130,6 +139,7 @@
 								For the full application packet and more information, please visit 
 								<a href="http://acec-la.org/scholarships.asp" target="_blank">http://acec-la.org/scholarships.asp</a>.
 							</p>
+						-->
 						</div>
 					</div>
 				</div>
