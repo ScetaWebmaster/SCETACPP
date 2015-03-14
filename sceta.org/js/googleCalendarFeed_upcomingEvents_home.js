@@ -20,19 +20,19 @@ $(document).ready(function() {
 		while (str.length < length)
 			str = pad_string + str;
 		return str;
-	};
+	}
 
 	// Convert the day integer to its string value.
 	function dayToString(day) {
 		var days = ["Sun.", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."];
 		return days[day];
-	};
+	}
 
 	// Convert the month integer to its string value. Keep note that months are listed starting from 0 - 11.
 	function monthToString(month) {
 		var months = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
 		return months[month];
-	};
+	}
 
 	// Check if the year is a leap year.
 	function isLeapYear(year) {
@@ -52,7 +52,7 @@ $(document).ready(function() {
 		else {
 			return false;
 		}
-	};
+	}
 
 	// Check if the month has 31 days.
 	function has31Days(month) {
@@ -65,7 +65,7 @@ $(document).ready(function() {
 		else {
 			return false;
 		}
-	};
+	}
 
 	// Check for the date or dateTime property of the start/end objects.
 	function checkAllDay(dateObject) {
@@ -83,13 +83,14 @@ $(document).ready(function() {
 		else {
 			return false;
 		}
-	};
+	}
 
 	// Process the feed data.
 	function processFeed(data) {
+		var container = jQuery("#upcomingEvents li");
 		if (data['items'] == '') {
-			jQuery("#upcomingEvents li").first().hide();
-			jQuery("#upcomingEvents li").last().before(
+			container.first().hide();
+			container.last().before(
 				"There are no upcoming events."
 			);
 		}
@@ -98,8 +99,8 @@ $(document).ready(function() {
 		    for (i in data['items']) {
 		    	// If there is at least 1 event, then hide the loading animation.
 				if (i == 0) {
-					jQuery("#upcomingEvents li").first().hide();
-				};
+					container.first().hide();
+				}
 
 				// Temporarily store the current feed item to an "item" object for simpler code.
 		        var item = data['items'][i];
@@ -111,7 +112,7 @@ $(document).ready(function() {
 		        // Ensure the event link exists and use it as the header.
 		        if (eventUrl.length > 0) {
 		        	eventHeader = "<a href='" + eventUrl + "' target='_blank'>" + eventHeader + "</a>";
-		        };
+		        }
 
 		        var rawDate_start = '';
 		        var rawDate_end = '';
@@ -184,15 +185,26 @@ $(document).ready(function() {
 						if (hour_start > 12) {
 							hour_start = hour_start - 12;
 						}
-					};
+					}
 
+					// Hour 0 is 12 AM.
+					else if (hour_start == 0) {
+						hour_start = 12;
+					}
+
+					// Convert to 12-hour time format and change the AMPM tag to "PM".
 					if (hour_end >= 12) {
 						hour_end_ampm = 'PM';
 
 						if (hour_end > 12) {
 							hour_end = hour_end - 12;
 						}
-					};
+					}
+
+					// Hour 0 is 12 AM.
+					else if (hour_end == 0) {
+						hour_end = 12;
+					}
 
 					// Pad the minutes with 0s if it's less than 2 digits.
 					var min_start = lpad(rawDate_start.getMinutes(), '0', 2);
@@ -200,7 +212,7 @@ $(document).ready(function() {
 
 					// Put together all the time formats.
 					time = hour_start + ':' + min_start + ' ' + hour_start_ampm + ' - ' + hour_end + ':' + min_end + ' ' + hour_end_ampm;
-				};
+				}
 
 				// Gather the location.
 				var where = item.location;
@@ -211,10 +223,10 @@ $(document).ready(function() {
 
 				else {
 					where = where + " (<a href='http://maps.google.com/maps?q=" + where + "' target='_blank'>map</a>)";
-				};
+				}
 
 		        // Render the event.
-				jQuery("#upcomingEvents li").last().before(
+				container.last().before(
 					eventHeader + "<br>" +
 					"<b>Date:</b> " + date + "<br>" +
 					"<b>Time:</b> " + time + "<br>" +

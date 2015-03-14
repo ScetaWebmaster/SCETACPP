@@ -1,38 +1,40 @@
 $(document).ready(function() {
 	// Define the calendar ID.
-	var calendarId = 'g9f3b14mrjrhbt22icvlfpe8eo@group.calendar.google.com';
+	var calendarId = "g9f3b14mrjrhbt22icvlfpe8eo@group.calendar.google.com";
 
 	// Define the public API key.
-	var apiKey = 'AIzaSyDvZ3SJpUg6IMFaAIAZ_RNrJnuSFABkfjw';
+	var apiKey = "AIzaSyDvZ3SJpUg6IMFaAIAZ_RNrJnuSFABkfjw";
 
 	// Define today's date & time to only check for future events in Google Calendar.
 	var today = new Date();
-	var todayFormatted = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + 
-		'T' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds() + '-08:00'; // YYYY-MM-DDThh:mm:ss-08:00 where 08:00 is Pacific Time Zone
+	var todayFormatted = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate() + 
+		"T" + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() + "-08:00"; // YYYY-MM-DDThh:mm:ss-08:00 where 08:00 is Pacific Time Zone
 
 	// Define the JSON feed URL of the calendar sorted by future events only.
-	var url = 'https://www.googleapis.com/calendar/v3/calendars/' + calendarId + '/events?fields=items(end%2ChtmlLink%2Clocation%2CoriginalStartTime%2Cstart%2Csummary)&maxResults=1&orderBy=startTime&singleEvents=true&timeMin='
-		+ todayFormatted + '&key=' + apiKey;
+	var url = "https://www.googleapis.com/calendar/v3/calendars/" + calendarId 
+		+ "/events?fields=items(end%2ChtmlLink%2Clocation%2CoriginalStartTime%2Cstart%2Csummary)&maxResults=1&orderBy=startTime&singleEvents=true&timeMin="
+		+ todayFormatted + "&key=" + apiKey;
 
 	// Pad single digits to two digits with 0s if needed.
 	function lpad(str, pad_string, length) {
 		var str = new String(str);
-		while (str.length < length)
+		while (str.length < length) {
 			str = pad_string + str;
+		}
 		return str;
-	};
+	}
 
 	// Convert the day integer to its string value.
 	function dayToString(day) {
 		var days = ["Sun.", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."];
 		return days[day];
-	};
+	}
 
 	// Convert the month integer to its string value. Keep note that months are listed starting from 0 - 11.
 	function monthToString(month) {
 		var months = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
 		return months[month];
-	};
+	}
 
 	// Check if the year is a leap year.
 	function isLeapYear(year) {
@@ -52,7 +54,7 @@ $(document).ready(function() {
 		else {
 			return false;
 		}
-	};
+	}
 
 	// Check if the month has 31 days.
 	function has31Days(month) {
@@ -65,11 +67,11 @@ $(document).ready(function() {
 		else {
 			return false;
 		}
-	};
+	}
 
 	// Check for the date or dateTime property of the start/end objects.
 	function checkAllDay(dateObject) {
-		var properties = '';
+		var properties;
 
 		// Check for the latest property in the object. In general, we are looking for date or dateTime.
 		for (property in dateObject) {
@@ -83,13 +85,15 @@ $(document).ready(function() {
 		else {
 			return false;
 		}
-	};
+	}
 
 	// Process the feed data.
 	function processFeed(data) {
-		if (data['items'] == '') {
-			jQuery("#nextMeeting li").first().hide();
-			jQuery("#nextMeeting li").last().before(
+		var container = jQuery("#nextMeeting li");
+
+		if (data['items'] == "") {
+			container.first().hide();
+			container.last().before(
 				"There is no upcoming general meeting."
 			);
 		}
@@ -98,8 +102,8 @@ $(document).ready(function() {
 		    for (i in data['items']) {
 		    	// If there is at least 1 event, then hide the loading animation.
 				if (i == 0) {
-					jQuery("#nextMeeting li").first().hide();
-				};
+					container.first().hide();
+				}
 
 				// Temporarily store the current feed item to an "item" object for simpler code.
 		        var item = data['items'][i];
@@ -107,8 +111,7 @@ $(document).ready(function() {
 		        // Retrieve the event name. For this general meeting calendar, we don't want a link.
 		        var eventHeader = "<b><u>" + item.summary + "</b></u>";
 
-		        var rawDate_start = '';
-		        var rawDate_end = '';
+		        var rawDate_start, rawDate_end;
 		        var isAllDay = false; // Use this to track if the event is all-day or not.
 
 		        // Check if the event is an all-day event. If so, the variable is slightly different.
@@ -124,8 +127,7 @@ $(document).ready(function() {
 			        rawDate_end = new Date(item.end.dateTime);
 			    }
 
-			    var date = '';
-			    var time = '';
+			    var date, time;
 			    var dateRange = true; // Use this to track if the event is a single date or has a date range.
 
 			    // If the event is all day, check if it's a single day or multiple days.
@@ -178,15 +180,26 @@ $(document).ready(function() {
 						if (hour_start > 12) {
 							hour_start = hour_start - 12;
 						}
-					};
+					}
 
+					// Hour 0 is 12 AM.
+					else if (hour_start == 0) {
+						hour_start = 12;
+					}
+
+					// Convert to 12-hour time format and change the AMPM tag to "PM".
 					if (hour_end >= 12) {
 						hour_end_ampm = 'PM';
 
 						if (hour_end > 12) {
 							hour_end = hour_end - 12;
 						}
-					};
+					}
+
+					// Hour 0 is 12 AM.
+					else if (hour_end == 0) {
+						hour_end = 12;
+					}
 
 					// Pad the minutes with 0s if it's less than 2 digits.
 					var min_start = lpad(rawDate_start.getMinutes(), '0', 2);
@@ -194,7 +207,7 @@ $(document).ready(function() {
 
 					// Put together all the time formats.
 					time = hour_start + ':' + min_start + ' ' + hour_start_ampm + ' - ' + hour_end + ':' + min_end + ' ' + hour_end_ampm;
-				};
+				}
 
 				// Gather the location.
 				var where = item.location;
@@ -204,7 +217,7 @@ $(document).ready(function() {
 				}
 
 		        // Render the event.
-		        jQuery("#nextMeeting li").last().before(
+		        container.last().before(
 		        	eventHeader + "<br>" +
 		        	date + "<br>" +
 		        	time + "<br>" +

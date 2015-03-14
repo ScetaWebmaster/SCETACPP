@@ -9,6 +9,7 @@ $(document).ready(function() {
 	var menu_3d = $('ul.menu_3d');
 	var meetings_fall2014 = $('.meetings_fall2014');
 	var meetings_winter2015 = $('.meetings_winter2015');
+	var event0 = $('.event0');
 	var event1 = $('.event1');
 	var event2 = $('.event2');
 	var event3 = $('.event3');
@@ -135,6 +136,12 @@ $(document).ready(function() {
 		meetings_winter2015.hide('Blind');
 	});
 
+	<!-- Event Participants - Event 0 -->
+	$('#btn_event0').on('click', function(e) {
+		event0.toggle('Blind');
+		return false;
+	});
+
 	<!-- Event Participants - Event 1 -->
 	$('#btn_event1').on('click', function(e) {
 		event1.toggle('Blind');
@@ -161,6 +168,7 @@ $(document).ready(function() {
 
 	<!-- Event Participants - Show All -->
 	$('#btn_showEvents').on('click', function(e) {
+		event0.show('Blind');
 		event1.show('Blind');
 		event2.show('Blind');
 		event3.show('Blind');
@@ -169,6 +177,7 @@ $(document).ready(function() {
 
 	<!-- Event Participants - Hide All -->
 	$('#btn_hideEvents').on('click', function(e) {
+		event0.hide('Blind');
 		event1.hide('Blind');
 		event2.hide('Blind');
 		event3.hide('Blind');

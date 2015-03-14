@@ -1169,6 +1169,7 @@ textarea:invalid {
 			display: none;
 		}
 
+		#maincontent .span_3_of_4 .event0,
 		#maincontent .span_3_of_4 .event1,
 		#maincontent .span_3_of_4 .event2,
 		#maincontent .span_3_of_4 .event3,
