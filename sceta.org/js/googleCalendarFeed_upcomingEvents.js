@@ -91,7 +91,7 @@ jQuery(document).ready(function() {
 		if (data['items'] == '') {
 			jQuery("#upcomingEvents li").first().hide();
 			jQuery("#upcomingEvents li").last().before(
-				"There are no upcoming " + parameters['noneMessage'] + ". Please stay tuned for any future announcements."
+				"There are no upcoming " + parameters['noneMessage'] + ". Please stay tuned for any future announcements.<br><br>"
 			);
 		}
 
