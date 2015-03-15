@@ -57,9 +57,27 @@
 
 		<!-- Smooth Scrolling -->
 		<script src="../../../../js/smoothScroll.js"></script>
+	
+		<!-- Loading Animation -->
+		<script>
+			$(window).load(function() {
+				// Animate the loader off screen.
+				$(".se-pre-con").fadeOut("slow");;
+			});
+		</script>
+	
+		<!-- Loading Animation -->
+		<script>
+			$(window).load(function() {
+				// Animate the loader off screen.
+				$(".se-pre-con").fadeOut("slow");;
+			});
+		</script>
 	</head>
 
 	<body>
+		<div class="se-pre-con"></div>
+		<div class="se-pre-con"></div>
 		<a name="top"></a>
 		
 		<!-- Main Body Wrapper -->
