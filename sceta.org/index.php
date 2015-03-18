@@ -50,19 +50,9 @@
 
 		<!-- Smooth Scroll -->
 		<script src="js/smoothScroll.js"></script>
-
-		<!-- Loading Animation -->
-		<script>
-			$(window).load(function() {
-				// Animate the loader off screen.
-				$(".se-pre-con").fadeOut("slow");;
-			});
-		</script>
 	</head>
 
 	<body>
-		<div class="se-pre-con"></div>
-
 		<!-- Facebook Like Box -->
 		<div id="fb-root"></div>
 		<script>
