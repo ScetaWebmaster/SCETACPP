@@ -44,7 +44,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>	 
 
 		<!-- Smooth Scroll -->
-		<script src="../js/smoothScroll"></script>
+		<script src="../js/smoothScroll.js"></script>
 	</head>
 
 	<body>
@@ -71,7 +71,7 @@
 							</p>
 
 							<h4>Full Calendar</h4>
-							<iframe src="https://www.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=scetacpp%40gmail.com&amp;color=%23A32929&amp;ctz=America%2FLos_Angeles" style="border-width: 0" width="100%" height="600" frameborder="0" scrolling="no"><img src="../img/ic_loading.gif"></iframe>
+							<iframe src="https://www.google.com/calendar/embed?showCalendars=0&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=scetacpp%40gmail.com&amp;color=%23125A12&amp;ctz=America%2FLos_Angeles" style="border-width: 0; padding: 0 24px 0 24px;" width="95%" height="600" frameborder="0" scrolling="no"><img src="../img/ic_loading.gif"></iframe>
 							<br><br>
 							
 							<h4>Full Agenda</h4>
