@@ -39,13 +39,13 @@ $(document).ready(function() {
 					// Gather all the parameters of the current event.
 					name = parameters['Name[' + counter + ']'];
 					date = parameters['Date[' + counter + ']'];
-					timeSorted = parameters['TimeSorted[' + counter + ']'];
+					priority = parameters['Priority[' + counter + ']'];
 					legend = parameters['Legend[' + counter + ']'];
 
 					// Display the header of each event.
 					content = "<h4 class='event" + counter + "'>" + name + " (" + date + ")";
 
-					if (timeSorted == "true") {
+					if (priority == "true") {
 						content += " ***";
 					}	
 
@@ -109,13 +109,13 @@ $(document).ready(function() {
 						// Display the data of each event.
 						$("ol.event" + counter).append("<p class='eventsListContent'>Last Updated: " + dateUpdated + " at " + timeUpdated + "</p>" + dataContent);
 
-						if (timeSorted == "false") {
+						if (priority == "false") {
 							sortListAbc($("ol.event" + counter));
 						}
 					}
 
 					// Store the object of the new event.
-					events[counter] = $('.event' + counter);
+					event[counter] = $('.event' + counter);
 
 					counter++;
 
@@ -135,14 +135,14 @@ $(document).ready(function() {
 						// Define the Show All button.
 						$(document).on('click', "#btn_showEvents", function() {
 							for (i = 0; i < numEvents; i++) {
-								events[i].show('Blind');
+								event[i].show('Blind');
 							}
 						});
 
 						// Define the Hide All button.
 						$(document).on('click', "#btn_hideEvents", function() {
 							for (i = 0; i < numEvents; i++) {
-								events[i].hide('Blind');
+								event[i].hide('Blind');
 							}
 						});
 					}
@@ -156,23 +156,23 @@ $(document).ready(function() {
 	// IF you need to add more, you need to manually add more.
 	function defineToggles() {
 		$(document).on('click', "#btn_event0", function() {
-			events[0].toggle('Blind');
+			event[0].toggle('Blind');
 		});
 
 		$(document).on('click', "#btn_event1", function() {
-			events[1].toggle('Blind');
+			event[1].toggle('Blind');
 		});
 
 		$(document).on('click', "#btn_event2", function() {
-			events[2].toggle('Blind');
+			event[2].toggle('Blind');
 		});
 
 		$(document).on('click', "#btn_event3", function() {
-			events[3].toggle('Blind');
+			event[3].toggle('Blind');
 		});
 
 		$(document).on('click', "#btn_event4", function() {
-			events[4].toggle('Blind');
+			event[4].toggle('Blind');
 		});
 	}
 
@@ -189,15 +189,13 @@ $(document).ready(function() {
 
 	// Grab all necessary parameters.
 	var parameters = JSON.parse(jQuery('#gDriveFeed').html());
-	var counter = 0;
-	var toggleCounter = 0;
 	var numEvents = parameters['NumEvents'];
-	var events = [];
-	var singleQueue = 0;
-	var name, date, timeSorted, id, legend;
-
+	var name, date, priority, legend, id;
+	var counter = 0;
+	var event = [];
+	
 	// Define the constant container parameter and a variable to manage content.
-	var container = jQuery("img#list");
+	var container = $("img#list");
 	var content = "";
 
 	// If the number of events is 0, then display the no participants message.
@@ -211,19 +209,17 @@ $(document).ready(function() {
 
 	// Otherwise, we assume the number of events is greater than 0 (granted the webmaster doesn't mess up).
 	else {
-		/* ===== FULL LIST ===== */
-
+		// Display the list of all events available with togglable links.
 		content += "<ul class='eventsList'>";
 
-		// Display the list of all events available with togglable links.
 		for (i = 0; i < numEvents; i++) {
 			name = parameters['Name[' + i + ']'];
 			date = parameters['Date[' + i + ']'];
-			timeSorted = parameters['TimeSorted[' + i + ']'];
+			priority = parameters['Priority[' + i + ']'];
 
 			content += "<li><a href='javascript:void(0);' id='btn_event" + i + "'>" + name + " (" + date + ")";
 
-			if (timeSorted == "true") {
+			if (priority == "true") {
 				content += " ***";
 			}
 

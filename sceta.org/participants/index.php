@@ -92,21 +92,21 @@
 
 									"Name[0]" : "GRID Alternatives Solar Spring Break 2015",
 									"Date[0]" : "03/23/15",
-									"TimeSorted[0]" : "true",
-									"ID[0]" : "111xRKeXjdcVf40NtMENaKshJXXp_3F30pTqROTgvUYY",
+									"Priority[0]" : "true",
 									"Legend[0]" : "* = confirmed",
+									"ID[0]" : "111xRKeXjdcVf40NtMENaKshJXXp_3F30pTqROTgvUYY",
 
 									"Name[1]" : "Show Taping Social/Fundraiser",
 									"Date[1]" : "03/26/15",
-									"TimeSorted[1]" : "false",
-									"ID[1]" : "1hz2opQvTvV9-PdvZB2OtQV1yrNdrPWEpJX2u92pg2IA",
+									"Priority[1]" : "false",
 									"Legend[1]" : "",
+									"ID[1]" : "1hz2opQvTvV9-PdvZB2OtQV1yrNdrPWEpJX2u92pg2IA",
 
 									"Name[2]" : "Power Supply Workshop",
 									"Date[2]" : "04/11/15",
-									"TimeSorted[2]" : "true",
-									"ID[2]" : "1dNxxQjVXiLzumG2lYV8ap9rlO5W1HH6FO-smPzPl8Xo",
-									"Legend[2]" : ""
+									"Priority[2]" : "true",
+									"Legend[2]" : "",
+									"ID[2]" : "1dNxxQjVXiLzumG2lYV8ap9rlO5W1HH6FO-smPzPl8Xo"
 								}
 							</script>
 						</div>
