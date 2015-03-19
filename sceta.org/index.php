@@ -124,12 +124,9 @@
 									jssor_sliderb_starter('sliderb_container');
 								</script>
 							</div>
-
-							<br>
-							<p>
-								<a href="news/" id="more"><img src="img/ic_right-arrow.png"> View All News</a>
-							</p>
+							<br><a href="news/" id="more"><img src="img/ic_right-arrow.png"> View All News</a>
 						</div>
+
 						<div class="col span_1_of_2">
 							<!-- Next Meeting -->
 							<h4>Next Meeting</h4>
