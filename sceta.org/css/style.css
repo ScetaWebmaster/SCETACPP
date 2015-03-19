@@ -1023,6 +1023,10 @@ textarea:invalid {
 						text-decoration: underline;
 					}
 
+			#maincontent .span_3_of_4 p.eventsListContent {
+				margin-left: -24px;
+			}
+
 			#maincontent .post ul {
 				text-align: center;
 				list-style: none;

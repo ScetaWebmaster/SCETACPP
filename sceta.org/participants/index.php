@@ -45,18 +45,10 @@
 
 		<!-- Smooth Scroll -->
 		<script src="../js/smoothScroll.js"></script>
-
-		<!-- Loading Animation -->
-		<script>
-			$(window).load(function() {
-				// Animate the loader off screen.
-				$(".se-pre-con").fadeOut("slow");;
-			});
-		</script>
 	</head>
 
 	<body>
-		<div class="se-pre-con"></div>
+		<a name="top"></a>
 
 		<!-- Main Body Wrapper -->
 		<div id="wrapper">
@@ -93,7 +85,7 @@
 							</p>
 
 							<h4>Event Participant List</h4>
-							<img id="list" src="../img/ic_loading.gif">
+							<img id="list" style="margin-left: 24px;" src="../img/ic_loading.gif">
 							<script id="gDriveFeed" src="../js/googleDriveFeed_eventParticipants.js">
 								{
 									"NumEvents" : 3,
@@ -102,16 +94,19 @@
 									"Date[0]" : "03/23/15",
 									"TimeSorted[0]" : "true",
 									"ID[0]" : "111xRKeXjdcVf40NtMENaKshJXXp_3F30pTqROTgvUYY",
+									"Legend[0]" : "* = confirmed",
 
 									"Name[1]" : "Show Taping Social/Fundraiser",
 									"Date[1]" : "03/26/15",
 									"TimeSorted[1]" : "false",
 									"ID[1]" : "1hz2opQvTvV9-PdvZB2OtQV1yrNdrPWEpJX2u92pg2IA",
+									"Legend[1]" : "",
 
 									"Name[2]" : "Power Supply Workshop",
 									"Date[2]" : "04/11/15",
 									"TimeSorted[2]" : "true",
-									"ID[2]" : "1dNxxQjVXiLzumG2lYV8ap9rlO5W1HH6FO-smPzPl8Xo"
+									"ID[2]" : "1dNxxQjVXiLzumG2lYV8ap9rlO5W1HH6FO-smPzPl8Xo",
+									"Legend[2]" : ""
 								}
 							</script>
 						</div>

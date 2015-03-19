@@ -20,87 +20,48 @@ $(document).ready(function() {
 		return months[month];
 	}
 
-	// Grab all necessary parameters.
-	var parameters = JSON.parse(jQuery('#gDriveFeed').html());
-	var numEvents = parameters['NumEvents'];
-	var name, date, timeSorted, id;
+	// Process the JSON feed of a defined event.
+	function processFeed() {
+		// Retrieve the current sheet ID.
+		id = parameters['ID[' + counter + ']'];
 
-	// Define the constant container parameter and a variable to manage content.
-	var container = jQuery("img#list");
-	var content = "";
+		// Define the JSON feed URL of the current event.
+		sheetUrl = "https://spreadsheets.google.com/feeds/list/" + id + "/1/public/values?alt=json&prettyprint=true";
 
-	// If the number of events is 0, then display the no participants message.
-	if (numEvents == 0) {
-		content += "<p>There are no upcoming events with participants to list. Please stay tuned for any future announcements.</p>";
-	}
-
-	// Otherwise, we assume the number of events is greater than 0 (granted the webmaster doesn't mess up).
-	else {
-		/* ===== FULL LIST ===== */
-
-		// Define additional needed variables.
-		var sheetUrl, dateUpdated_raw, dateUpdated, timeUpdated, hour, min, ampm, dataContent;
-
-		content += "<ul>";
-
-		// Display the list of all events available with togglable links.
-		for (i = 0; i < numEvents; i++) {
-			name = parameters['Name[' + i + ']'];
-			date = parameters['Date[' + i + ']'];
-			timeSorted = parameters['TimeSorted[' + i + ']'];
-
-			content += "<li><a href='javascript:void(0);' id='btn_event" + i + "'>" + name + " (" + date + ")";
-
-			if (timeSorted == "true") {
-				content += " ***";
-			}
-
-			content += "</a></li>";
-		}
-
-		content += "</ul>";
-
-		// Display the Show All / Hide All buttons.
-		content += "<p>[<a href='javascript:void(0);' id='btn_showEvents'>Show All</a>] / [<a href='javascript:void(0);' id='btn_hideEvents'>Hide All</a>]</p>";
-
-		/* ===== CONTENT OF EACH ITEM IN LIST ===== */
-
-		for (var i = 0; i < numEvents; i++) {
-			// Gather all the parameters of the current event.
-			name = parameters['Name[' + i + ']'];
-			date = parameters['Date[' + i + ']'];
-			timeSorted = parameters['TimeSorted[' + i + ']'];
-			id = parameters['ID[' + i + ']'];
-
-			// Display the header of each event.
-			content += "<h4 class='event" + i + "'>" + name + " (" + date + ")";
-
-			if (timeSorted == "true") {
-				content += " ***";
-			}	
-
-			content += "</h4>";
-			content += "<ol class='event" + i + "'>";
-
-			// Define the JSON feed URL of the current event.
-			sheetUrl = "https://spreadsheets.google.com/feeds/list/" + id + "/1/public/values?alt=json&prettyprint=true";
-
+		if (counter < numEvents) {
 			// Gather all the data for each event.
 			$.ajax({
 				url: sheetUrl, 
+				async: true,
 				type: 'GET',
 				dataType: 'json',
-				
-				async: false,
 				success: function(data) {
+					// Gather all the parameters of the current event.
+					name = parameters['Name[' + counter + ']'];
+					date = parameters['Date[' + counter + ']'];
+					timeSorted = parameters['TimeSorted[' + counter + ']'];
+					legend = parameters['Legend[' + counter + ']'];
+
+					// Display the header of each event.
+					content = "<h4 class='event" + counter + "'>" + name + " (" + date + ")";
+
+					if (timeSorted == "true") {
+						content += " ***";
+					}	
+
+					content += "</h4>";
+					content += "<ol class='event" + counter + "'>";
+					container.before(content);
+
 					// If there is no data, then display the no participants message.
 					if (data.feed.entry == null) {
-						content = "<p>There are currently no participants signed up for this event.</p>";
+						$("ol.event" + counter).append("<p class='eventsListContent'>There are currently no participants signed up for this event. If you'd like to sign up for this event, please sign up through our <a href='../signups/'>Signups page</a>.</p>");
 					}
 
 					// Otherwise, begin parsing the data.
 					else {
-						dataContent = "";
+						var sheetUrl, dateUpdated_raw, dateUpdated, timeUpdated, hour, min, ampm;
+						var dataContent = "";
 
 						// Parse and render each event.
 						$.each(data.feed.entry, function(j, item) {
@@ -140,71 +101,145 @@ $(document).ready(function() {
 							dataContent += "<li>" + item.gsx$name.$t + "</li>";
 						});
 
-						// Display the full updated date & time and close off the OL tag.
-						content += "<p style='margin-left: -24px;'>Last Updated: " + dateUpdated + " at " + timeUpdated + "</p>" + dataContent + "</ol>";
+						// If there is an additional legend, display it.
+						if (legend != "") {
+							$("ol.event" + counter).append("<p class='eventsListContent'>" + legend + "</p>");
+						}
+
+						// Display the data of each event.
+						$("ol.event" + counter).append("<p class='eventsListContent'>Last Updated: " + dateUpdated + " at " + timeUpdated + "</p>" + dataContent);
+
+						if (timeSorted == "false") {
+							sortListAbc($("ol.event" + counter));
+						}
+					}
+
+					// Store the object of the new event.
+					events[counter] = $('.event' + counter);
+
+					counter++;
+
+					if (counter < numEvents) {
+						processFeed();	
+					}
+
+					else {
+						// Hide the loading animation.
+						container.hide();
+
+						// Show the list of events since everything has finally loaded.
+						$('.eventsList').show();
+
+						defineToggles();
+
+						// Define the Show All button.
+						$(document).on('click', "#btn_showEvents", function() {
+							for (i = 0; i < numEvents; i++) {
+								events[i].show('Blind');
+							}
+						});
+
+						// Define the Hide All button.
+						$(document).on('click', "#btn_hideEvents", function() {
+							for (i = 0; i < numEvents; i++) {
+								events[i].hide('Blind');
+							}
+						});
 					}
 				}
 			});
 		}
 	}
 
-	// Hide the loading animation and display the gathered content.
-	container.hide();
-	container.before(content);
+	// This function defines the individual button toggles.
+	// WARNING: Due to limitations, this function is unable to loop through the elements.
+	// IF you need to add more, you need to manually add more.
+	function defineToggles() {
+		$(document).on('click', "#btn_event0", function() {
+			events[0].toggle('Blind');
+		});
 
-	// Handle all event handlers for event toggling.
-	// This is a special case as the handlers must be created AFTER the content is generated because the script will dynamically generate the content.
-	var event0 = $('.event0');
-	var event1 = $('.event1');
-	var event2 = $('.event2');
-	var event3 = $('.event3');
-	var event4 = $('.event4');
+		$(document).on('click', "#btn_event1", function() {
+			events[1].toggle('Blind');
+		});
 
-	<!-- Event Participants - Event 0 -->
-	$(document).on('click', "#btn_event0", function() {
-		event0.toggle('Blind');
-		return false;
-	});
+		$(document).on('click', "#btn_event2", function() {
+			events[2].toggle('Blind');
+		});
 
-	<!-- Event Participants - Event 1 -->
-	$(document).on('click', "#btn_event1", function() {
-		event1.toggle('Blind');
-		return false;
-	});
+		$(document).on('click', "#btn_event3", function() {
+			events[3].toggle('Blind');
+		});
 
-	<!-- Event Participants - Event 2 -->
-	$(document).on('click', "#btn_event2", function() {
-		event2.toggle('Blind');
-		return false;
-	});
+		$(document).on('click', "#btn_event4", function() {
+			events[4].toggle('Blind');
+		});
+	}
 
-	<!-- Event Participants - Event 3 -->
-	$(document).on('click', "#btn_event3", function() {
-		event3.toggle('Blind');
-		return false;
-	});
+	// Sort the passed in list in ABC order.
+	function sortListAbc(list) {
+		var listItems = list.children('li').get();
+		listItems.sort(function(a, b) {
+			return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+		})
+		$.each(listItems, function(id, item) {
+			list.append(item);
+		});
+	}
 
-	<!-- Event Participants - Event 4 -->
-	$(document).on('click', "#btn_event4", function() {
-		event4.toggle('Blind');
-		return false;
-	});
+	// Grab all necessary parameters.
+	var parameters = JSON.parse(jQuery('#gDriveFeed').html());
+	var counter = 0;
+	var toggleCounter = 0;
+	var numEvents = parameters['NumEvents'];
+	var events = [];
+	var singleQueue = 0;
+	var name, date, timeSorted, id, legend;
 
-	<!-- Event Participants - Show All -->
-	$(document).on('click', "#btn_showEvents", function() {
-		event0.show('Blind');
-		event1.show('Blind');
-		event2.show('Blind');
-		event3.show('Blind');
-		event4.show('Blind');
-	});
+	// Define the constant container parameter and a variable to manage content.
+	var container = jQuery("img#list");
+	var content = "";
 
-	<!-- Event Participants - Hide All -->
-	$(document).on('click', "#btn_hideEvents", function() {
-		event0.hide('Blind');
-		event1.hide('Blind');
-		event2.hide('Blind');
-		event3.hide('Blind');
-		event4.hide('Blind');
-	});
+	// If the number of events is 0, then display the no participants message.
+	if (numEvents == 0) {
+		content += "<p>There are no upcoming events with participants to list. Please stay tuned for any future announcements.</p>";
+
+		// Hide the loading animation and display the menu content.
+		container.hide();
+		container.before(content);
+	}
+
+	// Otherwise, we assume the number of events is greater than 0 (granted the webmaster doesn't mess up).
+	else {
+		/* ===== FULL LIST ===== */
+
+		content += "<ul class='eventsList'>";
+
+		// Display the list of all events available with togglable links.
+		for (i = 0; i < numEvents; i++) {
+			name = parameters['Name[' + i + ']'];
+			date = parameters['Date[' + i + ']'];
+			timeSorted = parameters['TimeSorted[' + i + ']'];
+
+			content += "<li><a href='javascript:void(0);' id='btn_event" + i + "'>" + name + " (" + date + ")";
+
+			if (timeSorted == "true") {
+				content += " ***";
+			}
+
+			content += "</a></li>";
+		}
+
+		content += "</ul>";
+
+		// Display the Show All / Hide All buttons.
+		content += "<p class='eventsList'>[<a href='javascript:void(0);' id='btn_showEvents'>Show All</a>] / [<a href='javascript:void(0);' id='btn_hideEvents'>Hide All</a>]</p>";
+
+		// Display but initially hide the events list content.
+		container.before(content);
+		$('.eventsList').hide();
+
+		// Gather the data content of each event. Results will be stored in dataContentArray.
+		processFeed();
+	}
 });
