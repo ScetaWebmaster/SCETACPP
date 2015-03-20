@@ -92,6 +92,8 @@
 										<li>ABS
 											<ul>
 												<?php 
+													$materialList = array();
+
 													// Connect to the 3D database.
 													include_once '../../../inc/sceta.org/connect_3d.php'; 
 
@@ -104,14 +106,24 @@
 													if ($result->num_rows > 0) {
 														// Identify $row as an object to pull data from.
 														while ($row = $result->fetch_assoc()) {
-															// Show "AVAILABLE" if status is 1.
-															if ($row["status"] == 1) {
-																echo "<li class='green'>" . $row["name"] . " (AVAILABLE)</td>";
-															}
+															array_push($materialList, $row["name"]);
+														}
 
-															// Otherwise, display "UNAVAILABLE".
-															else {
-																echo "<li class='red'>" . $row["name"] . " (UNAVAILABLE)</td>";
+														sort($materialList);
+
+														for ($i = 0; $i < count($materialList); $i++) {
+															$sql = "SELECT * FROM Materials WHERE material = 'ABS' AND name = '$materialList[$i]'";
+															$result2 = $connection->query($sql);
+															while ($row = $result2->fetch_assoc()) {
+																// Show "AVAILABLE" if status is 1.
+																if ($row["status"] == 1) {
+																	echo "<li class='green'>" . $materialList[$i] . " (AVAILABLE)</li>";
+																}
+
+																// Otherwise, display "UNAVAILABLE".
+																else {
+																	echo "<li class='red'>" . $materialList[$i] . " (UNAVAILABLE</li>";
+																}
 															}
 														}
 													}
@@ -119,7 +131,7 @@
 													// Otherwise, state that there are no materials available.
 													// This is a failsafe condition. Ideally, this should never be reached.
 													else {
-														echo "There are no materials available.";
+														echo "<li>There are no colors available for ABS.</li>";
 													}
 												?>
 											</ul>
@@ -127,6 +139,8 @@
 										<li>PLA
 											<ul>
 												<?php 
+													$materialList = array();
+
 													// Query select all items from Materials table.
 													$sql = "SELECT * FROM Materials WHERE material = 'PLA'";
 													// Gather that into the $result variable.
@@ -136,14 +150,24 @@
 													if ($result->num_rows > 0) {
 														// Identify $row as an object to pull data from.
 														while ($row = $result->fetch_assoc()) {
-															// Show "AVAILABLE" if status is 1.
-															if ($row["status"] == 1) {
-																echo "<li class='green'>" . $row["name"] . " (AVAILABLE)</td>";
-															}
+															array_push($materialList, $row["name"]);
+														}
 
-															// Otherwise, display "UNAVAILABLE".
-															else {
-																echo "<li class='red'>" . $row["name"] . " (UNAVAILABLE)</td>";
+														sort($materialList);
+
+														for ($i = 0; $i < count($materialList); $i++) {
+															$sql = "SELECT * FROM Materials WHERE material = 'PLA' AND name = '$materialList[$i]'";
+															$result2 = $connection->query($sql);
+															while ($row = $result2->fetch_assoc()) {
+																// Show "AVAILABLE" if status is 1.
+																if ($row["status"] == 1) {
+																	echo "<li class='green'>" . $materialList[$i] . " (AVAILABLE)</li>";
+																}
+
+																// Otherwise, display "UNAVAILABLE".
+																else {
+																	echo "<li class='red'>" . $materialList[$i] . " (UNAVAILABLE</li>";
+																}
 															}
 														}
 													}
@@ -151,7 +175,7 @@
 													// Otherwise, state that there are no materials available.
 													// This is a failsafe condition. Ideally, this should never be reached.
 													else {
-														echo "There are no materials available.";
+														echo "<li>There are no colors available for PLA.</li>";
 													}
 
 													$connection->close();
