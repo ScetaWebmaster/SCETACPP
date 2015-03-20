@@ -40,7 +40,7 @@
                     <b>Available Materials</b>
                     <ul>
                         <?php 
-                            echo "<u>ABS</u>";
+                            $content = "<u>ABS</u>";
 
                             // Connect to the 3D database.
                             include_once '../../../inc/sceta.org/connect_3d.php'; 
@@ -49,8 +49,6 @@
                             $sql = "SELECT * FROM Materials WHERE material = 'ABS'";
                             // Gather that into the $result variable.
                             $result = $connection->query($sql);
-
-                            $content = "";
 
                             // Only echo data if there is at least 1.
                             if ($result->num_rows > 0) {
