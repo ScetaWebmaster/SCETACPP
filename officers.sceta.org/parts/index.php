@@ -24,15 +24,17 @@
             <div class="maincontainer">
                 <h4>Update Parts</h4>
                 <hr>
-                <p><a href="../">Return to Control Panel Home</a></p>
                 <p>Logged in as <?php echo htmlentities($_SESSION['username']); ?>! (<a href="../logout/">Logout</a>)</p>
+                <p><a href="../">Return to Control Panel Home</a></p>
                 <hr>
 
                 <!-- If no part was selected, display the list of parts to chose from. -->
                 <?php if (!isset($_GET["db"]) && !isset($_GET["id"])) : ?>
                 <p>
-                    Click on any part you wish to update. Unfortunately, current limitations mean you will have to update a part
-                    one-by-one. However, for the most part, you won't be handling multiple parts anyways.
+                    Click on any part you wish to update.
+                </p>
+                <p>
+                    You may update its name, description, member price, regular price, and status.
                 </p>
                 <hr>
                 <p>

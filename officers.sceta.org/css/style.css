@@ -39,6 +39,16 @@ img {
 		}
 	}
 
+		a {
+			color: #008ec8;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: green;
+			text-decoration: underline;
+		}
+
 		h4 {
 			color: #55a5c6;
 			margin: 0 auto;
@@ -69,7 +79,7 @@ img {
 		}
 
 		p {
-			padding: 5px;
+			padding: 0 10px;
 		}
 
 		p.error {

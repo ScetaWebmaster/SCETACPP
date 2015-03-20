@@ -22,8 +22,8 @@
             <div class="maincontainer">
             	<h4>Update Parts</h4>
             	<hr>
+            	<p>Logged in as <?php echo htmlentities($_SESSION['username']); ?>! (<a href="../../logout/">Logout</a>)</p>
             	<p><a href="../../">Return to Control Panel Home</a></p>
-                <p>Logged in as <?php echo htmlentities($_SESSION['username']); ?>! (<a href="../../logout/">Logout</a>)</p>
                 <hr>
 
 				<?php
