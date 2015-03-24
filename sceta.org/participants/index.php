@@ -88,25 +88,19 @@
 							<img id="list" style="margin-left: 24px;" src="../img/ic_loading.gif">
 							<script id="gDriveFeed" src="../js/googleDriveFeed_eventParticipants.js">
 								{
-									"NumEvents" : 3,
+									"NumEvents" : 2,
 
-									"Name[0]" : "GRID Alternatives Solar Spring Break 2015",
-									"Date[0]" : "03/23/15",
-									"Priority[0]" : "true",
-									"Legend[0]" : "* = confirmed",
-									"ID[0]" : "111xRKeXjdcVf40NtMENaKshJXXp_3F30pTqROTgvUYY",
+									"Name[0]" : "Show Taping Social/Fundraiser",
+									"Date[0]" : "03/26/15",
+									"Priority[0]" : "false",
+									"Legend[0]" : "",
+									"ID[0]" : "1hz2opQvTvV9-PdvZB2OtQV1yrNdrPWEpJX2u92pg2IA",
 
-									"Name[1]" : "Show Taping Social/Fundraiser",
-									"Date[1]" : "03/26/15",
-									"Priority[1]" : "false",
+									"Name[1]" : "Power Supply Workshop",
+									"Date[1]" : "04/11/15",
+									"Priority[1]" : "true",
 									"Legend[1]" : "",
-									"ID[1]" : "1hz2opQvTvV9-PdvZB2OtQV1yrNdrPWEpJX2u92pg2IA",
-
-									"Name[2]" : "Power Supply Workshop",
-									"Date[2]" : "04/11/15",
-									"Priority[2]" : "true",
-									"Legend[2]" : "",
-									"ID[2]" : "1dNxxQjVXiLzumG2lYV8ap9rlO5W1HH6FO-smPzPl8Xo"
+									"ID[1]" : "1dNxxQjVXiLzumG2lYV8ap9rlO5W1HH6FO-smPzPl8Xo"
 								}
 							</script>
 						</div>
