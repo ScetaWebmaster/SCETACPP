@@ -88,19 +88,13 @@
 							<img id="list" style="margin-left: 24px;" src="../img/ic_loading.gif">
 							<script id="gDriveFeed" src="../js/googleDriveFeed_eventParticipants.js">
 								{
-									"NumEvents" : 2,
+									"NumEvents" : 1,
 
-									"Name[0]" : "Show Taping Social/Fundraiser",
-									"Date[0]" : "03/26/15",
-									"Priority[0]" : "false",
+									"Name[0]" : "Power Supply Workshop",
+									"Date[0]" : "04/11/15",
+									"Priority[0]" : "true",
 									"Legend[0]" : "",
-									"ID[0]" : "1hz2opQvTvV9-PdvZB2OtQV1yrNdrPWEpJX2u92pg2IA",
-
-									"Name[1]" : "Power Supply Workshop",
-									"Date[1]" : "04/11/15",
-									"Priority[1]" : "true",
-									"Legend[1]" : "",
-									"ID[1]" : "1dNxxQjVXiLzumG2lYV8ap9rlO5W1HH6FO-smPzPl8Xo"
+									"ID[0]" : "1dNxxQjVXiLzumG2lYV8ap9rlO5W1HH6FO-smPzPl8Xo"
 								}
 							</script>
 						</div>

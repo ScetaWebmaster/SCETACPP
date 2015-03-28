@@ -174,7 +174,7 @@
 									<li>College of Engineering</li>
 									<li>California State Polytechnic University, Pomona</li>
 									<li>3801 West Temple Ave.</li>
-									<li>Pomona, CA 91778</li>
+									<li>Pomona, CA 91768</li>
 								</ul>
 							</p>
 
