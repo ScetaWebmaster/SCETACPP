@@ -42,7 +42,7 @@
 			<h4>Contact Us</h4>
 				<p>
 					For general inquires or comments:
-					<br><a href="mailto:support@sceta.org">support@sceta.org</a>
+					<br><a href="mailto:contact@sceta.org">contact@sceta.org</a>
 					<br><br>
 					For website-related feedback and bug reports:
 					<br><a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a>
@@ -66,7 +66,7 @@
 		</div>
 	</footer>
 	<div id="smallprint">
-		&copy; 2014 Southern California Engineering Technologists Assocation. All rights reserved.
+		Copyright &copy; 2014-<?php echo date("Y"); ?> Southern California Engineering Technologists Assocation. All rights reserved.
 
 		<div class="follow">
 			<ul>

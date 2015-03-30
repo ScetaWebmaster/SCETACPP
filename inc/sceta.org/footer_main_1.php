@@ -1,6 +1,6 @@
 <div id="footercontainer">
 	<div id="smallprint">
-		&copy; 2014 Southern California Engineering Technologists Assocation. All rights reserved.
+		Copyright &copy; 2014-<?php echo date("Y"); ?> Southern California Engineering Technologists Assocation. All rights reserved.
 
 		<div class="follow">
 			<ul>
