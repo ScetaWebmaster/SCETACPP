@@ -91,16 +91,12 @@
 								</div>
 								<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 450px; overflow: hidden;">
 									<div>
-										<img u="image" src="img/news/201411_calendar-feeds-fixed_home.jpg">
-										<div u="thumb"><a href="news/2014/11/calendar-feeds-fixed/">Calendar Feeds Fixed</a></div>
+										<img u="image" src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xta1/t31.0-8/11096429_10153299339575984_6925977548576694891_o.jpg">
+										<div u="thumb"><a href="http://www.usatoday.com/story/news/nation-now/2015/03/25/solar-panels-spring-break/70416832/" target="_blank">USA Today: CPP Solar Spring Break</a></div>
 									</div>
 									<div>
 										<img u="image" src="http://www.verotechsolutions.net/images/118a1c4.jpg">
 										<div u="thumb"><a href="news/2014/11/jobs-and-scholarships/">Jobs and Scholarships</a></div>
-									</div>
-									<div>
-										<img u="image" src="img/news/201409_new-sceta-website_home.jpg">
-										<div u="thumb"><a href="news/2014/09/new-sceta-website/">The Newly Redesigned SCETA Website</a></div>
 									</div>
 								</div>
 								<div u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom: 0px; left: 0px; height: 45px; width: 600px;">

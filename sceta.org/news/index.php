@@ -74,6 +74,13 @@
 								Facebook, Twitter, and Instagram through our "Connect with Us" bar to get the latest and greatest.
 							</p>
 
+							<a href="http://www.usatoday.com/story/news/nation-now/2015/03/25/solar-panels-spring-break/70416832/" target="_blank">
+								<h4>USA Today: CPP Solar Spring Break</h4>
+								<h3>25 MAR 2015</h3>
+								<p><img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xta1/t31.0-8/11096429_10153299339575984_6925977548576694891_o.jpg">
+									For most students, spring break is a much-deserved chance to do anything but work. But in Desert Hot Springs, Calif. this week, about 30 students 
+									from California State Polytechnic University, Pomona, are spending their spring break installing solar panels at three low-income homes</p>
+
 							<a href="2014/11/calendar-feeds-fixed/">
 								<h4>Calendar Feeds Fixed</h4>
 								<h3>22 NOV 2014</h3>
