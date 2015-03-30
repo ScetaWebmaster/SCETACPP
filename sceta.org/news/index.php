@@ -74,6 +74,12 @@
 								Facebook, Twitter, and Instagram through our "Connect with Us" bar to get the latest and greatest.
 							</p>
 
+							<a href="2015/03/meet-our-new-officers/">
+								<h4>Meet Our New Officers</h4>
+								<h3>27 MAR 2015</h3>
+								<p><img src="http://netimpactla.org/wp-content/uploads/2012/12/Executive-Team.jpg">
+									Please help us welcome our new leadership team of SCETA for the upcoming 2015-2016 academic year.</p>
+
 							<a href="http://www.usatoday.com/story/news/nation-now/2015/03/25/solar-panels-spring-break/70416832/" target="_blank">
 								<h4>USA Today: CPP Solar Spring Break</h4>
 								<h3>25 MAR 2015</h3>

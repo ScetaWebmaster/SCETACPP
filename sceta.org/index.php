@@ -91,6 +91,10 @@
 								</div>
 								<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 450px; overflow: hidden;">
 									<div>
+										<img u="image" src="http://netimpactla.org/wp-content/uploads/2012/12/Executive-Team.jpg">
+										<div u="thumb"><a href="news/2015/03/meet-our-new-officers/">Meet Our New Officers</a></div>
+									</div>
+									<div>
 										<img u="image" src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xta1/t31.0-8/11096429_10153299339575984_6925977548576694891_o.jpg">
 										<div u="thumb"><a href="http://www.usatoday.com/story/news/nation-now/2015/03/25/solar-panels-spring-break/70416832/" target="_blank">USA Today: CPP Solar Spring Break</a></div>
 									</div>
