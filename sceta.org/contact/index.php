@@ -73,7 +73,7 @@
 								For general inquires or comments:
 								<ul class="contactList">
 									<li>SCETA</li>
-									<li><a href="mailto:support@sceta.org">support@sceta.org</a></li>
+									<li><a href="mailto:contact@sceta.org">contact@sceta.org</a></li>
 								</ul>
 							</p>
 
