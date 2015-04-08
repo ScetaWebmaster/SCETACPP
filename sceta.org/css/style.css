@@ -1181,6 +1181,7 @@ textarea:invalid {
 			}
 		}
 
+		#maincontent .span_3_of_4 .meetings_winter2015,
 		#maincontent .span_3_of_4 .meetings_fall2014 {
 			display: none;
 		}

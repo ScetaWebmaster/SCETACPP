@@ -9,6 +9,7 @@ $(document).ready(function() {
 	var menu_3d = $('ul.menu_3d');
 	var meetings_fall2014 = $('.meetings_fall2014');
 	var meetings_winter2015 = $('.meetings_winter2015');
+	var meetings_spring2015 = $('.meetings_spring2015');
 	var gallery_2005 = $('.gallery_2005');
 	var gallery_2006 = $('.gallery_2006');
 	var gallery_2008 = $('.gallery_2008');
@@ -119,16 +120,24 @@ $(document).ready(function() {
 		return false;
 	});
 
+	<!-- Meetings - Spring 2015 -->
+	$('#btn_meetings_spring2015').on('click', function(e) {
+		meetings_spring2015.toggle('Blind');
+		return false;
+	});
+
 	<!-- Meetings - Show All -->
 	$('#btn_showMeetings').on('click', function(e) {
 		meetings_fall2014.show('Blind');
 		meetings_winter2015.show('Blind');
+		meetings_spring2015.show('Blind');
 	});
 
 	<!-- Meetings - Hide All -->
 	$('#btn_hideMeetings').on('click', function(e) {
 		meetings_fall2014.hide('Blind');
 		meetings_winter2015.hide('Blind');
+		meetings_spring2015.hide('Blind');
 	});
 
 	<!-- Galleries - 2005 - 2006 -->
