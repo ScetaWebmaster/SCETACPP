@@ -70,15 +70,15 @@
 							</p>
 
 							<h4>Signup List</h4>
-							<!--
 							<p>
 								There are currently no events available for signups. Please stay tuned for future announcements.
 							</p>
-						-->
 
+						<!--
 							<ul>
 								<li><a href="https://docs.google.com/forms/d/1W6voVLk_G2aYHSnIKOIc8qy0nIVfgUkStR6dD9Eo7A0/viewform" target="_blank">[04/11/15] Power Supply Workshop</a></li>
 							</ul>
+						-->
 						</div>
 					</div>
 				</div>

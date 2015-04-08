@@ -91,7 +91,7 @@
 									"NumEvents" : 1,
 
 									"Name[0]" : "Power Supply Workshop",
-									"Date[0]" : "04/11/15",
+									"Date[0]" : "POSTPONED",
 									"Priority[0]" : "true",
 									"Legend[0]" : "",
 									"ID[0]" : "1dNxxQjVXiLzumG2lYV8ap9rlO5W1HH6FO-smPzPl8Xo"
