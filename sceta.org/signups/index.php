@@ -77,7 +77,6 @@
 						-->
 
 							<ul>
-								<li><a href="https://docs.google.com/forms/d/1W6voVLk_G2aYHSnIKOIc8qy0nIVfgUkStR6dD9Eo7A0/viewform" target="_blank">[04/11/15] Power Supply Workshop</a></li>
 								<li><a href="https://docs.google.com/forms/d/1tBi5GS0qbO5ZZpsR2wU29JdrmCrNKDNkQlej6xlCsfk/viewform" target="_blank">[04/23/15] Graduation Sashes</a></li>
 							</ul>
 						</div>
