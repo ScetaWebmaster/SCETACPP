@@ -74,11 +74,28 @@
 								Facebook, Twitter, and Instagram through our "Connect with Us" bar to get the latest and greatest.
 							</p>
 
+							<a href="2015/04/rsvp-now-2015-end-of-the-year-banquet/">
+								<h4>RSVP Now: 2015 End of the Year Banquet</h4>
+								<h3>18 APR 2015</h3>
+								<p><img src="http://www.cpp.edu/~rkr/images/diningroom.jpg">
+									It's that time of the year again! The 2015 SCETA End of the Year banquet is here. Check the details below and make sure your save your spot today
+									by RSVPing at</p>
+							</a>
+
+							<div class="readMore">
+								<a href="2015/04/rsvp-now-2015-end-of-the-year-banquet/">Read More >></a>
+							</div>
+
 							<a href="2015/03/meet-our-new-officers/">
 								<h4>Meet Our New Officers</h4>
 								<h3>27 MAR 2015</h3>
 								<p><img src="http://netimpactla.org/wp-content/uploads/2012/12/Executive-Team.jpg">
 									Please help us welcome our new leadership team of SCETA for the upcoming 2015-2016 academic year.</p>
+							</a>
+
+							<div class="readMore">
+								<a href="2015/03/meet-our-new-officers/">Read More >></a>
+							</div>
 
 							<a href="http://www.usatoday.com/story/news/nation-now/2015/03/25/solar-panels-spring-break/70416832/" target="_blank">
 								<h4>USA Today: CPP Solar Spring Break</h4>
@@ -86,6 +103,11 @@
 								<p><img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xta1/t31.0-8/11096429_10153299339575984_6925977548576694891_o.jpg">
 									For most students, spring break is a much-deserved chance to do anything but work. But in Desert Hot Springs, Calif. this week, about 30 students 
 									from California State Polytechnic University, Pomona, are spending their spring break installing solar panels at three low-income homes</p>
+							</a>
+
+							<div class="readMore">
+								<a href="http://www.usatoday.com/story/news/nation-now/2015/03/25/solar-panels-spring-break/70416832/">Read More >></a>
+							</div>
 
 							<a href="2014/11/calendar-feeds-fixed/">
 								<h4>Calendar Feeds Fixed</h4>
@@ -93,6 +115,11 @@
 								<p><img src="../img/news/201411_calendar-feeds-fixed_news.jpg">
 									The calendar feeds on the SCETA website are now fully fixed and functional as of Saturday, November 22, 2014 @ 5:03 PM. We apologize 
 									for the inconvenience the downtime may have caused</p> 
+							</a>
+
+							<div class="readMore">
+								<a href="2014/11/calendar-feeds-fixed/">Read More >></a>
+							</div>
 
 							<a href="2014/11/google-calendar-error/">
 								<h4>Google Calendar Error</h4>
@@ -100,6 +127,11 @@
 								<p><img src="../img/news/201411_google-calendar-error_news.jpg">
 									Google Calendar has officially discontinued their v2 API. Unfortunately, this has resulted in the failure of the
 									calendar feeds that the SCETA website heavily uses. This news announcement is here to</p> 
+							</a>
+
+							<div class="readMore">
+								<a href="2014/11/google-calendar-error/">Read More >></a>
+							</div>
 
 							<a href="2014/11/jobs-and-scholarships/">
 								<h4>Jobs and Scholarships</h4>
@@ -107,6 +139,11 @@
 								<p><img src="http://www.verotechsolutions.net/images/118a1c4.jpg">
 									SCETA is proud to announce the creation of a Scholarships and a Jobs & Internships page. One of our goals is to ease your 
 									college experience. This includes many things but not limited to</p> 
+							</a>
+
+							<div class="readMore">
+								<a href="2014/11/jobs-and-scholarships/">Read More >></a>
+							</div>
 
 							<a href="2014/11/3d-printing-workshop/">
 								<h4>3D Printing Workshop</h4>
@@ -114,6 +151,11 @@
 								<p><img src="http://upload.wikimedia.org/wikipedia/commons/f/f0/Printing_with_a_3D_printer_at_Makers_Party_Bangalore_2013_11.JPG">
 									This is a friendly reminder that SCETA will be hosting a 3D Printing Workshop on Saturday, Nov. 22, 2014 from 9:00 AM - 12:00 PM</b>
 									in Building 17, Room 2654. This workshop is intended for</p>
+							</a>
+
+							<div class="readMore">
+								<a href="2014/11/3d-printing-workshop/">Read More >></a>
+							</div>
 
 							<a href="2014/10/first-fall-general-meeting/">
 								<h4>1st Fall 2014 General Meeting</h4>
@@ -123,6 +165,10 @@
 									out our Meetings page for all the</p>
 							</a>
 
+							<div class="readMore">
+								<a href="2014/10/first-fall-general-meeting/">Read More >></a>
+							</div>
+
 							<a href="2014/09/new-sceta-website/">
 								<h4>Newer than Ever - The Newly Redesigned SCETA Website</h4>
 								<h3>21 SEPT 2014</h3>
@@ -131,12 +177,20 @@
 									If you have just recently joined us, we welcome you regardless</p>
 							</a>
 
+							<div class="readMore">
+								<a href="2014/09/new-sceta-website/">Read More >></a>
+							</div>
+
 							<a href="2014/06/thanks-for-coming-out/">
 								<h4>Thanks for Coming Out!</h4>
 								<h3>14 JUN 2014</h3>
 								<p><img src="../img/news/201406_thanks-for-coming-out.jpg">
 									Thank you once again for coming out to the SCETA banquet. The turnout was amazing and congratulations to those who won the great prizes.</p>
 							</a>
+
+							<div class="readMore">
+								<a href="2014/06/thanks-for-coming-out/">Read More >></a>
+							</div>
 
 							<a href="2014/06/sceta-banquet-is-today/">
 								<h4>SCETA Banquet is Today!</h4>
@@ -146,6 +200,10 @@
 								Claremont Buca di Beppo. Please remember that if you were a late RSVP</p>
 							</a>
 
+							<div class="readMore">
+								<a href="2014/06/sceta-banquet-is-today/">Read More >></a>
+							</div>
+
 							<a href="2014/06/summer-contact-list/">
 								<h4>Summer Contact List</h4>
 								<h3>5 JUN 2014</h3>
@@ -153,6 +211,10 @@
 									We will be maintaining a summer contact list for those interested in receiving information about job opportunities, activites,
 								and other events that will happen in the summer before the next school year. If you are interested</p>
 							</a>
+
+							<div class="readMore">
+								<a href="2014/06/summer-contact-list/">Read More >></a>
+							</div>
 
 							<a href="2014/06/last-day-to-rsvp/">
 								<h4>Last Day to RSVP</h4>
@@ -162,6 +224,10 @@
 								when you are ready. Current prices are as follows</p>
 							</a>
 
+							<div class="readMore">
+								<a href="2014/06/last-day-to-rsvp/">Read More >></a>
+							</div>
+
 							<a href="2014/05/sceta-banquet-rsvp-extended/">
 								<h4>SCETA Banquet RSVP Extended</h4
 								<h3>22 MAY 2014</h3>
@@ -170,6 +236,10 @@
 								sceta.secretary@gmail.com. Prices have increased to the following</p>
 							</a>
 
+							<div class="readMore">
+								<a href="2014/05/sceta-banquet-rsvp-extended/">Read More >></a>
+							</div>
+
 							<a href="2014/05/new-engineering-resource/">
 								<h4>New Engineering Resource</h4>
 								<h3>1 MAY 2014</h3>
@@ -177,6 +247,10 @@
 									We have most recently been acquainted with a very helpful engineering resource that we find may be very useful for
 								your engineering endeavors. From professional organizations to colleges to books, this resources has</p>
 							</a>
+
+							<div class="readMore">
+								<a href="2014/05/new-engineering-resource/">Read More >></a>
+							</div>
 
 							<a href="2014/02/3d-design-contest/">
 								<h4>3D Design Contest</h4>
@@ -187,6 +261,10 @@
 								SCETA member discounted price</p>
 							</a>
 
+							<div class="readMore">
+								<a href="2014/02/3d-design-contest/">Read More >></a>
+							</div>
+
 							<a href="2014/02/jpl-tour/">
 								<h4>JPL Tour</h4>
 								<h3>13 FEB 2014</h3>
@@ -194,6 +272,10 @@
 									SCETA has officially landed a tour for JPL on Friday, Feb. 21st, 2014 from 10:00 AM - 12:00 PM. If you are interested, 
 								please attend the next general meeting for more information and contact our</p>
 							</a>
+
+							<div class="readMore">
+								<a href="2014/02/jpl-tour/">Read More >></a>
+							</div>
 
 							<a href="2014/02/airwolf-3d-printer-tour/">
 								<h4>Airwolf 3D Printer Tour</h4>
@@ -203,6 +285,10 @@
 								please contact our secretary at sceta.secretary@gmail.com. The tour will be fairly short (approximately 1 hour), and it will be</p>
 							</a>
 
+							<div class="readMore">
+								<a href="2014/02/airwolf-3d-printer-tour/">Read More >></a>
+							</div>
+
 							<a href="2014/01/winter-grid-solar-installation/">
 								<h4>Winter GRID Solar Installation</h4>
 								<h3>10 JAN 2014</h3>
@@ -211,6 +297,10 @@
 								your e-mails for the details sent out by our president and respond back</p>
 							</a>
 
+							<div class="readMore">
+								<a href="2014/01/winter-grid-solar-installation/">Read More >></a>
+							</div>
+
 							<a href="2013/12/designed-and-built-by-students/">
 								<h4>Designed & Built by Students!</h4>
 								<h3>12 DEC 2013</h3>
@@ -218,6 +308,10 @@
 									A perfect Christmas gift. Buy it assembled or in a kit. Show off and support what Engineering Technology is all about. Available
 								in gift box sets: assembled or kit (soldering required). Purchase</p>
 							</a>
+
+							<div class="readMore">
+								<a href="2013/12/designed-and-built-by-students/">Read More >></a>
+							</div>
 						</div>
 					</div>
 				</div>
