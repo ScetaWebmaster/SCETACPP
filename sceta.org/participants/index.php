@@ -88,25 +88,19 @@
 							<img id="list" style="margin-left: 24px;" src="../img/ic_loading.gif">
 							<script id="gDriveFeed" src="../js/googleDriveFeed_eventParticipants.js">
 								{
-									"NumEvents" : 3,
+									"NumEvents" : 2,
 
-									"Name[0]" : "Power Supply Workshop",
-									"Date[0]" : "04/18/2015",
-									"Priority[0]" : "true",
+									"Name[0]" : "Graduation Sashes",
+									"Date[0]" : "04/23/2015",
+									"Priority[0]" : "false",
 									"Legend[0]" : "",
-									"ID[0]" : "1dNxxQjVXiLzumG2lYV8ap9rlO5W1HH6FO-smPzPl8Xo",
+									"ID[0]" : "1P6trcW9HuuoAczk3Urhpwwbh-QC33MhV0KNB3OvjKn0",
 
-									"Name[1]" : "Graduation Sashes",
-									"Date[1]" : "04/23/2015",
+									"Name[1]" : "SCETA 2015 End of the Year Banquet",
+									"Date[1]" : "04/24/2015",
 									"Priority[1]" : "false",
 									"Legend[1]" : "",
-									"ID[1]" : "1P6trcW9HuuoAczk3Urhpwwbh-QC33MhV0KNB3OvjKn0",
-
-									"Name[2]" : "SCETA 2015 End of the Year Banquet",
-									"Date[2]" : "04/24/2015",
-									"Priority[2]" : "false",
-									"Legend[2]" : "",
-									"ID[2]" : "1A2bjWOfifsWa8e3SdQSJZbahL7eEp-NezwNETPS55-k"
+									"ID[1]" : "1A2bjWOfifsWa8e3SdQSJZbahL7eEp-NezwNETPS55-k"
 								}
 							</script>
 						</div>
