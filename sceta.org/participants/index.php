@@ -88,19 +88,13 @@
 							<img id="list" style="margin-left: 24px;" src="../img/ic_loading.gif">
 							<script id="gDriveFeed" src="../js/googleDriveFeed_eventParticipants.js">
 								{
-									"NumEvents" : 2,
+									"NumEvents" : 1,
 
 									"Name[0]" : "Graduation Sashes",
 									"Date[0]" : "04/23/2015",
 									"Priority[0]" : "false",
 									"Legend[0]" : "",
-									"ID[0]" : "1P6trcW9HuuoAczk3Urhpwwbh-QC33MhV0KNB3OvjKn0",
-
-									"Name[1]" : "SCETA 2015 End of the Year Banquet",
-									"Date[1]" : "04/24/2015",
-									"Priority[1]" : "false",
-									"Legend[1]" : "",
-									"ID[1]" : "1A2bjWOfifsWa8e3SdQSJZbahL7eEp-NezwNETPS55-k"
+									"ID[0]" : "1P6trcW9HuuoAczk3Urhpwwbh-QC33MhV0KNB3OvjKn0"
 								}
 							</script>
 						</div>

@@ -78,7 +78,6 @@
 
 							<ul>
 								<li><a href="https://docs.google.com/forms/d/1tBi5GS0qbO5ZZpsR2wU29JdrmCrNKDNkQlej6xlCsfk/viewform" target="_blank">[04/23/2015] Graduation Sashes</a></li>
-								<li><a href="https://docs.google.com/forms/d/1tohWrV-CkiSnPDNH4oTVHDKKX-fP-lCUVL0C40tExAs/viewform" target="_blank">[04/24/2015] SCETA 2015 End of the Year Banquet</a></li>
 							</ul>
 						</div>
 					</div>
