@@ -88,13 +88,25 @@
 							<img id="list" style="margin-left: 24px;" src="../img/ic_loading.gif">
 							<script id="gDriveFeed" src="../js/googleDriveFeed_eventParticipants.js">
 								{
-									"NumEvents" : 1,
+									"NumEvents" : 3,
 
-									"Name[0]" : "Graduation Sashes",
-									"Date[0]" : "04/23/2015",
+									"Name[0]" : "Broomball Social with IEEE",
+									"Date[0]" : "05/21/2015",
 									"Priority[0]" : "false",
 									"Legend[0]" : "",
-									"ID[0]" : "1P6trcW9HuuoAczk3Urhpwwbh-QC33MhV0KNB3OvjKn0"
+									"ID[0]" : "1JR1TubLll1ShbozvNOh2ukoD0wjpmZD38iPpJ6T_Rvo",
+
+									"Name[1]" : "Bonfire Social with SWE",
+									"Date[1]" : "05/23/2015",
+									"Priority[1]" : "false",
+									"Legend[1]" : "",
+									"ID[1]" : "1HKxko7AHxCqkUCKQ9-lndo02_3fAP0k2SK6mvOS84O0",
+
+									"Name[2]" : "ET Banquet Hosted by SCETA and MCAA",
+									"Date[2]" : "06/04/2015",
+									"Priority[2]" : "false",
+									"Legend[2]" : "",
+									"ID[2]" : "1w9Brf_npbsjjOrym8V1grIaXpsfuNKL8QbDYhHh7GbA"
 								}
 							</script>
 						</div>

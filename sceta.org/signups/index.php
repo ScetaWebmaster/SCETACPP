@@ -77,7 +77,9 @@
 						-->
 
 							<ul>
-								<li><a href="https://docs.google.com/forms/d/1tBi5GS0qbO5ZZpsR2wU29JdrmCrNKDNkQlej6xlCsfk/viewform" target="_blank">[04/23/2015] Graduation Sashes</a></li>
+								<li><a href="https://docs.google.com/forms/d/1Yt4M6reMS7GLMoFK3Wlnuocr6b9VOSH04nnU6hbdLIk/viewform" target="_blank">[05/21/2015] Broomball Social with IEEE</a></li>
+								<li><a href="https://docs.google.com/forms/d/1dUf9ZggSoKo-0pnS45VHenQiuMomJpTOKnBT_Iq5HrM/viewform" target="_blank">[05/23/2015] Bonfire Social with SWE</a></li>
+								<li><a href="https://docs.google.com/forms/d/15cNDjHKFzHNKZ3bXGf_uUuXq8w-gUmcUuOW4-lSe23Y/viewform" target="_blank">[06/04/2015] ET Banquet Hosted by SCETA and MCAA</a></li>
 							</ul>
 						</div>
 					</div>
