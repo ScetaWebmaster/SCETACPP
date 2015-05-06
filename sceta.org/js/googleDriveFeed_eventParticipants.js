@@ -153,7 +153,7 @@ $(document).ready(function() {
 
 	// This function defines the individual button toggles.
 	// WARNING: Due to limitations, this function is unable to loop through the elements.
-	// IF you need to add more, you need to manually add more.
+	// If you need to add more, you need to manually add more.
 	function defineToggles() {
 		$(document).on('click', "#btn_event0", function() {
 			event[0].toggle('Blind');
