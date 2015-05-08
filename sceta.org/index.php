@@ -142,6 +142,15 @@
 							<a href="calendar/" id="more"><img src="img/ic_right-arrow.png"> View the Full Calendar</a><br><br>
 						</div>
 					</div>
+
+					<div class="section group">
+						<div class="col span_2_of_2">
+							<h4>Don't miss the ET Banquet Hosted by SCETA and MCAA!</h4>
+							<p>
+								<a href="https://docs.google.com/forms/d/15cNDjHKFzHNKZ3bXGf_uUuXq8w-gUmcUuOW4-lSe23Y/viewform" target="_blank"><img src="img/img_etbanquet_00.jpg"></a>
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 
