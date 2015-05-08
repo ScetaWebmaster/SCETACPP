@@ -1,13 +1,7 @@
 <div id="footercontainer">
 	<div id="smallprint">
-		Copyright &copy; 2014-<?php echo date("Y"); ?> Southern California Engineering Technologists Assocation. All rights reserved.
-
 		<div class="follow">
 			<ul>
-				<br>
-				<li>
-					Follow:
-				</li>
 				<li>
 					<a href="https://www.facebook.com/sceta" target="_blank"><img src="../img/ic_facebook.png" alt="Facebook"></a>
 				</li>
@@ -36,6 +30,8 @@
 				</li>
 			</ul>	
 		</div>
+
+		Copyright &copy; 2014-<?php echo date("Y"); ?> Southern California Engineering Technologists Assocation. All rights reserved.
 	</div>
 </div>
 

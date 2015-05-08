@@ -43,19 +43,20 @@
 				<p>
 					For general inquires or comments:
 					<br><a href="mailto:contact@sceta.org">contact@sceta.org</a>
-					<br><br>
+				</p>
+
+				<p>
 					For website-related feedback and bug reports:
 					<br><a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a>
-					<br><br>
+				</p>
+
+				<p>
 					Please see our <a href="contact/">contacts page</a> for a full list of contacts.
 				</p>
 		</div>
 		<div class="col span_1_of_3">
 			<h4>Visit Us</h4>
 				<p>
-					Find us in our club room located in Building 9, Room 257.
-					<br><br>
-					<b>Southern California Engineering Technologists Association</b><br>
 					Building 9, Room 257<br>
 					Department of Engineering Technology<br>
 					College of Engineering<br>
@@ -65,15 +66,10 @@
 				</p>
 		</div>
 	</footer>
+	
 	<div id="smallprint">
-		Copyright &copy; 2014-<?php echo date("Y"); ?> Southern California Engineering Technologists Assocation. All rights reserved.
-
 		<div class="follow">
 			<ul>
-				<br>
-				<li>
-					Follow:
-				</li>
 				<li>
 					<a href="https://www.facebook.com/sceta" target="_blank"><img src="img/ic_facebook.png" alt="Facebook"></a>
 				</li>
@@ -102,6 +98,8 @@
 				</li>
 			</ul>	
 		</div>
+
+		Copyright &copy; 2014-<?php echo date("Y"); ?> Southern California Engineering Technologists Assocation. All rights reserved.
 	</div>
 </div>
 </div>
