@@ -84,6 +84,7 @@
 								</ul>
 							</p>
 
+							<!-- WARNING: Due to limitations, please fix the script file if you need more than 5 events. Find explanation there. -->
 							<h4>Event Participant List</h4>
 							<img id="list" style="margin-left: 24px;" src="../img/ic_loading.gif">
 							<script id="gDriveFeed" src="../js/googleDriveFeed_eventParticipants.js">

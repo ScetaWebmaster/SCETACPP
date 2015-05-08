@@ -91,10 +91,6 @@
 								</div>
 								<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 450px; overflow: hidden;">
 									<div>
-										<img u="image" src="http://www.cpp.edu/~rkr/images/diningroom.jpg">
-										<div u="thumb"><a href="news/2015/04/rsvp-now-2015-end-of-the-year-banquet/">RSVP Now: 2015 End of the Year Banquet</a></div>
-									</div>
-									<div>
 										<img u="image" src="http://netimpactla.org/wp-content/uploads/2012/12/Executive-Team.jpg">
 										<div u="thumb"><a href="news/2015/03/meet-our-new-officers/">Meet Our New Officers</a></div>
 									</div>
