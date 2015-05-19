@@ -98,7 +98,7 @@
 								Below is a list of what we currently supply. Happy electronics shopping!
 							</p>
 
-							<h4>Kits & Cables</h4>
+							<h4>Kits, Cables & Other Components</h4>
 
 							<table class="parts" border="1">
 								<tr class="title">
