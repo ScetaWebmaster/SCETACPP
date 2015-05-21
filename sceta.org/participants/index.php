@@ -89,7 +89,7 @@
 							<img id="list" style="margin-left: 24px;" src="../img/ic_loading.gif">
 							<script id="gDriveFeed" src="../js/googleDriveFeed_eventParticipants.js">
 								{
-									"NumEvents" : 2,
+									"NumEvents" : 3,
 
 									"Name[0]" : "Broomball Social with IEEE",
 									"Date[0]" : "05/21/2015",
@@ -101,7 +101,13 @@
 									"Date[1]" : "06/04/2015",
 									"Priority[1]" : "false",
 									"Legend[1]" : "",
-									"ID[1]" : "1w9Brf_npbsjjOrym8V1grIaXpsfuNKL8QbDYhHh7GbA"
+									"ID[1]" : "1w9Brf_npbsjjOrym8V1grIaXpsfuNKL8QbDYhHh7GbA",
+
+									"Name[2]" : "CES 2016 with SCETA & IEEE",
+									"Date[2]" : "01/07/2016",
+									"Priority[2]" : "false",
+									"Legend[2]" : "",
+									"ID[2]" : "1I0Tw3odhhYM4jfIF_7BWC9f2k0K6cVYI_0TibHUOaiA"
 								}
 							</script>
 						</div>
