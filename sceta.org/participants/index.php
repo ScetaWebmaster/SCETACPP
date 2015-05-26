@@ -89,25 +89,19 @@
 							<img id="list" style="margin-left: 24px;" src="../img/ic_loading.gif">
 							<script id="gDriveFeed" src="../js/googleDriveFeed_eventParticipants.js">
 								{
-									"NumEvents" : 3,
+									"NumEvents" : 2,
 
-									"Name[0]" : "Broomball Social with IEEE",
-									"Date[0]" : "05/21/2015",
+									"Name[0]" : "ET Banquet Hosted by SCETA and MCAA",
+									"Date[0]" : "06/04/2015",
 									"Priority[0]" : "false",
 									"Legend[0]" : "",
-									"ID[0]" : "1JR1TubLll1ShbozvNOh2ukoD0wjpmZD38iPpJ6T_Rvo",
+									"ID[0]" : "1w9Brf_npbsjjOrym8V1grIaXpsfuNKL8QbDYhHh7GbA",
 
-									"Name[1]" : "ET Banquet Hosted by SCETA and MCAA",
-									"Date[1]" : "06/04/2015",
+									"Name[1]" : "CES 2016 with SCETA & IEEE",
+									"Date[1]" : "01/07/2016",
 									"Priority[1]" : "false",
 									"Legend[1]" : "",
-									"ID[1]" : "1w9Brf_npbsjjOrym8V1grIaXpsfuNKL8QbDYhHh7GbA",
-
-									"Name[2]" : "CES 2016 with SCETA & IEEE",
-									"Date[2]" : "01/07/2016",
-									"Priority[2]" : "false",
-									"Legend[2]" : "",
-									"ID[2]" : "1I0Tw3odhhYM4jfIF_7BWC9f2k0K6cVYI_0TibHUOaiA"
+									"ID[1]" : "1I0Tw3odhhYM4jfIF_7BWC9f2k0K6cVYI_0TibHUOaiA"
 								}
 							</script>
 						</div>
