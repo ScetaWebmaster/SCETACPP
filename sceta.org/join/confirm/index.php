@@ -93,7 +93,6 @@
 									$error3 = FALSE;
 									$error4 = FALSE;
 									$error5 = FALSE;
-									$error6 = FALSE;
 
 									if (!isName($_REQUEST['firstname']) || empty($_REQUEST['firstname']) || strlen($_REQUEST['firstname']) > 30) {
 										$message1 = "<li>Please check your first name. Only the letters A-Z are accepted.</li>";
@@ -120,16 +119,10 @@
 										$error4 = TRUE;
 									}
 
-									if (!isDigits($_REQUEST['broncoid']) || strlen($_REQUEST['broncoid']) > 15) {
-										$message5 = "<li>Please check your Bronco ID. It may not exceed 15 digits and only digits 0-9 are allowed.</li>";
+									if (!isDigits($_REQUEST['broncoid']) || strlen($_REQUEST['broncoid']) > 9) {
+										$message5 = "<li>Please check your Bronco ID. It may not exceed 9 digits and only digits 0-9 are allowed.</li>";
 										$form_validated = FALSE;
 										$error5 = TRUE;
-									}
-
-									if (empty($_REQUEST['major']) || strlen($_REQUEST['major']) > 60) {
-										$message6 = "<li>Please check your major. It can be up to 60 characters and cannot be empty.</li>";
-										$form_validated = FALSE;
-										$error6 = TRUE;
 									}
 
 									if (!$form_validated) {
@@ -154,10 +147,6 @@
 
 										if ($error5) {
 											echo $message5;
-										}
-
-										if ($error6) {
-											echo $message6;
 										}
 
 										echo "</ul>";
@@ -189,11 +178,7 @@
 										$form_validated = FALSE;
 									}
 
-									if (!isDigits($_REQUEST['broncoid']) || strlen($_REQUEST['broncoid']) > 15) {
-										$form_validated = FALSE;
-									}
-
-									if (empty($_REQUEST['major']) || strlen($_REQUEST['major']) > 60) {
+									if (!isDigits($_REQUEST['broncoid']) || strlen($_REQUEST['broncoid']) > 9) {
 										$form_validated = FALSE;
 									}
 
@@ -212,16 +197,16 @@
 								$phone = "(" . $_REQUEST['phone1'] . ") " . $_REQUEST['phone2'] . "-".$_REQUEST['phone3'];
 								$broncoid = $_REQUEST['broncoid'];
 								$major = $_REQUEST['major'];
-								$email_message = "Dear Elizabeth Romo,<br><br>We have a new member who just registered for SCETA. 
+								$email_message = "Dear SCETA Secretary,<br><br>We have a new member who just registered for SCETA. 
 									The following is their information:";
 								$email_message .= "<ul>";
 						    		$email_message .= "<li>Name: " . clean_string($firstname) . " " . clean_string($lastname) . "</li>";
-						    		$email_message .= "<li>Email: " . clean_string($email) . "</li>";
-						    		$email_message .= "<li>Telephone: " . clean_string($phone) . "</li>";
-						    		$email_message .= "<li>Bronco ID: " . clean_string($broncoid) . "</li>";
+						    		$email_message .= "<li>E-mail Address: " . clean_string($email) . "</li>";
+						    		$email_message .= "<li>Phone Number: " . clean_string($phone) . "</li>";
+						    		$email_message .= "<li>Bronco ID Number: " . clean_string($broncoid) . "</li>";
 						    		$email_message .= "<li>Major: " . clean_string($major) . "</li>";
 								$email_message .= "</ul>";
-								$email_message .= "Best regards,<br>Byron Phung<br><br><hr>Please note that this is an 
+								$email_message .= "Best regards,<br>SCETA Webmaster<br><br><hr>Please note that this is an 
 									automatically generated message upon registration.<br>Any concerns can be discussed 
 									via reply to this e-mail (webmaster@sceta.org), on GroupMe, or in person.";
 
@@ -310,15 +295,15 @@
 									to complete this portion of your membership process.<br><br>Below is the following information that was submitted:";
 								$email_message1 .= "<ul>";
 						    		$email_message1 .= "<li>Name: " . clean_string($firstname) . " " . clean_string($lastname) . "</li>";
-						    		$email_message1 .= "<li>Email: " . clean_string($email) . "</li>";
-						    		$email_message1 .= "<li>Telephone: " . clean_string($phone) . "</li>";
-						    		$email_message1 .= "<li>Bronco ID: " . clean_string($broncoid) . "</li>";
+						    		$email_message1 .= "<li>E-mail Address: " . clean_string($email) . "</li>";
+						    		$email_message1 .= "<li>Phone Number: " . clean_string($phone) . "</li>";
+						    		$email_message1 .= "<li>Bronco ID Number: " . clean_string($broncoid) . "</li>";
 						    		$email_message1 .= "<li>Major: " . clean_string($major) . "</li>";
 								$email_message1 .= "</ul>";
 								$email_message1 .= "If you have any problems with this membership process or need to correct any information, please e-mail our 
 									secretary at <a href='mailto:secretary@sceta.org'>secretary@sceta.org</a>.<br><br> Thank you once again for 
 									joining SCETA and we hope to see you very soon at our next meeting!<br><br>";
-								$email_message1 .= "Best regards,<br>Elizabeth Romo<br>Your SCETA Secretary<br><br><hr>This is an automatically 
+								$email_message1 .= "Best regards,<br>Your SCETA Secretary<br><br><hr>This is an automatically 
 									generated message upon registration.<br>Please direct any questions, comments, or concerns via e-mail to 
 									<a href='mailto:secretary@sceta.org'>secretary@sceta.org</a> or in person.";
 
