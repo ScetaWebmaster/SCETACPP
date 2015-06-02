@@ -156,7 +156,7 @@
 											}
 
 											if ($mat == "PLA") {
-												if ($col == "Black" || $col == "Orange") {
+												if ($col == "Black") {
 													return false;
 												}
 											}
@@ -310,8 +310,8 @@
 										$email_message = "Dear 3D Techs,<br><br>We have a new 3D printing order. The following is the information:";
 										$email_message .= "<ul>";
 								    		$email_message .= "<li>Name: " . clean_string($firstname) . " " . clean_string($lastname) . "</li>";
-								    		$email_message .= "<li>Email: " . clean_string($email) . "</li>";
-								    		$email_message .= "<li>Telephone: " . clean_string($phone) . "</li>";
+								    		$email_message .= "<li>E-mail Address: " . clean_string($email) . "</li>";
+								    		$email_message .= "<li>Phone Number: " . clean_string($phone) . "</li>";
 								    		$email_message .= "<li>Order Time: " . $date . "</li>";
 								    		$email_message .= "<li>Quality: " . $quality . "</li>";
 								    		$email_message .= "<li>Material: " . $material . "</li>";
@@ -322,7 +322,7 @@
 								    			"'>http://www.sceta.org/3d/stlUploads/" . $_FILES["file"]["name"] . "</a></li>";
 								    		//$email_message .= "<li>Current Order List: <a href='http://www.sceta.org/new/3d/stlUploads/orders.txt' target='_blank'>http://www.sceta.org/new/3d/stlUploads/orders.txt</a></li>";
 										$email_message .= "</ul>";
-										$email_message .= "Best regards,<br>Byron Phung<br><br><hr>Please note that this is an automatically generated message upon submission.<br>Any errors or concerns related to the automated 3D system may be directed towards me via in person, GroupMe, or webmaster@sceta.org.";
+										$email_message .= "Best regards,<br>Your SCETA Webmaster<br><br><hr>Please note that this is an automatically generated message upon submission.<br>Any errors or concerns related to the automated 3D system may be directed towards me via in person, GroupMe, or webmaster@sceta.org.";
 
 										// PEAR Mail Configuration
 										require_once "Mail.php"; // PEAR mail is already installed in the current environment.
@@ -369,8 +369,8 @@
 										$email_message1 = "Dear " . clean_string($firstname) . " " . clean_string($lastname) . ",<br><br>We have received your 3D printing order. Below is your submitted information:";
 										$email_message1 .= "<ul>";
 								    		$email_message1 .= "<li>Name: " . clean_string($firstname) . " " . clean_string($lastname) . "</li>";
-								    		$email_message1 .= "<li>Email: " . clean_string($email) . "</li>";
-								    		$email_message1 .= "<li>Telephone: " . clean_string($phone) . "</li>";
+								    		$email_message1 .= "<li>E-mail Address: " . clean_string($email) . "</li>";
+								    		$email_message1 .= "<li>Phone Number: " . clean_string($phone) . "</li>";
 								    		$email_message1 .= "<li>Order Time: " . $date . "</li>";
 								    		$email_message1 .= "<li>Quality: " . $quality . "</li>";
 								    		$email_message1 .= "<li>Material: " . $material . "</li>";

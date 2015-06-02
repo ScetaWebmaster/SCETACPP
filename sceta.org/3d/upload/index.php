@@ -30,6 +30,7 @@
 		<link rel="stylesheet" href="../../css/html5reset.css" media="all">
 		<link rel="stylesheet" href="../../css/style.css" media="all">
 		<link rel="stylesheet" href="../../css/col.css" media="all">
+		<link rel="stylesheet" href="../../css/2cols.css" media="all">
 		<link rel="stylesheet" href="../../css/3cols.css" media="all">
 		<link rel="stylesheet" href="../../css/4cols.css" media="all">
 
@@ -192,82 +193,144 @@
 								successfully placed.
 							</p>
 
-							<br>
-
 							<!-- I AM NEW -->
 							<form action="confirm/" method="post" enctype="multipart/form-data">
 								<fieldset>
-									<p>
-										<b>First Name: </b> <input name="firstname" type="text" id="firstname" size="30" maxlength="30">
-									</p>
+									<div class="section group">
+										<div class="col span_1_of_2">
+											<p>
+												<b>First Name</b>
+											</p>
 
-									<p>
-										<b>Last Name: </b> <input name="lastname" type="text" id="lastname" size="30" maxlength="30">
-									</p>
+											<p>
+												<input name="firstname" type="text" id="firstname" maxlength="30" style="width: 100%;">
+											</p>
+										</div>
 
-									<p>
-										<b>E-mail Address: </b> <input name="email" type="text" id="email" size="36" maxlength="60">
-									</p>
+										<div class="col span_1_of_2">
+											<p>
+												<b>Last Name</b>
+											</p>
 
-									<p>
-										<b>Phone Number: </b>
-										<input name="phone1" type="text" id="phone1" size="3" maxlength="3"> - 
-										<input name="phone2" type="text" id="phone2" size="3" maxlength="3"> -
-										<input name="phone3" type="text" id="phone3" size="4" maxlength="4">	
-									</p>
+											<p>
+												<input name="lastname" type="text" id="lastname" maxlength="30" style="width: 100%;">
+											</p>
+										</div>
+									</div>
 
-									<p>
-										<b>Quality: </b>
-										<select name="quality" id="quality">
-											<option value="Low">Low ($1.00 per 500 mm)</option>
-											<option value="Medium">Medium ($1.50 per 500 mm)</option>
-											<option value="High">High ($2.00 per 500 mm)</option>
-										</select>
-									</p>
+									<div class="section group">
+										<div class="col span_2_of_2">
+											<p>
+												<b>E-mail Address</b><br>
+												This will be the primary e-mail address that we will be contacting you with.
+											</p>
 
-									<p>
-										<b>Filament/Material: </b>
-										<select name="material" id="material">
-											<option value="ABS">ABS</option>
-											<option value="PLA">PLA</option>
-										</select>
-									</p>
+											<p>
+												<input name="email" type="text" id="email" maxlength="60" style="width: 100%;">
+											</p>
+										</div>
+									</div>
 
-									<p>
-										<b>Color: </b>
-										<select name="color" id="color">
-											<option value="Green">Green (ALL)</option>
-											<option value="Red">Red (ALL)</option>
-											<option value="Black">Black (ABS)</option>
-											<option value="Orange">Orange (ABS)</option>
-											<option value="Sky Blue">Sky Blue (PLA)</option>
-											<option value="Silver">Silver (PLA)</option>
-											<option value="Pink">Pink (PLA)</option>
-											<option value="Natural">Natural (PLA)</option>
-										</select>
-									</p>
+									<div class="section group">
+										<div class="col span_2_of_2">
+											<p>
+												<b>Phone Number</b>
+											</p>
 
-									<p>
-										<label for="file"><b>File: </b>
-										<input type="file" name="file" id="file"></label>
-									</p>
+											<p>
+												<input name="phone1" type="text" id="phone1" size="3" maxlength="3"> - 
+												<input name="phone2" type="text" id="phone2" size="3" maxlength="3"> -
+												<input name="phone3" type="text" id="phone3" size="4" maxlength="4">	
+											</p>
+										</div>
+									</div>
 
-									<p>
-										<b>Additional Comments (Max 500 Characters):</b>
-									</p>
+									<div class="section group">
+										<div class="col span_2_of_2">
+											<p>
+												<b>Quality</b>
+											</p>
 
-									<p>
-										<textarea name="comments" id="comments" maxlength="500"></textarea>
-									</p>
+											<p>
+												<select name="quality" id="quality">
+													<option value="Low">Low ($1.00 per 500 mm)</option>
+													<option value="Medium">Medium ($1.50 per 500 mm)</option>
+													<option value="High">High ($2.00 per 500 mm)</option>
+												</select>
+											</p>
+										</div>
+									</div>
+
+									<div class="section group">
+										<div class="col span_2_of_2">
+											<p>
+												<b>Filament/Material</b>
+											</p>
+
+											<p>
+												<select name="material" id="material">
+													<option value="ABS">ABS</option>
+													<option value="PLA">PLA</option>
+												</select>
+											</p>
+										</div>
+									</div>
+
+									<div class="section group">
+										<div class="col span_2_of_2">
+											<p>
+												<b>Color</b>
+											</p>
+
+											<p>
+												<select name="color" id="color">
+													<option value="Green">Green (ALL)</option>
+													<option value="Red">Red (ALL)</option>
+													<option value="Black">Black (ABS)</option>
+													<option value="Sky Blue">Sky Blue (PLA)</option>
+													<option value="Silver">Silver (PLA)</option>
+													<option value="Pink">Pink (PLA)</option>
+													<option value="Natural">Natural (PLA)</option>
+												</select>
+											</p>
+										</div>
+									</div>
+
+									<div class="section group">
+										<div class="col span_2_of_2">
+											<p>
+												<label for="file"><b>File</b>
+											</p>
+
+											<p>
+												<input type="file" name="file" id="file"></label>
+											</p>
+										</div>
+									</div>
+
+									<div class="section group">
+										<div class="col span_2_of_2">
+											<p>
+												<b>Additional Comments (Max 500 Characters)</b>
+											</p>
+
+
+											<p>
+												<textarea name="comments" id="comments" maxlength="500"></textarea>
+											</p>
+										</div>
+									</div>
 
 									<!-- Check for spam. -->
 									<input name='name2' type='text' size='20' style='display: none;'>
 
-									<br>
-									
-									<p>
-										<input type="submit" name="submit" value="Submit Order" id="submitButton">
-									</p>
+									<div class="section group">
+										<div class="col span_1_of_2">
+											<p>
+												<input type="submit" name="submit" value="Submit Order" id="submitButton">
+											</p>
+										</div>
+									</div>
 								</fieldset> 	
 							</form>
 						</div>
