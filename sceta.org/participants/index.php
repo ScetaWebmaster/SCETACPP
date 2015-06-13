@@ -89,19 +89,13 @@
 							<img id="list" style="margin-left: 24px;" src="../img/ic_loading.gif">
 							<script id="gDriveFeed" src="../js/googleDriveFeed_eventParticipants.js">
 								{
-									"NumEvents" : 2,
+									"NumEvents" : 1,
 
-									"Name[0]" : "ET Banquet Hosted by SCETA and MCAA",
-									"Date[0]" : "06/04/2015",
+									"Name[0]" : "CES 2016 with SCETA & IEEE",
+									"Date[0]" : "01/07/2016",
 									"Priority[0]" : "false",
 									"Legend[0]" : "",
-									"ID[0]" : "1w9Brf_npbsjjOrym8V1grIaXpsfuNKL8QbDYhHh7GbA",
-
-									"Name[1]" : "CES 2016 with SCETA & IEEE",
-									"Date[1]" : "01/07/2016",
-									"Priority[1]" : "false",
-									"Legend[1]" : "",
-									"ID[1]" : "1I0Tw3odhhYM4jfIF_7BWC9f2k0K6cVYI_0TibHUOaiA"
+									"ID[0]" : "1I0Tw3odhhYM4jfIF_7BWC9f2k0K6cVYI_0TibHUOaiA"
 								}
 							</script>
 						</div>
