@@ -218,7 +218,7 @@
 								$host = "mail.sceta.org"; // Host of mail server.
 								$username = "donotreply@sceta.org"; // Host user.
 								$from_address = "donotreply@sceta.org"; // Set a from address.
-								$password = "ecetsCPP1"; // Password of host user.
+								$password = "Airwolf7400"; // Password of host user.
 								$reply_to = "webmaster@sceta.org"; // Reply e-mail.
 								$port = "50";
 
