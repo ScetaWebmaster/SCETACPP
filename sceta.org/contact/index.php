@@ -12,7 +12,7 @@
 		<!-- Always Force Latest IE Rendering Engine (even in intranet) & Chrome Frame -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>SCETA - Contact Us</title>
+		<title>Contact SCETA</title>
 
 		<meta name="description" content="SCETA (Southern California Engineering Technologists Association) has been networking with engineering alumni who have been working in the engineering field since 1983. SCETA is an association of students interested in life-long learning and the sharing of knowledge among the various engineering disciplines. One of our goals is to establish a social network for current/future students and alumni.">
 		<meta name="keywords" content="SCETA, engineering, technology, networking">
@@ -30,8 +30,7 @@
 		<link rel="stylesheet" href="../css/html5reset.css" media="all">
 		<link rel="stylesheet" href="../css/style.css" media="all">
 		<link rel="stylesheet" href="../css/col.css" media="all">
-		<link rel="stylesheet" href="../css/3cols.css" media="all">
-		<link rel="stylesheet" href="../css/4cols.css" media="all">
+		<link rel="stylesheet" href="../css/2cols.css" media="all">
 
 		<!-- Responsive Stylesheets -->
 		<link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="../css/1024.css">
@@ -42,152 +41,96 @@
 		<script src="../js/modernizr-2.5.3-min.js"></script>
 
 		<!-- jQuery -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>	 
-
-		<!-- Smooth Scroll -->
-		<script src="../js/smoothScroll.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	</head>
 
-	<body>
-		<!-- Main Body Wrapper -->
-		<div id="wrapper">
-			<!-- Main Header w/ SCETA Logo/Title & Main Menu -->
-			<?php include '../../inc/sceta.org/header_1.php'; ?>
+	<body class="cbp-spmenu-push">
+		<!-- Back to Top -->
+		<a name="top"></a>
 
-			<!-- Main Body Content -->
-			<div id="maincontentcontainer">
-				<div id="maincontent">
-					<div class="section group">
-						<div class="col span_1_of_4">
-							<?php include '../../inc/sceta.org/sidemenu_contact.php'; ?>
-						</div>
+		<?php include '../../inc/sceta.org/header_subLevel_1.php'; ?>
 
-						<div class="col span_3_of_4">
-							<h4>Contact Us</h4>
-							<p>
-								Interacting with everyone, both members and non-members, is crucial to our success. If you have any questions, comments,
-								or concerns, you may direct them to any of our contacts below.
-							</p>
+		<div class="not-fullscreen background" id="background" style="background-image:url('../img/header/contact.jpg');" data-img-width="1920" data-img-height="1080">
+			<div class="content-a">
+				<div class="content-b">
+					<h1>Contact SCETA</h1>
+				</div>
+			</div>
+		</div>
 
-							<p>
-								For general inquires or comments:
-								<ul class="contactList">
-									<li>SCETA</li>
-									<li><a href="mailto:contact@sceta.org">contact@sceta.org</a></li>
-								</ul>
-							</p>
-
-							<p>
-								For industry contact:
-								<ul class="contactList">
-									<li>SCETA</li>
-									<li><a href="mailto:industry@sceta.org">industry@sceta.org</a></li>
-								</ul>
-							</p>
-
-							<p>
-								For contacting our club advisor:
-								<ul class="contactList">
-									<li>Gerald Herder</li>
-									<li><a href="mailto:gkherder@cpp.edu">gkherder@cpp.edu</a></li>
-								</ul>
-							</p>
-
-							<p>
-								For establishing relationships or more outreach-related activities: <br>
-								<ul class="contactList">
-									<li>Jeremy Bonsall</li>
-									<li><a href="mailto:president@sceta.org">president@sceta.org</a></li>
-								</ul>
-							</p>
-
-							<p>
-								For more specific, member-related or local club inquiries: <br>
-								<ul class="contactList">
-									<li>Tyler Myers</li>
-									<li><a href="mailto:vp@sceta.org">vp@sceta.org</a></li>
-								</ul>
-							</p>
-
-							<p>
-								For more schedule-related activities, such as RSVPing or confirming events: <br>
-								<ul class="contactList">
-									<li>Elizabeth Romo</li>
-									<li><a href="mailto:secretary@sceta.org">secretary@sceta.org</a></li>
-								</ul>
-							</p>
-
-							<p>
-								For 3D-related questions or concerns: <br>
-								<ul class="contactList">
-									<li>Victor Zamora (lead) / Javier Estevez / Michael Oleata</li>
-									<li><a href="mailto:3d@sceta.org">3d@sceta.org</a></li>
-								</ul>	
-							</p>
-
-							<p>
-								For suggesting, commenting on, or recommending activities and events: <br>
-								<ul class="contactList">
-									<li>Gregory Lynch</li>
-									<li><a href="mailto:events@sceta.org">events@sceta.org</a></li>
-								</ul>
-							</p>
-
-							<p>
-								For website-related feedback or bug reports: <br>
-								<ul class="contactList">
-									<li>Byron Phung</li>
-									<li><a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a></li>
-								</ul>	
-							</p>
-
-							<p>
-								For media-related suggestions, submissions, or inquiries: <br>
-								<ul class="contactList">
-									<li>Nicole Diaz / Julian Larregui</li>
-									<li><a href="mailto:media@sceta.org">media@sceta.org</a></li>
-								</ul>
-							</p>
-
-							<p>
-								For specific E-Council matters: <br>
-								<ul class="contactList">
-									<li>Joseph Cubas</li>
-									<li><a href="mailto:ecouncil@sceta.org">ecouncil@sceta.org</a></li>
-								</ul>
-							</p>
-
-							<p>
-								For contacting our treasurer primarily for ASI, E-Council, or financial matters: <br>
-								<ul class="contactList">
-									<li>Sean Kennedy</li>
-									<li><a href="mailto:treasurer@sceta.org">treasurer@sceta.org</a></li>
-								</ul>
-							</p>
-
-							<p>
-								Mailing address: <br>
-								<ul class="mailing">
-									<li>Southern California Engineering Technologists Association</li>
-									<li>Building 9, Room 257</li>
-									<li>Department of Engineering Technology</li>
-									<li>College of Engineering</li>
-									<li>California State Polytechnic University, Pomona</li>
-									<li>3801 West Temple Ave.</li>
-									<li>Pomona, CA 91768</li>
-								</ul>
-							</p>
-
-						</div>
-					</div>
+		<div class="wrapper">
+			<div class="container">
+				<div class="content">
+					<p class="intro">
+						Reach us anywhere at anytime using the contact information below.
+					</p>
 				</div>
 			</div>
 
-			<!-- Main Footer -->
-			<?php include '../../inc/sceta.org/footer_main_1.php'; ?>
+			<div class="container gray">
+				<div class="content">
+					<h2>General Inquiries & Comments</h2>
 
-			<!-- Back to Top -->
-			<a href="#top" class="cd-top">Top</a>
-			<script src="../js/top.js"></script>
+					<ul>
+						<li><b>Contact:</b> SCETA</li>
+						<li><b>E-mail:</b> <a href="mailto:contact@sceta.org">contact@sceta.org</a></li>
+					</ul>
+
+					<h2>Industry Partnership Opportunities</h2>
+
+					<ul>
+						<li><b>Contact:</b> SCETA Industry Representative</li>
+						<li><b>E-mail:</b> <a href="mailto:industry@sceta.org">industry@sceta.org</a></li>
+					</ul>
+
+					<h2>Website Feedback</h2>
+
+					<ul>
+						<li><b>Contact:</b> SCETA Webmaster</li>
+						<li><b>E-mail:</b> <a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a></li>
+					</ul>
+
+					<h2>Officer Contacts</h2>
+
+					<ul>
+						<li><b>President:</b> <a href="mailto:president@sceta.org">president@sceta.org</a></li>
+						<li><b>Vice President:</b> <a href="mailto:vp@sceta.org">vp@sceta.org</a></li>
+						<li><b>Secretary:</b> <a href="mailto:secretary@sceta.org">secretary@sceta.org</a></li>
+						<li><b>Treasurer:</b> <a href="mailto:treasurer@sceta.org">treasurer@sceta.org</a></li>
+						<li><b>Industry Representative:</b> <a href="mailto:industry@sceta.org">industry@sceta.org</a></li>
+						<li><b>Events & Development:</b> <a href="mailto:events@sceta.org">events@sceta.org</a></li>
+						<li><b>Engineering Council Representative:</b> <a href="mailto:ecouncil@sceta.org">ecouncil@sceta.org</a></li>
+						<li><b>Webmaster:</b> <a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a></li>
+						<li><b>Media & Outreach:</b> <a href="mailto:media@sceta.org">media@sceta.org</a></li>
+						<li><b>3D Technicians:</b> <a href="mailto:3d@sceta.org">3d@sceta.org</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="content">
+					<h2>Find & Visit Us</h2>
+
+					<p>
+						Southern California Engineering Technologists Association<br>
+						Building 9, Room 257<br>
+						Department of Engineering Technology<br>
+						College of Engineering<br>
+						California State Polytechnic University, Pomona<br>
+						3801 West Temple Ave.<br>
+						Pomona, CA 91768
+					</p>
+
+					<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+						width="100%" height="400" 
+						src="https://maps.google.com/maps?hl=en&q=3801 West Temple Avenue, Pomona, CA 91768&ie=UTF8&t=roadmap&z=13&iwloc=B&output=embed">
+					</iframe>
+				</div>
+			</div>
+
+			<?php include '../../inc/sceta.org/footer_subLevel_1.php'; ?>
+		</div>
+
+		<?php include '../../inc/sceta.org/commonScripts_subLevel_1.php'; ?>
 	</body>
 </html>

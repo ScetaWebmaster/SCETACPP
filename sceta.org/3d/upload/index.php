@@ -12,7 +12,7 @@
 		<!-- Always Force Latest IE Rendering Engine (even in intranet) & Chrome Frame -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>SCETA - 3D Printing - Upload 3D Design</title>
+		<title>Upload &ndash; 3D Printing &ndash; SCETA</title>
 
 		<meta name="description" content="SCETA (Southern California Engineering Technologists Association) has been networking with engineering alumni who have been working in the engineering field since 1983. SCETA is an association of students interested in life-long learning and the sharing of knowledge among the various engineering disciplines. One of our goals is to establish a social network for current/future students and alumni.">
 		<meta name="keywords" content="SCETA, engineering, technology, networking">
@@ -31,8 +31,6 @@
 		<link rel="stylesheet" href="../../css/style.css" media="all">
 		<link rel="stylesheet" href="../../css/col.css" media="all">
 		<link rel="stylesheet" href="../../css/2cols.css" media="all">
-		<link rel="stylesheet" href="../../css/3cols.css" media="all">
-		<link rel="stylesheet" href="../../css/4cols.css" media="all">
 
 		<!-- Responsive Stylesheets -->
 		<link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="../../css/1024.css">
@@ -43,306 +41,381 @@
 		<script src="../../js/modernizr-2.5.3-min.js"></script>
 
 		<!-- jQuery -->
-		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary. -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="../../js/jquery-1.7.2.min.js"><\/script>')</script>
-
-		<!-- Smooth Scrolling -->
-		<script src="../../js/smoothScroll.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	</head>
 
-	<body>
+	<body class="cbp-spmenu-push">
+		<!-- Back to Top -->
 		<a name="top"></a>
-		
-		<!-- Main Body Wrapper -->
-		<div id="wrapper">
-			<!-- Main Header w/ SCETA Logo/Title & Main Menu -->
-			<?php include '../../../inc/sceta.org/header_2.php'; ?>
 
-			<!-- Main Body Content -->
-			<div id="maincontentcontainer">
-				<div id="maincontent">
-					<div class="section group">
-						<div class="col span_1_of_4">
-							<div>
-								<?php include '../../../inc/sceta.org/sidemenu_services_3d_upload.php'; ?>
-							</div>
-						</div>
+		<?php include '../../../inc/sceta.org/header_subLevel_2.php'; ?>
 
-						<div class="col span_3_of_4">
-							<h4>How to Create an STL File</h4>
-							<p>Please refer to the <a href="../faq/">FAQ page</a> on how to create a proper STL file of your 3D design.</p>
+		<div class="not-fullscreen background" id="background" style="background-image:url('../../img/header/services_3d.jpg');" data-img-width="816" data-img-height="612">
+			<div class="content-a">
+				<div class="content-b">
+					<h1>3D Printing</h1>
+				</div>
+			</div>
+		</div>
 
-							<h4>Requirements</h4>
-							<p>The following are some requirements that need to be met to allow a successful order.</p>
-							<ul>
-								<li>
-									The design cannot exceed the print envelope of 300 mm x 200 mm x 178 mm (W x L x H). It is recommended to scale to half 
-									of the print envelope (please keep it small).
-								</li>
-								<li>
-									Please send <b>ONLY .STL files</b>. No solidworks or sketchup files please.
-								</li>
-								<li>
-									As of right now, your .STL file cannot exceed 2 MB. If your file must exceed 2 MB, then please place a special
-									order request to <a href="mailto:3d@sceta.org">3d@sceta.org</a>.
-								</li> 
-								<li>
-									Please enter a color of choice for your print. Only certain colors are available for certain filaments.
-									<ul class="materials">
-										<li>ABS
-											<ul>
-												<?php 
-													$materialList = array();
+		<div class="wrapper">
+			<div class="container">
+				<div class="content">
+					<?php
+						// Include the necessary functions.
+						include '../../../inc/sceta.org/functions_forms.php';
+						include '../../../inc/sceta.org/functions_email.php';
+						include '../../../inc/sceta.org/connect_3d.php';
 
-													// Connect to the 3D database.
-													include_once '../../../inc/sceta.org/connect_3d.php'; 
+						// Get the form information.
+						$firstName = cleanString($_REQUEST['firstname']);
+						$lastName = cleanString($_REQUEST['lastname']);
+						$email = cleanString($_REQUEST['email']);
+						$phone = cleanString("(" . $_REQUEST['phone1'] . ") " . $_REQUEST['phone2'] . "-" . $_REQUEST['phone3']);
+						$phoneDigits = $_REQUEST['phone1'] . $_REQUEST['phone2'] . $_REQUEST['phone3'];
+						$quality = $_REQUEST['quality'];
+						$material = $_REQUEST['material'];
+						$color = $_REQUEST['color'];
 
-													// Query select all items from Materials table.
-													$sql = "SELECT * FROM Materials WHERE material = 'ABS'";
-													// Gather that into the $result variable.
-													$result = $connection->query($sql);
+						// If the comments are empty, then assign it to "None".
+						if (empty($_REQUEST['comments'])) {
+							$comments = "None";
+						}
 
-													// Only echo data if there is at least 1.
-													if ($result->num_rows > 0) {
-														// Identify $row as an object to pull data from.
-														while ($row = $result->fetch_assoc()) {
-															array_push($materialList, $row["name"]);
-														}
+						// Otherwise, retrieve the comments.
+						else {
+							$comments = $_REQUEST['comments'];
+						}
 
-														sort($materialList);
+						// Store error messages if applicable.
+						$errorMsg = "";
 
-														for ($i = 0; $i < count($materialList); $i++) {
-															$sql = "SELECT * FROM Materials WHERE material = 'ABS' AND name = '$materialList[$i]'";
-															$result2 = $connection->query($sql);
-															while ($row = $result2->fetch_assoc()) {
-																// Show "AVAILABLE" if status is 1.
-																if ($row["status"] == 1) {
-																	echo "<li class='green'>" . $materialList[$i] . " (AVAILABLE)</li>";
-																}
+						// If the first name is empty, then display an error.
+						if (empty($firstName)) {
+							$errorMsg .= "<li>First name cannot be empty.</li>";
+						}
 
-																// Otherwise, display "UNAVAILABLE".
-																else {
-																	echo "<li class='red'>" . $materialList[$i] . " (UNAVAILABLE</li>";
-																}
-															}
-														}
-													}
+						// Otherwise, check for invalid input.
+						else {
+							// If there is an invalid first name, then
+							// display that invalid input.
+							if ((strlen($firstName) > 30) || !isValidFirstName($firstName)) {
+								$errorMsg .= "<li>Invalid first name: " . $firstName . "<ul>";
 
-													// Otherwise, state that there are no materials available.
-													// This is a failsafe condition. Ideally, this should never be reached.
-													else {
-														echo "<li>There are no colors available for ABS.</li>";
-													}
-												?>
-											</ul>
-										</li>
-										<li>PLA
-											<ul>
-												<?php 
-													$materialList = array();
+								// If the first name is longer than 30 characters, 
+								// then display an error.
+								if (strlen($firstName) > 30) {
+									$errorMsg .= "<li>First name is larger than 30 characters. If you need to increase "
+										. "this limit, please contact our webmaster at "
+										. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</li>";
+								}
 
-													// Query select all items from Materials table.
-													$sql = "SELECT * FROM Materials WHERE material = 'PLA'";
-													// Gather that into the $result variable.
-													$result = $connection->query($sql);
+								// If the first name contains invalid characters, then
+								// display an error.
+								if (!isValidFirstName($firstName)) {
+									$errorMsg .= "<li>First name can only contain letters A-Z, a-z.</li>";
+								}
 
-													// Only echo data if there is at least 1.
-													if ($result->num_rows > 0) {
-														// Identify $row as an object to pull data from.
-														while ($row = $result->fetch_assoc()) {
-															array_push($materialList, $row["name"]);
-														}
+								$errorMsg .= "</ul></li>";
+							}
+						}
 
-														sort($materialList);
+						// If the last name is empty, then display an error.
+						if (empty($lastName)) {
+							$errorMsg .= "<li>Last name cannot be empty.</li>";
+						}
 
-														for ($i = 0; $i < count($materialList); $i++) {
-															$sql = "SELECT * FROM Materials WHERE material = 'PLA' AND name = '$materialList[$i]'";
-															$result2 = $connection->query($sql);
-															while ($row = $result2->fetch_assoc()) {
-																// Show "AVAILABLE" if status is 1.
-																if ($row["status"] == 1) {
-																	echo "<li class='green'>" . $materialList[$i] . " (AVAILABLE)</li>";
-																}
+						// Otherwise, check for invalid input.
+						else {
+							// If there is an invalid last name, then
+							// display that invalid input.
+							if ((strlen($lastName) > 30) || !isValidLastName($lastName)) {
+								$errorMsg .= "<li>Invalid last name: " . $lastName . "<ul>";
 
-																// Otherwise, display "UNAVAILABLE".
-																else {
-																	echo "<li class='red'>" . $materialList[$i] . " (UNAVAILABLE</li>";
-																}
-															}
-														}
-													}
+								// If the last name is longer than 30 characters, then
+								// display an error.
+								if (strlen($lastName) > 30) {
+									$errorMsg .= "<li>First name is larger than 30 characters. If you need to increase "
+										. "this limit, please contact our webmaster at "
+										. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</li>";
+								}
 
-													// Otherwise, state that there are no materials available.
-													// This is a failsafe condition. Ideally, this should never be reached.
-													else {
-														echo "<li>There are no colors available for PLA.</li>";
-													}
+								// If the last name contains invalid characters, then
+								// display an error.
+								if (!isValidLastName($lastName)) {
+									$errorMsg .= "<li>Last name can only contain letters A-Z, a-z or dashes.</li>";
+								}
 
-													$connection->close();
-												?>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
+								$errorMsg .= "</ul></li>";
+							}
+						}
 
-							<h4>Upload Your Design</h4>
-							<p>
-								Please fill out the following form correctly, and you will be provided a confirmation e-mail once your order has been
-								successfully placed.
-							</p>
+						// If the e-mail address is empty, then display an error.
+						if (empty($email)) {
+							$errorMsg .= "<li>E-mail address cannot be empty.</li>";
+						}
 
-							<!-- I AM NEW -->
-							<form action="confirm/" method="post" enctype="multipart/form-data">
-								<fieldset>
-									<div class="section group">
-										<div class="col span_1_of_2">
-											<p>
-												<b>First Name</b>
-											</p>
+						// Otherwise, check for invalid input.
+						else {
+							// If there is an invalid e-mail address, then
+							// display that invalid input.
+							if ((strlen($email) > 60) || !isValidEmail($email)) {
+								$errorMsg .= "<li>Invalid e-mail address: " . $email . "<ul>";
 
-											<p>
-												<input name="firstname" type="text" id="firstname" maxlength="30" style="width: 100%;">
-											</p>
-										</div>
+								// If the e-mail address is longer than 60 characters,
+								// then display an error.
+								if (strlen($email) > 60) {
+									$errorMsg .= "<li>E-mail address is larger than 60 characters. If you need to "
+										. "increase this limit, please contact our webmaster at "
+										. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</li>";
+								}
 
-										<div class="col span_1_of_2">
-											<p>
-												<b>Last Name</b>
-											</p>
+								// If the e-mail address contains invalid characters,
+								// then display an error.
+								if (!isValidEmail($email)) {
+									$errorMsg .= "<li>E-mail address can only contain letters A-Z, a-z, numbers 0-9, "
+										. "dashes, underscores, and 1 @ symbol.</li>";
+								}
 
-											<p>
-												<input name="lastname" type="text" id="lastname" maxlength="30" style="width: 100%;">
-											</p>
-										</div>
-									</div>
+								$errorMsg .= "</ul></li>";
+							}
+						}
 
-									<div class="section group">
-										<div class="col span_2_of_2">
-											<p>
-												<b>E-mail Address</b><br>
-												This will be the primary e-mail address that we will be contacting you with.
-											</p>
+						// If the phone number is empty, then display an error.
+						if (empty($phoneDigits)) {
+							$errorMsg .= "<li>Phone number cannot be empty.</li>";
+						}
 
-											<p>
-												<input name="email" type="text" id="email" maxlength="60" style="width: 100%;">
-											</p>
-										</div>
-									</div>
+						// Otherwise, check for invalid input.
+						else {
+							// If there is an invalid phone number, then
+							// display that invalid input.
+							if ((strlen($phoneDigits) != 10) || !isAllDigits($phoneDigits)) {
+								$errorMsg .= "<li>Invalid phone number: " . $phone . "<ul>";
 
-									<div class="section group">
-										<div class="col span_2_of_2">
-											<p>
-												<b>Phone Number</b>
-											</p>
+								// If the phone number is not 10 digits, then display
+								// an error.
+								if (strlen($phoneDigits) != 10) {
+									$errorMsg .= "<li>Phone number can only be 10 digits. If additional codes or "
+										. "international numbers need to be supported, please contact our webmaster at "
+										. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</li>";
+								}
 
-											<p>
-												<input name="phone1" type="text" id="phone1" size="3" maxlength="3"> - 
-												<input name="phone2" type="text" id="phone2" size="3" maxlength="3"> -
-												<input name="phone3" type="text" id="phone3" size="4" maxlength="4">	
-											</p>
-										</div>
-									</div>
+								// If the phone number contains invalid characters,
+								// then display an error.
+								if (!isAllDigits($phoneDigits)) {
+									$errorMsg .= "<li>Phone number can only contain digits 0-9.</li>";
+								}
 
-									<div class="section group">
-										<div class="col span_2_of_2">
-											<p>
-												<b>Quality</b>
-											</p>
+								$errorMsg .= "</ul></li>";
+							}
+						}
 
-											<p>
-												<select name="quality" id="quality">
-													<option value="Low">Low ($1.00 per 500 mm)</option>
-													<option value="Medium">Medium ($1.50 per 500 mm)</option>
-													<option value="High">High ($2.00 per 500 mm)</option>
-												</select>
-											</p>
-										</div>
-									</div>
+						// Define the SQL query to select all materials & process it.
+						$sql = "SELECT * FROM Materials";
+						$result = $connection->query($sql);
 
-									<div class="section group">
-										<div class="col span_2_of_2">
-											<p>
-												<b>Filament/Material</b>
-											</p>
+						// If there is at least 1 result, then check the material
+						// and color combination.
+						if ($result->num_rows > 0) {
+							// Track if the material/color combination is valid.
+							$isMaterialColorValid = false;
 
-											<p>
-												<select name="material" id="material">
-													<option value="ABS">ABS</option>
-													<option value="PLA">PLA</option>
-												</select>
-											</p>
-										</div>
-									</div>
+							// Identify $row as an object to pull data from.
+							while ($row = $result->fetch_assoc()) {
+								// If the material/color combination matches and
+								// it is available, then break out of the 
+								if ($color == $row['name'] 
+									&& $material == $row['material']
+									&& $row['status'] == 1) {
+									$isMaterialColorValid = true;
+									break;
+								}
+							}
 
-									<div class="section group">
-										<div class="col span_2_of_2">
-											<p>
-												<b>Color</b>
-											</p>
+							// If the material/color combination is not valid,
+							// then display an error.
+							if (!$isMaterialColorValid) {
+								$errorMsg .= "<li>Invalid material/color combinaton: " . $material . " / " . $color . "</li>";
+							}
+						}
 
-											<p>
-												<select name="color" id="color">
-													<option value="Green">Green (ALL)</option>
-													<option value="Red">Red (ALL)</option>
-													<option value="Black">Black (ABS)</option>
-													<option value="Sky Blue">Sky Blue (PLA)</option>
-													<option value="Silver">Silver (PLA)</option>
-													<option value="Pink">Pink (PLA)</option>
-													<option value="Natural">Natural (PLA)</option>
-												</select>
-											</p>
-										</div>
-									</div>
+						// Otherwise, display an error. Ideally, this should not
+						// be reached and is meant for debugging purposes.
+						else {
+							$errorMsg .= "<li>No materials could be found in our databases. This "
+								. "is a critical server issue that should not be occurring. Please "
+								. "let our webmaster know at <a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.";
+						}
 
-									<div class="section group">
-										<div class="col span_2_of_2">
-											<p>
-												<label for="file"><b>File</b>
-											</p>
+						// Close the MySQL connection.
+						$connection->close();
 
-											<p>
-												<input type="file" name="file" id="file"></label>
-											</p>
-										</div>
-									</div>
+						// Define the list of valid file extensions.
+						$allowedExtensions = array("stl", "STL", "stL", "sTL", "sTl", "Stl", "StL", "STl");
 
-									<div class="section group">
-										<div class="col span_2_of_2">
-											<p>
-												<b>Additional Comments (Max 500 Characters)</b>
-											</p>
+						// Get the file name.
+						$fileName = $_FILES["file"]["name"];
 
+						// Get the uploaded file's extension.
+						$extension = end(explode(".", $fileName));
 
-											<p>
-												<textarea name="comments" id="comments" maxlength="500"></textarea>
-											</p>
-										</div>
-									</div>
+						// If a file was not uploaded, then display an error.
+						if (empty($fileName)) {
+							$errorMsg .= "<li>3D design must be uploaded.</li>";
+						}
 
-									<!-- Check for spam. -->
-									<input name='name2' type='text' size='20' style='display: none;'>
+						// Otherwise, check the file.
+						else {
+							// If there is an invalid file, then display an error.
+							if (!in_array($extension, $allowedExtensions)
+								|| ($_FILES["file"]["error"] > 0)
+								|| ($_FILES["file"]["size"] > 2000000)
+								|| file_exists("../stlUploads/" . $fileName)) {
+								$errorMsg .= "<li>Invalid file: " . $fileName . "<ul>";
 
-									<div class="section group">
-										<div class="col span_1_of_2">
-											<p>
-												<input type="submit" name="submit" value="Submit Order" id="submitButton">
-											</p>
-										</div>
-									</div>
-								</fieldset> 	
-							</form>
-						</div>
-					</div>
+								// If the file extension is not supported, then
+								// display an error.
+								if (!in_array($extension, $allowedExtensions)) {
+									$errorMsg .= "<li>File must be a .STL file.</li>";
+								}
+
+								// If there was some sort of file error, then
+								// display an error.
+								if ($_FILES["file"]["error"] > 0) {
+									$errorMsg .= "<li>Uploaded file error: " . $_FILES["file"]["error"] . "</li>";
+								}
+
+								// If the file is greater than 2 MB, then display
+								// an error.
+								if ($_FILES["file"]["size"] > 2000000) {
+									$errorMsg .= "<li>File must be less than or equal to 2 MB.</li>";
+								}
+
+								// If the file already exists, then display an error.
+								if (file_exists("../stlUploads/" . $fileName)) {
+									$errorMsg .= "<li>File already exists in our servers. Please rename & re-upload your file.</li>";
+								}
+
+								$errorMsg .= "</ul></li>";
+							}
+						}
+
+						// If there are no error messages, then send the e-mails.
+						if ($errorMsg == "") {
+							// Set the default timezone to LA and get the date.
+							date_default_timezone_set('America/Los_Angeles');
+							$date = date('m/d/Y h:i:s a', time());
+
+							// Define the e-mail message to the 3D technicians.
+							$emailMsg_3d = "Dear 3D Techs,<br>"
+								. "<br>"
+								. "We have a new 3D printing order. Please review the following information."
+								. "<ul>"
+								. "<li><b>Name:</b> " . $firstName . " " . $lastName . "</li>"
+								. "<li><b>E-mail Address:</b> " . $email . "</li>"
+								. "<li><b>Phone Number:</b> " . $phone . "</li>"
+								. "<li><b>Order Time:</b> " . $date . "</li>"
+								. "<li><b>Quality:</b> " . $quality . "</li>"
+								. "<li><b>Material:</b> " . $material . "</li>"
+								. "<li><b>Color:</b> " . $color . "</li>"
+								. "<li><b>Additional Comments:</b> " . $comments . "</li>"
+								. "<li><b>File Name:</b> " . $fileName . "</li>"
+								. "<li><b>File Location:</b> <a href='http://www.sceta.org/3d/stlUploads/" 
+									. $fileName . "'>http://www.sceta.org/3d/stlUploads/" . $fileName . "</a></li>"
+								. "</ul>"
+								. "Best regards,<br>"
+								. "Your SCETA Webmaster<br>"
+								. "<br>"
+								. "<hr>"
+								. "This is an automatically generated message upon submission.<br>"
+								. "Please address any errors or concerns related to this automated system "
+								. "via <a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>, GroupMe, "
+								. "or in person.";
+
+							// Define the e-mal message to the submitter.
+							$emailMsg_submitter = "Dear " . $firstName . " " . $lastName . "<br>"
+								. "<br>"
+								. "We have received your 3D printing order. Please review the following information "
+								. "for your confirmation."
+								. "<ul>"
+								. "<li><b>Name:</b> " . $firstName . " " . $lastName . "</li>"
+								. "<li><b>E-mail Address:</b> " . $email . "</li>"
+								. "<li><b>Phone Number:</b> " . $phone . "</li>"
+								. "<li><b>Order Time:</b> " . $date . "</li>"
+								. "<li><b>Quality:</b> " . $quality . "</li>"
+								. "<li><b>Material:</b> " . $material . "</li>"
+								. "<li><b>Color:</b> " . $color . "</li>"
+								. "<li><b>Additional Comments:</b> " . $comments . "</li>"
+								. "<li><b>File Name:</b> " . $fileName . "</li>"
+								. "</ul>"
+								. "We will contact you again when your order is being processed and completed.<br>"
+								. "<br>"
+								. "If you have any problems with your order or need to correct any information, "
+								. "then please simply reply to this e-mail.<br>"
+								. "<br>"
+								. "Thank you,<br>"
+								. "Your SCETA 3D Techs";
+
+							// Get the mail status after sending to SCETA 3D techs.
+							$mailStatus = sendMail("3d@sceta.org", "webmaster@sceta.org",
+								"New 3D Order", "webmaster@sceta.org", $emailMsg_3d,
+								"webmaster@sceta.org", "Airwolf7400");
+
+							// If the mail status is empty, then store the
+							// uploaded file and display success.
+							if ($mailStatus == "") {
+								move_uploaded_file($_FILES["file"]["tmp_name"], "../stlUploads/" . $fileName);
+								echo "<h2>Your order has been submitted & received!</h2>"
+									. "<p>Thank you for submitting your 3D design. You will receive an e-mail "
+									. "from one of our 3D technicians within 1-3 business days to confirm your "
+									. "design specifications and further process your order.</p>"
+									. "<p>If you do not receive a confirmation e-mail or need to correct any "
+									. "information, please contact our 3D technicians at "
+									. "<a href='mailto:3d@sceta.org'>3d@sceta.org</a>.</p>"
+									. "<p>Thank you very much for your order. We look forward to satisfying "
+									. "your 3D printing needs!</p>"
+									. "<p>Click <a href='../'>here</a> to return to the 3D printing home page.</p>";
+							}
+
+							// Otherwise, display an error.
+							else {
+								echo "<h2>Mailer Error: Could not e-mail SCETA 3D technicians.</h2>"
+									. "<p>" . $mailStatus . "</p>"
+									. "<p>Please notify our webmaster at "
+									. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</p>";
+							}
+
+							// Reset the mail status.
+							$mailStatus = "";
+
+							// Get the mail status after sending to the submitter.
+							$mailStatus = sendMail($email, "3d@sceta.org", "New SCETA 3D Order",
+								"3d@sceta.org", $emailMsg_submitter, "3d@sceta.org", "Airwolf7400");
+
+							// If the mail status is not empty, then display
+							// an error.
+							if ($mailStatus != "") {
+								echo "<h2>Mailer Error: Could not send confirmation e-mail.</h2>"
+									. "<p>" . $mailStatus . "</p>"
+									. "<p>Please notify our webmaster at "
+									. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</p>";
+							}
+						}
+
+						// Otherwise, display the error messages.
+						else {
+							echo "<h2>Sorry. There was an error with your upload request.</h2>"
+								. "<ul>" . $errorMsg . "</ul>"
+								. "<p>Click <a href='../'>here</a> to return to the 3D printing home page.</p>";
+						}
+					?>
 				</div>
 			</div>
 
-			<!-- Main Footer -->
-			<?php include '../../../inc/sceta.org/footer_main_2.php'; ?>
+			<?php include '../../../inc/sceta.org/footer_subLevel_2.php'; ?>
+		</div>
 
-			<!-- Back to Top -->
-			<a href="#top" class="cd-top">Top</a>
-			<script src="../../js/top.js"></script>
+		<?php include '../../../inc/sceta.org/commonScripts_subLevel_2.php'; ?>
 	</body>
 </html>
