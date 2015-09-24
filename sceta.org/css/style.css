@@ -1077,6 +1077,10 @@ html, body {
 				width: 50%;
 			}	
 
+			.container#services a {
+				color: #fff;
+			}
+
 			div.background-selector {
 				height: 400px;
 				overflow: hidden;
