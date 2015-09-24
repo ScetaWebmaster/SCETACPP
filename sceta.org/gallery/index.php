@@ -1,3 +1,3 @@
 <?php
-   header('Location: ../resources#gallery/');
+   header('Location: ../resources#gallery');
 ?>

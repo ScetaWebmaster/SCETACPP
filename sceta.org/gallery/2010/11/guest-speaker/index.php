@@ -38,7 +38,7 @@
 		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="../../../../css/480.css">
 
 		<!-- All JavaScript at the bottom except for Modernizr which enables HTML5 elements and feature detects. -->
-		<script src="../../../../../inc/sceta.org/js/modernizr-2.5.3-min.js"></script>
+		<script src="../../../../js/modernizr-2.5.3-min.js"></script>
 
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

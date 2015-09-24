@@ -38,7 +38,7 @@
 		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="css/480.css">
 
 		<!-- All JavaScript at the bottom except for Modernizr which enables HTML5 elements and feature detects. -->
-		<script src="../inc/sceta.org/js/modernizr-2.5.3-min.js"></script>
+		<script src="js/modernizr-2.5.3-min.js"></script>
 
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -68,7 +68,7 @@
 
 							<div id="gcal_nextMeeting">
 								<img src="img/ic_loading.gif">
-								<script src="../inc/sceta.org/js/googleCalendar_nextMeeting.js"></script>
+								<script src="js/googleCalendar_nextMeeting.js"></script>
 							</div>
 
 							<br>
@@ -79,7 +79,7 @@
 
 							<div class="section group" id="gcal_upcomingEvents">
 								<img src="img/ic_loading.gif">
-								<script src="../inc/sceta.org/js/googleCalendar_upcomingEvents.js"></script>
+								<script src="js/googleCalendar_upcomingEvents.js"></script>
 							</div>
 
 							<div id="calendar_link">
