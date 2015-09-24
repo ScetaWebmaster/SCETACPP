@@ -3,32 +3,39 @@
 /* -------------------------------------------------------------------------- */
 
 #galleryList {
-    margin: 0;
-    padding: 0 4px;
+    text-align: center;
 }
 
 #galleryList li {
     display: inline-block;
-    float: left;
+    *display: inline;
+    *zoom: 1;
     list-style: none;
-    margin: 5px 6px;
-    padding: 0;
+    margin: 8px;
 }
 
 #galleryList li a {
-    background-color: #FFF;
-    border: 3px solid #CCC;
+    background-color: transparent;
     display: block;
-    padding: 4px;
 }
 
-#galleryList li a:hover {
-    border-color: #333;
-}
+    #galleryList li a:hover {
+        border-color: #333;
+    }
 
-#galleryList li a img {
-    border: none;
-}
+    #galleryList li a img {
+        border: none;
+        margin: 0 auto;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        border-radius: 5px;
+    }
+
+        #galleryList li a img:hover {
+            opacity: 0.5;
+        }
 
 /* -------------------------------------------------------------------------- */
 /* -----| GALLERY FOOTER |--------------------------------------------------- */

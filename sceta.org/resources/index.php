@@ -12,7 +12,7 @@
 		<!-- Always Force Latest IE Rendering Engine (even in intranet) & Chrome Frame -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>SCETA - Resources</title>
+		<title>Resources &ndash; SCETA</title>
 
 		<meta name="description" content="SCETA (Southern California Engineering Technologists Association) has been networking with engineering alumni who have been working in the engineering field since 1983. SCETA is an association of students interested in life-long learning and the sharing of knowledge among the various engineering disciplines. One of our goals is to establish a social network for current/future students and alumni.">
 		<meta name="keywords" content="SCETA, engineering, technology, networking">
@@ -30,7 +30,7 @@
 		<link rel="stylesheet" href="../css/html5reset.css" media="all">
 		<link rel="stylesheet" href="../css/style.css" media="all">
 		<link rel="stylesheet" href="../css/col.css" media="all">
-		<link rel="stylesheet" href="../css/4cols.css" media="all">
+		<link rel="stylesheet" href="../css/2cols.css" media="all">
 
 		<!-- Responsive Stylesheets -->
 		<link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="../css/1024.css">
@@ -38,74 +38,170 @@
 		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="../css/480.css">
 
 		<!-- All JavaScript at the bottom except for Modernizr which enables HTML5 elements and feature detects. -->
-		<script src="../js/modernizr-2.5.3-min.js"></script>
+		<script src="../../inc/sceta.org/js/modernizr-2.5.3-min.js"></script>
 
 		<!-- jQuery -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>	
-
-		<!-- Smooth Scroll -->
-		<script src="../js/smoothScroll.js"></script> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	</head>
 
-	<body>
-		<!-- Main Body Wrapper -->
-		<div id="wrapper">
-			<!-- Main Header w/ SCETA Logo/Title & Main Menu -->
-			<?php include '../../inc/sceta.org/header_1.php'; ?>
+	<body class="cbp-spmenu-push">
+		<!-- Back to Top -->
+		<a name="top"></a>
 
-			<!-- Main Body Content -->
-			<div id="maincontentcontainer">
-				<div id="maincontent">
-					<div class="section group">
-						<div class="col span_1_of_4">
-							<?php include '../../inc/sceta.org/sidemenu_members_resources.php'; ?>
-						</div>
+		<?php include '../../inc/sceta.org/header_subLevel_1.php'; ?>
 
-						<div class="col span_3_of_4">
-							<h4>Resources</h4>
-							<p>
-								As students, we know that it's always important to have resources and points of reference. Here we'd like to provide you with as many resources as we can
-								both for the Cal Poly Pomona student and engineering student in general.
-							</p>
+		<div class="not-fullscreen background" id="background" style="background-image:url('http://images6.alphacoders.com/306/306638.jpg');" data-img-width="1920" data-img-height="1080">
+			<div class="content-a">
+				<div class="content-b">
+					<h1>Resources</h1>
+				</div>
+			</div>
+		</div>
 
-							<p>
-								Please feel free to browse to your liking, and if you have any suggestions or recommendations, shoot us an e-mail to our webmaster at
-								<a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a>, and we'd be happy to look at it and share it with the entire community!
-							</p>
+		<div class="wrapper">
+			<div class="container">
+				<div class="content">
+					<p class="intro">
+						Stop wondering and stop by this single point of reference resources page anytime you need
+						information that doesn't fall in any of the other categories.
+					</p>
 
-							<ul>
-								<li>General
-									<ul>
-										<li><a href="https://www.udacity.com/courses#!/all" target="_blank">Udacity - Free Online Technical Courses</a></li>
-										<li><a href="https://www.edx.org/" target="_blank">edX - Great Online Courses from the World's Best Universities</a></li>
-										<li><a href="http://www.bestcolleges.com/subjects/engineering/engineering-resources/" target="_blank">BestColleges.com Engineering Resources</a></li>
-										<li><a href="http://www.guidetoonlineschools.com/degrees/engineering" target="_blank">Guide to Online Schools - Engineering Degrees</a></li>
-										<li><a href="http://grathio.com/assets/resistor_tags.pdf" target="_blank">Common Resistor Tags</a></li>
-										<li><a href="http://grathio.com/assets/capacitor_tags.pdf" target="_blank">Common Ceramic Capacitor Tags</a></li>
-										<li><a href="http://grathio.com/assets/led_tags.pdf" target="_blank">Common LED Tags</a></li>
-									</ul>
-								</li>
-								<li>Cal Poly Pomona
-									<ul>
-										<li><a href="http://www.csupomona.edu/~career/index.shtml" target="_blank">Career Center</a></li>
-										<li><a href="https://csupomona-csm.symplicity.com/students/index.php?s=home" target="_blank">Bronco Connection (Jobs for Students)</a></li>
-										<li><a href="http://www.csupomona.edu/~engineering/index.shtml" target="_blank">College of Engineering</a></li>
-										<li><a href="http://schedule.csupomona.edu/" target="_blank">Public Class Schedules</a></li>
-										<li><a href="http://www.csupomona.edu/~academic/sheets/index.shtml" target="_blank">2013-2014 College of Engineering Curriculum Sheets</a></li>
-										<li><a href="http://www.csupomona.edu/~advising/" target="_blank">Advising Department</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
+					<div class="section group colorful">
+						<div class="col span_1_of_2 red"><a href="http://blog.sceta.org" target="_blank">Blog</a></div>
+						<div class="col span_1_of_2 blue"><a href="#gallery">Gallery</a></div>
+					</div>
+
+					<div class="section group colorful">
+						<div class="col span_1_of_2 green"><a href="#scholarships">Scholarships</a></div>
+						<div class="col span_1_of_2 yellow"><a href="#careers">Careers</a></div>
 					</div>
 				</div>
 			</div>
 
-			<!-- Main Footer -->
-			<?php include '../../inc/sceta.org/footer_main_1.php'; ?>
+			<a name="gallery"></a>
+			<div class="container blue" id="gallery">
+				<div class="content">
+					<h2>Gallery</h2>
 
-			<!-- Back to Top -->
-			<a href="#top" class="cd-top">Top</a>
-			<script src="../js/top.js"></script>
+					<ul>
+						<li><a href="javascript:void(0);" id="btn_gallery_2014">2014 - 2015</a>
+							<ul class="gallery_2014">
+								<li><a href="http://gcphotobooth.smugmug.com/ET-Department-Banquet-2015/" target="_blank">Jun 04, 2015 - ET Department Banquet</a></li>
+								<li><a href="../gallery/2015/02/members-only-bowling-social/">Feb 12, 2015 - Members-Only Bowling Social</a></li>
+								<li><a href="../gallery/2015/01/2015-consumer-electronics-show/">Jan 08, 2015 - 2015 Consumer Electronics Show</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" id="btn_gallery_2013">2013 - 2014</a>
+							<ul class="gallery_2013">
+								<li><a href="../gallery/2014/06/goldstone-tour/">Jun 06, 2014 - Goldstone Tour</a></li>
+								<li><a href="../gallery/2014/06/et-social/">Jun 05, 2014 - ET Social</a></li>
+								<li><a href="../gallery/2014/05/3rd-annual-alternative-vehicles-exposition/">May 29, 2014 - 3rd Annual Alternative Vehicles Exposition</a></li>
+								<li><a href="../gallery/2014/03/grid-alternatives-solar-spring-break/">Mar 24, 2014 - GRID Alternatives Solar Spring Break</a></li>
+								<li><a href="../gallery/2013/10/previous-sceta-tshirt-designs/">Oct 17, 2013 - Previous SCETA T-Shirt Designs</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" id="btn_gallery_2012">2012 - 2013</a>
+							<ul class="gallery_2012">
+								<li><a href="../gallery/2013/06/2013-sceta-banquet/">Jun 13, 2013 - 2013 SCETA Banquet</a></li>
+								<li><a href="../gallery/2013/06/2013-et-senior-project-symposium/">Jun 09, 2013 - 2013 ET Senior Project Symposium</a></li>
+								<li><a href="../gallery/2013/03/2nd-annual-alternative-vehicles-exposition/">Mar 16, 2013 - 2nd Annual Alternative Vehicles Exposition</a></li>
+								<li><a href="../gallery/2013/01/2013-consumer-electronics-show/">Jan 09, 2013 - 2013 Consumer Electronics Show</a></li>
+								<li><a href="../gallery/2012/11/2012-welcome-fair-and-cpp-lights/">Nov 10, 2012 - 2012 Welcome Fair & CPP Lights</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" id="btn_gallery_2011">2011 - 2012</a>
+							<ul class="gallery_2011">
+								<li><a href="../gallery/2011/11/opto22-trip/">Nov 10, 2011 - Opto22 Trip</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" id="btn_gallery_2010">2010 - 2011</a>
+							<ul class="gallery_2010">
+								<li><a href="../gallery/2011/01/2011-consumer-electronics-show/">Jan 09, 2011 - 2011 Consumer Electronics Show</a></li>
+								<li><a href="../gallery/2010/11/guest-speaker/">Nov 18, 2010 - Guest Speaker</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" id="btn_gallery_2009">2009 - 2010</a>
+							<ul class="gallery_2009">
+								<li><a href="../gallery/2010/05/ecet-banquet-hosted-by-sceta/">May 28, 2010 - ECET Banquet Hosted by SCETA</a></li>
+								<li><a href="../gallery/2010/02/engineering-week-dodgeball-tournament/">Feb 18, 2010 - Engineering Week Dodgeball Tournament</a></li>
+								<li><a href="../gallery/2010/01/2010-consumer-electronics-show/">Jan 08, 2010 - 2010 Consumer Electronics Show</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" id="btn_gallery_2006">2006 - 2007</a>
+							<ul class="gallery_2006">
+								<li><a href="../gallery/2007/02/et-wars/">Feb 20, 2007 - ET Wars</a></li>
+								<li><a href="../gallery/2006/10/et-fair/">Oct 12, 2006 - ET Fair</a></li>
+								<li><a href="../gallery/2006/09/goldstone-trip/">Sep 29, 2006 - Goldstone Trip</a></li>
+							</ul>
+						<li><a href="javascript:void(0);" id="btn_gallery_2005">2005 - 2006</a>
+							<ul class="gallery_2005">
+								<li><a href="../gallery/2006/06/sceta-taco-fest/">Jun 01, 2006 - SCETA Taco Fest</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<p>
+						<a href="javascript:void(0);" class="button" id="btn_showGalleries">Show All</a> <a href="javascript:void(0);" class="button" id="btn_hideGalleries">Hide All</a>
+					</p>
+				</div>
+			</div>
+
+			<a name="scholarships"></a>
+			<div class="container green">
+				<div class="content">
+					<h2>Scholarships</h2>
+
+					<p>
+						Consisting of generally all student members, SCETA aims to ease common financial problems
+						that many college students face by sharing all the available scholarship opportunities
+						to our knowledge. If you are aware of any scholarship opportunities, please feel free to
+						participate in the cause and share them with us by e-mailing our webmaster at
+						<a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a>.
+					</p>
+
+					<hr>
+
+					<h3>There are currently no scholarship opportunities available.</h3>
+
+					<p>
+						Unfortunately, there are no scholarship opportunities that have been brought to our attention.
+						Please stay tuned and check back again later to see if any new opportunities are posted.
+					</p>
+				</div>
+			</div>
+
+			<a name="careers"></a>
+			<div class="container yellow">
+				<div class="content">
+					<h2>Careers</h2>
+
+					<p>
+						We all want jobs & internships, but let's face it - it's tough out there. Besides preparing
+						you with the technical, professional, and individual skills needed to remain competitive in
+						a very limited market, SCETA is helping to ease the process by sharing any available
+						opportunities whenever possible. If you are aware of any career or internship opportunities,
+						please feel free to participate in the cause and share them with us by e-mailing our webmaster
+						at <a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a>.
+					</p>
+
+					<hr>
+
+					<h3>There are currently no career or internship opportunities available.</h3>
+
+					<p>
+						Unfortunately, there are no career or internship opportunities that have been brought to our
+						attention. Please stay tuned and check back again later to see if any new opportunities
+						are posted.
+					</p>
+				</div>
+			</div>
+
+			<?php include '../../inc/sceta.org/footer_subLevel_1.php'; ?>
+		</div>
+
+		<?php include '../../inc/sceta.org/commonScripts_subLevel_1.php'; ?>
+
+		<!-- Gallery Toggle -->
+		<script src="../../inc/sceta.org/js/galleryToggle.js"></script>
 	</body>
 </html>

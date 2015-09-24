@@ -12,7 +12,7 @@
 		<!-- Always Force Latest IE Rendering Engine (even in intranet) & Chrome Frame -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>SCETA - Electronic Parts</title>
+		<title>Parts Store &ndash; SCETA</title>
 
 		<meta name="description" content="SCETA (Southern California Engineering Technologists Association) has been networking with engineering alumni who have been working in the engineering field since 1983. SCETA is an association of students interested in life-long learning and the sharing of knowledge among the various engineering disciplines. One of our goals is to establish a social network for current/future students and alumni.">
 		<meta name="keywords" content="SCETA, engineering, technology, networking">
@@ -30,8 +30,7 @@
 		<link rel="stylesheet" href="../css/html5reset.css" media="all">
 		<link rel="stylesheet" href="../css/style.css" media="all">
 		<link rel="stylesheet" href="../css/col.css" media="all">
-		<link rel="stylesheet" href="../css/3cols.css" media="all">
-		<link rel="stylesheet" href="../css/4cols.css" media="all">
+		<link rel="stylesheet" href="../css/2cols.css" media="all">
 
 		<!-- Responsive Stylesheets -->
 		<link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="../css/1024.css">
@@ -39,174 +38,166 @@
 		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="../css/480.css">
 
 		<!-- All JavaScript at the bottom except for Modernizr which enables HTML5 elements and feature detects. -->
-		<script src="../js/modernizr-2.5.3-min.js"></script>
+		<script src="../../inc/sceta.org/js/modernizr-2.5.3-min.js"></script>
 
 		<!-- jQuery -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>	 
-
-		<!-- Smooth Scroll -->
-		<script src="../js/smoothScroll.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	</head>
 
-	<body>
-		<!-- Main Body Wrapper -->
-		<div id="wrapper">
-			<!-- Main Header w/ SCETA Logo/Title & Main Menu -->
-			<?php include '../../inc/sceta.org/header_1.php'; ?>
+	<body class="cbp-spmenu-push">
+		<!-- Back to Top -->
+		<a name="top"></a>
 
-			<!-- Main Body Content -->
-			<div id="maincontentcontainer">
-				<div id="maincontent">
-					<div class="section group">
-						<div class="col span_1_of_4">
-							<?php include '../../inc/sceta.org/sidemenu_services_parts.php'; ?>
-						</div>
+		<?php include '../../inc/sceta.org/header_subLevel_1.php'; ?>
 
-						<div class="col span_3_of_4">
-							<h4>Electronic Parts</h4>
-							<p>
-								Here at SCETA, we understand how difficult it is to find electronic parts for the individual whether it's for class 
-								or just an individual project. We pride ourselves in being one of the main suppliers on campus when the Engineering Stock Room
-								cannot provide what we can. 
-							</p>
+		<div class="not-fullscreen background" id="background" style="background-image:url('http://highlowtech.org/wp-content/uploads/2011/06/IMG_0888.jpg');" data-img-width="2122" data-img-height="1592">
+			<div class="content-a">
+				<div class="content-b">
+					<h1>Parts Store</h1>
+				</div>
+			</div>
+		</div>
 
-							<p>
-								Part sales are conducted at the SCETA office (Building 9, Room 257), but be quick - parts are becoming rarer and 
-								they may soon be unfortunately out-of-stock permanently.
-							</p>
-
-							<p>
-								While shopping for your electronics supplies here at SCETA, please keep in mind the following:
-								<ul>
-									<li>
-										Discounts are available with a SCETA membership. Please visit the <a href="../about/">About page</a>
-										for more information on a SCETA membership.
-									</li>
-									<li>
-										All sales are final, which means no refunds or returns will be provided.
-									</li>
-									<li>
-										All prices are subject to change.
-									</li>
-									<li>
-										Cash is highly suggested, especially for $1 parts.
-									</li>
-								</ul>
-							</p>
-
-							<p>
-								Below is a list of what we currently supply. Happy electronics shopping!
-							</p>
-
-							<h4>Kits, Cables & Other Components</h4>
-
-							<table class="parts" border="1">
-								<tr class="title">
-									<td>Part Name</td>
-									<td>Description</td>
-									<td>Member Price</td>
-									<td>Regular Price</td>
-									<td>Status</td>
-								</tr>
-
-								<?php 
-									// Connect to the parts database.
-									include_once '../../inc/sceta.org/connect_parts.php'; 
-									// Query select all items from RegularParts table.
-									$sql = "SELECT * FROM RegularParts";
-									// Gather that into the $result variable.
-									$result = $connection->query($sql);
-
-									// Only echo data if there is at least 1.
-									if ($result->num_rows > 0) {
-										// Identify $row as an object to pull data from.
-										while ($row = $result->fetch_assoc()) {
-											// Display standard data.
-											echo "<tr>" 
-												. "<td>" . $row["name"] . "</td>"
-												. "<td>" . $row["description"] . "</td>"
-												. "<td>" . $row["price_member"] . "</td>"
-												. "<td>" . $row["price_regular"] . "</td>";
-
-											// Show "IN STOCK" if status is 1.
-											if ($row["status"] == 1) {
-												echo "<td class='green'></td>";
-											}
-
-											// Otherwise, display "OUT OF STOCK".
-											else {
-												echo "<td class='red'></td>";
-											}
-										}
-									}
-
-									// Otherwise, state that there are no parts available.
-									// This is a failsafe condition. Ideally, this should never be reached.
-									else {
-										echo "There are no parts available.";
-									}
-								?>
-							</table>
-
-							<h4>TTL Chips/ICs</h4>
-
-							<table class="dollarParts" border="1">
-								<tr class="title">
-									<td>Part Name</td>
-									<td>Description</td>
-									<td>Member Price</td>
-									<td>Regular Price</td>
-									<td>Status</td>
-								</tr>
-
-								<?php 
-									// Query select all items from DollarParts table.
-									$sql = "SELECT * FROM DollarParts";
-									// Gather that into the $result variable.
-									$result = $connection->query($sql);
-
-									// Only echo data if there is at least 1.
-									if ($result->num_rows > 0) {
-										// Identify $row as an object to pull data from.
-										while ($row = $result->fetch_assoc()) {
-											// Display standard data.
-											echo "<tr>" 
-												. "<td>" . $row["name"] . "</td>"
-												. "<td>" . $row["description"] . "</td>"
-												. "<td></td>"
-												. "<td></td>";
-
-											// Show "IN STOCK" if status is 1.
-											if ($row["status"] == 1) {
-												echo "<td class='green'></td>";
-											}
-
-											// Otherwise, display "OUT OF STOCK".
-											else {
-												echo "<td class='red'></td>";
-											}
-										}
-									}
-
-									// Otherwise, state that there are no parts available.
-									// This is a failsafe condition. Ideally, this should never be reached.
-									else {
-										echo "There are no parts available.";
-									}
-
-									$connection->close();
-								?>
-							</table>
-						</div>
-					</div>
+		<div class="wrapper">
+			<div class="container">
+				<div class="content">
+					<p class="intro">
+						Get the electronic parts you need with the convenience of on-campus service.
+					</p>
 				</div>
 			</div>
 
-			<!-- Main Footer -->
-			<?php include '../../inc/sceta.org/footer_main_1.php'; ?>
+			<div class="container gray">
+				<div class="content">
+					<h2>Store Policy</h2>
 
-			<!-- Back to Top -->
-			<a href="#top" class="cd-top">Top</a>
-			<script src="../js/top.js"></script>
+					<p>
+						Parts sales are conducted at the SCETA office (Building 9, Room 257), but be quick for
+						many parts are becoming rarer and may soon be out-of-stock permanently.
+					</p>
+
+					<p>
+						While shopping for your electronics supplies here at SCETA, please keep in mind the following:
+
+						<ul>
+							<li>Discounts are available with a SCETA membership.</li>
+							<li>All sales are final, which means no refunds or returns will be provided.</li>
+							<li>All prices are subject to change.</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="content">
+					<h2>Kits, Cables & Other Components</h2>
+
+					<br>
+
+					<table class="parts" border="1">
+						<tr class="title">
+							<td>Part Name</td>
+							<td>Description</td>
+							<td>Member Price</td>
+							<td>Regular Price</td>
+							<td>Status</td>
+						</tr>
+
+						<?php 
+							// Connect to the parts database.
+							include '../../inc/sceta.org/connect_parts.php'; 
+
+							// Define the SQL query to parse regular parts & process it.
+							$sql = "SELECT * FROM RegularParts";
+							$result = $connection->query($sql);
+
+							// If there is at least 1 item, then display the parts.
+							if ($result->num_rows > 0) {
+								// Identify $row as an object to pull data from.
+								while ($row = $result->fetch_assoc()) {
+									// Display standard data.
+									echo "<tr>" 
+										. "<td>" . $row["name"] . "</td>"
+										. "<td>" . $row["description"] . "</td>"
+										. "<td>" . $row["price_member"] . "</td>"
+										. "<td>" . $row["price_regular"] . "</td>";
+
+									// If status is 1, then show "IN STOCK".
+									if ($row["status"] == 1) {
+										echo "<td class='green'></td>";
+									}
+
+									// Otherwise, display "OUT OF STOCK".
+									else {
+										echo "<td class='red'></td>";
+									}
+								}
+							}
+
+							// Otherwise, state that there are no parts available.
+							// This is a failsafe condition. Ideally, this should never be reached.
+							else {
+								echo "There are no parts available.";
+							}
+						?>
+					</table>
+
+					<h2>TTL Chips/ICs</h2>
+
+					<br>
+
+					<table class="dollarParts" border="1">
+						<tr class="title">
+							<td>Part Name</td>
+							<td>Description</td>
+							<td>Member Price</td>
+							<td>Regular Price</td>
+							<td>Status</td>
+						</tr>
+
+						<?php 
+							// Define the SQL query to parse dollar parts & process it.
+							$sql = "SELECT * FROM DollarParts";
+							$result = $connection->query($sql);
+
+							// If there is at least 1 item, then display the parts.
+							if ($result->num_rows > 0) {
+								// Identify $row as an object to pull data from.
+								while ($row = $result->fetch_assoc()) {
+									// Display standard data.
+									echo "<tr>" 
+										. "<td>" . $row["name"] . "</td>"
+										. "<td>" . $row["description"] . "</td>"
+										. "<td></td>"
+										. "<td></td>";
+
+									// If status is 1, then show "IN STOCK".
+									if ($row["status"] == 1) {
+										echo "<td class='green'></td>";
+									}
+
+									// Otherwise, display "OUT OF STOCK".
+									else {
+										echo "<td class='red'></td>";
+									}
+								}
+							}
+
+							// Otherwise, state that there are no parts available.
+							// This is a failsafe condition. Ideally, this should never be reached.
+							else {
+								echo "There are no parts available.";
+							}
+
+							$connection->close();
+						?>
+					</table>
+				</div>
+			</div>
+
+			<?php include '../../inc/sceta.org/footer_subLevel_1.php'; ?>
+		</div>
+
+		<?php include '../../inc/sceta.org/commonScripts_subLevel_1.php'; ?>
 	</body>
 </html>

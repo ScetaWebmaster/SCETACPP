@@ -12,7 +12,7 @@
 		<!-- Always Force Latest IE Rendering Engine (even in intranet) & Chrome Frame -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>SCETA - Join</title>
+		<title>Confirm &ndash; Join SCETA</title>
 
 		<meta name="description" content="SCETA (Southern California Engineering Technologists Association) has been networking with engineering alumni who have been working in the engineering field since 1983. SCETA is an association of students interested in life-long learning and the sharing of knowledge among the various engineering disciplines. One of our goals is to establish a social network for current/future students and alumni.">
 		<meta name="keywords" content="SCETA, engineering, technology, networking">
@@ -30,8 +30,7 @@
 		<link rel="stylesheet" href="../../css/html5reset.css" media="all">
 		<link rel="stylesheet" href="../../css/style.css" media="all">
 		<link rel="stylesheet" href="../../css/col.css" media="all">
-		<link rel="stylesheet" href="../../css/3cols.css" media="all">
-		<link rel="stylesheet" href="../../css/4cols.css" media="all">
+		<link rel="stylesheet" href="../../css/2cols.css" media="all">
 
 		<!-- Responsive Stylesheets -->
 		<link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="../../css/1024.css">
@@ -39,319 +38,316 @@
 		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="../../css/480.css">
 
 		<!-- All JavaScript at the bottom except for Modernizr which enables HTML5 elements and feature detects. -->
-		<script src="../../js/modernizr-2.5.3-min.js"></script>
+		<script src="../../../inc/sceta.org/js/modernizr-2.5.3-min.js"></script>
 
-		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary. -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="../../js/jquery-1.7.2.min.js"><\/script>')</script> 
-
-		<!-- Smooth Scroll -->
-		<script src="../../js/smoothScroll.js"></script>
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	</head>
 
-	<body>
-		<!-- Main Body Wrapper -->
-		<div id="wrapper">
-			<!-- Main Header w/ SCETA Logo/Title & Main Menu -->
-			<?php include '../../../inc/sceta.org/header_2.php'; ?>
+	<body class="cbp-spmenu-push">
+		<!-- Back to Top -->
+		<a name="top"></a>
 
-			<!-- Main Body Content -->
-			<div id="maincontentcontainer">
-				<div id="maincontent">
-					<div class="section group">
-						<div class="col span_1_of_4">
-							<?php include '../../../inc/sceta.org/sidemenu_join_confirm.php'; ?>
-						</div>
+		<?php include '../../../inc/sceta.org/header_subLevel_2.php'; ?>
 
-						<div class="col span_3_of_4">
-							<?php 
-								function isDigits($element) {
-							  		return !preg_match ("/[^0-9]/", $element);
+		<div class="not-fullscreen background" id="background" style="background-image:url('../../gallery/2013/06/2013-sceta-banquet/img/067.jpg');" data-img-width="1092" data-img-height="728">
+			<div class="content-a">
+				<div class="content-b">
+					<h1>Join SCETA</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<div class="container">
+				<div class="content">
+					<?php
+						// Include the necessary functions.
+						include '../../../inc/sceta.org/functions_forms.php';
+						include '../../../inc/sceta.org/functions_email.php';
+
+						// Get the form information.
+					 	$firstName = cleanString($_REQUEST['firstname']);
+					 	$lastName = cleanString($_REQUEST['lastname']);
+					 	$email = cleanString($_REQUEST['email']);
+						$phone = cleanString("(" . $_REQUEST['phone1'] . ") " . $_REQUEST['phone2'] . "-" . $_REQUEST['phone3']);
+						$phoneDigits = $_REQUEST['phone1'] . $_REQUEST['phone2'] . $_REQUEST['phone3'];
+						$broncoid = cleanString($_REQUEST['broncoid']);
+						$major = cleanString($_REQUEST['major']);
+
+						// Store error messages if applicable.
+						$errorMsg = "";
+
+						// If the spam field is empty, then perform the normal
+						// field checks.
+						if (empty($_REQUEST['name2'])) {
+							// If the first name is empty, then display an error.
+							if (empty($firstName)) {
+								$errorMsg .= "<li>First name cannot be empty.</li>";
+							}
+
+							// Otherwise, check for invalid input.
+							else {
+								// If there is an invalid first name, then
+								// display that invalid input.
+								if ((strlen($firstName) > 30) || !isValidFirstName($firstName)) {
+									$errorMsg .= "<li>Invalid first name: " . $firstName . "<ul>";
+
+									// If the first name is longer than 30 characters, 
+									// then display an error.
+									if (strlen($firstName) > 30) {
+										$errorMsg .= "<li>First name is larger than 30 characters. If you need to increase "
+											. "this limit, please contact our webmaster at "
+											. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</li>";
+									}
+
+									// If the first name contains invalid characters, then
+									// display an error.
+									if (!isValidFirstName($firstName)) {
+										$errorMsg .= "<li>First name can only contain letters A-Z, a-z.</li>";
+									}
+
+									$errorMsg .= "</ul></li>";
 								}
+							}
 
-								function isName($element) {
-							  		return !preg_match ("/[^A-z]/", $element);
+							// If the last name is empty, then display an error.
+							if (empty($lastName)) {
+								$errorMsg .= "<li>Last name cannot be empty.</li>";
+							}
+
+							// Otherwise, check for invalid input.
+							else {
+								// If there is an invalid last name, then
+								// display that invalid input.
+								if ((strlen($lastName) > 30) || !isValidLastName($lastName)) {
+									$errorMsg .= "<li>Invalid last name: " . $lastName . "<ul>";
+
+									// If the last name is longer than 30 characters, then
+									// display an error.
+									if (strlen($lastName) > 30) {
+										$errorMsg .= "<li>First name is larger than 30 characters. If you need to increase "
+											. "this limit, please contact our webmaster at "
+											. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</li>";
+									}
+
+									// If the last name contains invalid characters, then
+									// display an error.
+									if (!isValidLastName($lastName)) {
+										$errorMsg .= "<li>Last name can only contain letters A-Z, a-z or dashes.</li>";
+									}
+
+									$errorMsg .= "</ul></li>";
 								}
+							}
 
-								function isLastName($element) {
-									return !preg_match ("/[^A-z-]/", $element);
+							// If the e-mail address is empty, then display an error.
+							if (empty($email)) {
+								$errorMsg .= "<li>E-mail address cannot be empty.</li>";
+							}
+
+							// Otherwise, check for invalid input.
+							else {
+								// If there is an invalid e-mail address, then
+								// display that invalid input.
+								if ((strlen($email) > 60) || !isValidEmail($email)) {
+									$errorMsg .= "<li>Invalid e-mail address: " . $email . "<ul>";
+
+									// If the e-mail address is longer than 60 characters,
+									// then display an error.
+									if (strlen($email) > 60) {
+										$errorMsg .= "<li>E-mail address is larger than 60 characters. If you need to "
+											. "increase this limit, please contact our webmaster at "
+											. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</li>";
+									}
+
+									// If the e-mail address contains invalid characters,
+									// then display an error.
+									if (!isValidEmail($email)) {
+										$errorMsg .= "<li>E-mail address can only contain letters A-Z, a-z, numbers 0-9, "
+											. "dashes, underscores, and 1 @ symbol.</li>";
+									}
+
+									$errorMsg .= "</ul></li>";
 								}
+							}
 
-								function checkEmail($email) {
-							  		$pattern = "/^[A-z0-9\._-]+"
-							        		. "@"
-							         		. "[A-z0-9][A-z0-9-]*"
-							         		. "(\.[A-z0-9_-]+)*"
-							         		. "\.([A-z]{2,6})$/";
-							  		return preg_match ($pattern, $email);
+							// If the phone number is empty, then display an error.
+							if (empty($phoneDigits)) {
+								$errorMsg .= "<li>Phone number cannot be empty.</li>";
+							}
+
+							// Otherwise, check for invalid input.
+							else {
+								// If there is an invalid phone number, then
+								// display that invalid input.
+								if ((strlen($phoneDigits) != 10) || !isAllDigits($phoneDigits)) {
+									$errorMsg .= "<li>Invalid phone number: " . $phone . "<ul>";
+
+									// If the phone number is not 10 digits, then display
+									// an error.
+									if (strlen($phoneDigits) != 10) {
+										$errorMsg .= "<li>Phone number can only be 10 digits. If additional codes or "
+											. "international numbers need to be supported, please contact our webmaster at "
+											. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</li>";
+									}
+
+									// If the phone number contains invalid characters,
+									// then display an error.
+									if (!isAllDigits($phoneDigits)) {
+										$errorMsg .= "<li>Phone number can only contain digits 0-9.</li>";
+									}
+
+									$errorMsg .= "</ul></li>";
 								}
+							}
 
-								function validateJoinForm() {
-									$form_validated = TRUE;
-									$error1 = FALSE;
-									$error2 = FALSE;
-									$error3 = FALSE;
-									$error4 = FALSE;
-									$error5 = FALSE;
+							// If the bronco ID number is empty, then display
+							// an error.
+							if (empty($broncoid)) {
+								$errorMsg .= "<li>Bronco ID number cannot be empty.</li>";
+							}
 
-									if (!isName($_REQUEST['firstname']) || empty($_REQUEST['firstname']) || strlen($_REQUEST['firstname']) > 30) {
-										$message1 = "<li>Please check your first name. Only the letters A-Z are accepted.</li>";
-										$form_validated = FALSE;
-										$error1 = TRUE;
+							// Otherwise, check for invalid input.
+							else {
+								// If there is an invalid bronco ID number, then
+								// display that invalid input.
+								if ((strlen($broncoid) > 9) || !isAllDigits($broncoid)) {
+									$errorMsg .= "<li>Invalid bronco ID number: " . $broncoid . "<ul>";
+
+									// If the bronco ID number is longer than 9 characters,
+									// then display an error.
+									if (strlen($broncoid) > 9) {
+										$errorMsg .= "<li>Bronco ID number cannot exceed 9 digits. If you believe this is "
+											. "an error, please contact our webmaster at "
+											. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</li>";
 									}
 
-									if (!isLastName($_REQUEST['lastname']) || empty($_REQUEST['lastname']) || strlen($_REQUEST['lastname']) > 30) {
-										$message2 = "<li>Please check your last name. Only the letters A-Z and hyphen '-' are accepted.</li>";
-										$form_validated = FALSE;
-										$error2 = TRUE;
+									// If the bronco ID number is not all digits, then
+									// display an error.
+									if (!isAllDigits($broncoid)) {
+										$errorMsg .= "<li>Bronco ID number can only contain digits 0-9.</li>";
 									}
 
-									if (!checkEmail($_REQUEST['email']) || empty($_REQUEST['email']) || strlen($_REQUEST['email']) > 60) {
-										$message3 = "<li>Please check your email address.</li>";
-										$form_validated = FALSE;
-										$error3 = TRUE;
-									}
-
-									$phone = $_REQUEST['phone1'].$_REQUEST['phone2'].$_REQUEST['phone3'];
-									if (!isDigits($phone) || strlen($phone) != 10) {
-										$message4 = "<li>Please check your phone number. Only digits 0-9 are allowed.</li>";	
-										$form_validated = FALSE;
-										$error4 = TRUE;
-									}
-
-									if (!isDigits($_REQUEST['broncoid']) || strlen($_REQUEST['broncoid']) > 9) {
-										$message5 = "<li>Please check your Bronco ID. It may not exceed 9 digits and only digits 0-9 are allowed.</li>";
-										$form_validated = FALSE;
-										$error5 = TRUE;
-									}
-
-									if (!$form_validated) {
-										echo "<h4>We are sorry. There was an error with your submission request.</h4>";
-										echo "<ul>";
-										
-										if ($error1) {
-											echo $message1;
-										}
-
-										if ($error2) {
-											echo $message2;
-										}
-								
-										if ($error3) {
-											echo $message3;
-										}
-							
-										if ($error4) {
-											echo $message4;
-										}
-
-										if ($error5) {
-											echo $message5;
-										}
-
-										echo "</ul>";
-
-										echo "<p>Please click <a href='../../join/'>here</a> to return to the Join page.</p>";
-									}
-
-									return $form_validated;
+									$errorMsg .= "</ul></li>";
 								}
+							}
+						}
 
-								/* Prevent multiple/repeated error messages. */
-								function validateJoinForm1() {
-									$form_validated = TRUE;
+						// Otherwise, display the spam error.
+						else {
+							$errorMsg = "<li>Invalid name.</li>";
+						}
 
-									if (!isName($_REQUEST['firstname']) || empty($_REQUEST['firstname']) || strlen($_REQUEST['firstname']) > 30) {
-										$form_validated = FALSE;
-									}
+						// If there are no error messages, then send the e-mails.
+						if ($errorMsg == "") {
+							// Define the e-mail message to be sent to the SCETA secretary.
+							$emailMsg_secretary = "Dear SCETA Secretary,<br>"
+								. "<br>"
+								. "We have a new member who just registered for SCETA. The following is "
+								. "their information:"
+								. "<ul>"
+					    		. "<li><b>Name:</b> " . $firstName . " " . $lastName . "</li>"
+					    		. "<li><b>E-mail Address:</b> " . $email . "</li>"
+					    		. "<li><b>Phone Number:</b> " . $phone . "</li>"
+					    		. "<li><b>Bronco ID Number:</b> " . $broncoid . "</li>"
+					    		. "<li><b>Major:</b> " . $major . "</li>"
+								. "</ul>"
+								. "Best regards,<br>"
+								. "SCETA Webmaster<br>"
+								. "<br>"
+								. "<hr>"
+								. "This is an automatically generated message upon registration.<br>"
+								. "Please discuss any concerns via reply to this e-mail ("
+								. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>), "
+								. "on GroupMe, or in person.";
 
-									if (!isLastName($_REQUEST['lastname']) || empty($_REQUEST['lastname']) || strlen($_REQUEST['lastname']) > 30) {
-										$form_validated = FALSE;
-									}
+							// Define the e-mail message to be sent to the new member.
+							$emailMsg_member = "Dear " . $firstName . " " . $lastName . ",<br><br>"
+								. "Welcome to SCETA!<br>"
+								. "<br>"
+								. "This is your confirmation e-mail for your membership request. However, you "
+								. "must complete your membership process by submitting your membership dues.<br>"
+								. "<br>"
+								. "<b>To submit your membership dues, please coordinate with our secretary at "
+								. "<a href='mailto:secretary@sceta.org'>secretary@sceta.org</a>.</b><br>"
+								. "<br>"
+								. "Below is the following information that you have submitted:"
+								. "<ul>"
+					    		. "<li><b>Name:</b> " . $firstName . " " . $lastName . "</li>"
+					    		. "<li><b>E-mail Address:</b> " . $email . "</li>"
+					    		. "<li><b>Phone Number:</b> " . $phone . "</li>"
+					    		. "<li><b>Bronco ID Number:</b> " . $broncoid . "</li>"
+					    		. "<li><b>Major:</b> " . $major . "</li>"
+								. "</ul>"
+								. "If you have any problems with this membership process or need to correct any "
+								. "information, please e-mail our secretary at "
+								. "<a href='mailto:secretary@sceta.org'>secretary@sceta.org</a>.<br><br>"
+								. "Welcome again to SCETA and we hope to see you very soon at our next event!<br><br>"
+								. "Best regards,<br>"
+								. "Your SCETA Secretary<br>"
+								. "<br>"
+								. "<hr>"
+								. "This is an automatically generated message upon registration.<br>"
+								. "Please direct any questions, comments, or concerns via e-mail to "
+								. "<a href='mailto:secretary@sceta.org'>secretary@sceta.org</a> or in person.";
 
-									if (!checkEmail($_REQUEST['email']) || empty($_REQUEST['email']) || strlen($_REQUEST['email']) > 60) {
-										$form_validated = FALSE;
-									}
+							// Get the mail status after sending to SCETA secretary.
+							$mailStatus = sendMail("secretary@sceta.org", "webmaster@sceta.org", 
+								"New SCETA Member", "webmaster@sceta.org", $emailMsg_secretary,
+								"webmaster@sceta.org", "Airwolf7400");
 
-									$phone = $_REQUEST['phone1'].$_REQUEST['phone2'].$_REQUEST['phone3'];
-									if (!isDigits($phone) || strlen($phone) != 10) {
-										$form_validated = FALSE;
-									}
+							// If the mail status is empty, then display success.
+							if ($mailStatus == "") {
+								echo "<h2>You have successfully registered!</h2>"
+									. "<p>Thank you for your submission. Please stay tuned for a new member e-mail, "
+									. "and be sure to check the calendar for our upcoming events.</p>"
+									. "<p>We look forwarding to meeting you at our next event!</p>"
+									. "<h2>Complete your Membership</h2>"
+									. "<p>As a short reminder, your membership process will not be completed "
+									. "until your membership dues have been paid. Please coordinate with our "
+									. "secretary at <a href='mailto:secretary@sceta.org'>secretary@sceta.org</a> "
+									. "to complete this process.</p>";
+							}
 
-									if (!isDigits($_REQUEST['broncoid']) || strlen($_REQUEST['broncoid']) > 9) {
-										$form_validated = FALSE;
-									}
+							// Otherwise, display an error.
+							else {
+								echo "<h2>Mailer Error: Could not e-mail SCETA secretary.</h2>"
+									. "<p>" . $mailStatus . "</p>"
+									. "<p>Please notify our webmaster at "
+									. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</p>";
+							}
 
-									return $form_validated;
-								}
+							// Reset the mail status.
+							$mailStatus = "";
 
-						    	function clean_string($string) {
-						      		$bad = array("content-type","bcc:","to:","cc:","href");
-						      		return str_replace($bad,"",$string);
-								}
+							// Get the mail status after sending to new member.
+							$mailStatus = sendMail($email, "donotreply@sceta.org", "Welcome to SCETA",
+								"secretary@sceta.org", $emailMsg_member, "donotreply@sceta.org", "Airwolf7400");
 
-								// Identify the Form Information
-							 	$firstname = $_REQUEST['firstname'];
-							 	$lastname = $_REQUEST['lastname'];
-							 	$email = $_REQUEST['email'];
-								$phone = "(" . $_REQUEST['phone1'] . ") " . $_REQUEST['phone2'] . "-".$_REQUEST['phone3'];
-								$broncoid = $_REQUEST['broncoid'];
-								$major = $_REQUEST['major'];
-								$email_message = "Dear SCETA Secretary,<br><br>We have a new member who just registered for SCETA. 
-									The following is their information:";
-								$email_message .= "<ul>";
-						    		$email_message .= "<li>Name: " . clean_string($firstname) . " " . clean_string($lastname) . "</li>";
-						    		$email_message .= "<li>E-mail Address: " . clean_string($email) . "</li>";
-						    		$email_message .= "<li>Phone Number: " . clean_string($phone) . "</li>";
-						    		$email_message .= "<li>Bronco ID Number: " . clean_string($broncoid) . "</li>";
-						    		$email_message .= "<li>Major: " . clean_string($major) . "</li>";
-								$email_message .= "</ul>";
-								$email_message .= "Best regards,<br>SCETA Webmaster<br><br><hr>Please note that this is an 
-									automatically generated message upon registration.<br>Any concerns can be discussed 
-									via reply to this e-mail (webmaster@sceta.org), on GroupMe, or in person.";
+							// If the mail status is not empty, then display
+							// an error.
+							if ($mailStatus != "") {
+								echo "<h2>Mailer Error: Could not e-mail new member.</h2>"
+									. "<p>" . $mailStatus . "</p>"
+									. "<p>Please notify our webmaster at "
+									. "<a href='mailto:webmaster@sceta.org'>webmaster@sceta.org</a>.</p>";
+							}
+						}
 
-								// PEAR Mail Configuration
-								require_once "Mail.php"; // PEAR mail is already installed in the current environment.
-								require_once "Mail/mime.php"; // Allow HTML text.
-								$email_to = "secretary@sceta.org"; // Recipient e-mail.
-								$email_subject = "New SCETA Member"; // Subject of the e-mail.
-								$host = "mail.sceta.org"; // Host of mail server.
-								$username = "donotreply@sceta.org"; // Host user.
-								$from_address = "donotreply@sceta.org"; // Set a from address.
-								$password = "Airwolf7400"; // Password of host user.
-								$reply_to = "webmaster@sceta.org"; // Reply e-mail.
-								$port = "50";
-
-								// Allow HTML message.
-								$mime = new Mail_mime();
-								$mime->setHTMLBody($email_message);
-								$email_message = $mime->get();
-
-								// This section creates the e-mail headers.
-								$auth = array('host' => $host, 'auth' => true, 'username' => $username, 'password' => $password);
-								$headers = array('From' => $from_address, 'To' => $email_to, 'Subject' => $email_subject, 'Reply-To' => $reply_to);
-								$headers = $mime->headers($headers);
-
-								// If the form is valid, send the e-mail out.
-								if (validateJoinForm()) {
-									// Prevent spam e-mails based on previous spam with first name equaling last name.
-									if (!empty($_REQUEST['name2'])) {
-										// Trick the spammer into thinking they by-passed the filter when they really didn't.
-										echo "<h4>You have successfully registered!</h4><p>Thank you for your submission. 
-										Stay tuned for a new member e-mail, and be sure to check the calendar for the next meeting and 
-										upcoming events!</p><p>We're excited to see you soon at the next SCETA meeting!</p>";
-									}
-
-									// Otherwise, if not spam, then send the mail.
-									else {
-										$smtp = Mail::factory('smtp', $auth);
-										$mail = $smtp->send($email_to, $headers, $email_message);
-
-										if (PEAR::isError($mail)) {
-											echo "<p>Mailer Error: " . $mail->ErrorInfo . "</p>";
-										}
-										
-										else {
-											echo "
-												<h4>You have successfully registered!</h4>
-												<p>
-													Thank you for your submission. Stay tuned for a new member e-mail, and be sure to check the calendar for the next 
-													meeting and upcoming events!
-												</p>
-												<p>
-													We're excited to see you soon at the next SCETA meeting!
-												</p>
-
-												<h4>Reminder: These are just some of your benefits!</h4>
-												<p>
-													You've joined us for a reason. Here are more of some of your benefits:
-													<ul>
-														<li>discounts on electronic parts</li>
-														<li>priority for SCETA-hosted events</li>
-														<li>free food at meetings</li>
-														<li>industry exposure from outreach events like Innovative Tech Expo and GRID Alternatives</li>
-														<li>...and still more!</li>
-													</ul>
-												</p>
-
-												<h4>Complete Your Membership</h4>
-												<p>
-													As you will find in your new member e-mail, the membership process needs to be completed with
-													a $20 membership fee. 
-												</p>
-
-												<p>
-													Please coordinate with our secretary through 
-													<a href='mailto:secretary@sceta.org'>secretary@sceta.org</a> to complete this process.
-												</p>";
-										}
-									}
-								}
-
-								/* User confirmation e-mail information. */
-								$email_message1 = "Dear " . clean_string($firstname) . " " . clean_string($lastname) . ",<br><br>Thank you for joining SCETA. 
-									This is your confirmation e-mail. However, your membership process is still incomplete.<br><br> To complete your membership, 
-									you need to submit your <b>$20 membership dues</b>. Please coordinate with our secretary at <a href='mailto:secretary@sceta.org'>secretary@sceta.org</a> 
-									to complete this portion of your membership process.<br><br>Below is the following information that was submitted:";
-								$email_message1 .= "<ul>";
-						    		$email_message1 .= "<li>Name: " . clean_string($firstname) . " " . clean_string($lastname) . "</li>";
-						    		$email_message1 .= "<li>E-mail Address: " . clean_string($email) . "</li>";
-						    		$email_message1 .= "<li>Phone Number: " . clean_string($phone) . "</li>";
-						    		$email_message1 .= "<li>Bronco ID Number: " . clean_string($broncoid) . "</li>";
-						    		$email_message1 .= "<li>Major: " . clean_string($major) . "</li>";
-								$email_message1 .= "</ul>";
-								$email_message1 .= "If you have any problems with this membership process or need to correct any information, please e-mail our 
-									secretary at <a href='mailto:secretary@sceta.org'>secretary@sceta.org</a>.<br><br> Thank you once again for 
-									joining SCETA and we hope to see you very soon at our next meeting!<br><br>";
-								$email_message1 .= "Best regards,<br>Your SCETA Secretary<br><br><hr>This is an automatically 
-									generated message upon registration.<br>Please direct any questions, comments, or concerns via e-mail to 
-									<a href='mailto:secretary@sceta.org'>secretary@sceta.org</a> or in person.";
-
-								$email_to = $email; // Recipient e-mail.
-								$email_subject = "Welcome to SCETA!"; // Subject of the e-mail.
-								$reply_to = "secretary@sceta.org"; // Reply e-mail.
-
-								// Allow HTML message.
-								$mime = new Mail_mime();
-								$mime->setHTMLBody($email_message1);
-								$email_message = $mime->get();
-
-								// This section creates the e-mail headers.
-								$auth = array('host' => $host, 'auth' => true, 'username' => $username, 'password' => $password);
-								$headers = array('From' => $from_address, 'To' => $email_to, 'Subject' => $email_subject, 'Reply-To' => $reply_to);
-								$headers = $mime->headers($headers);
-
-								// If the form is valid, send the e-mail out.
-								if (validateJoinForm1()) {
-									// Prevent spam e-mails based on previous spam with first name equaling last name.
-									if (!empty($_REQUEST['name2'])) {
-										// Trick the spammer into thinking they by-passed the filter when they really didn't.
-										echo "<h4>You have successfully registered!</h4><p>Thank you for your submission. 
-										Stay tuned for a new member e-mail, and be sure to check the calendar for the next meeting and 
-										upcoming events!</p><p>We're excited to see you soon at the next SCETA meeting!</p>";
-									}
-
-									// Otherwise, if not spam, then send the mail.
-									else {
-										$smtp = Mail::factory('smtp', $auth);
-										$mail = $smtp->send($email_to, $headers, $email_message1);
-
-										if (PEAR::isError($mail)) {
-											echo "<p>Mailer Error: " . $mail->ErrorInfo . "</p>";
-										}
-									}
-								}
-							?> 
-						</div>
-					</div>
+						// Otherwise, display the error messages.
+						else {
+							echo "<h2>Sorry. There was an error with your submission request.</h2>"
+								. "<ul>" . $errorMsg . "</ul>"
+								. "<p>Click <a href='../'>here</a> to return to the Join page.</p>";
+						}
+					?> 
 				</div>
 			</div>
 
-			<!-- Main Footer -->
-			<?php include '../../../inc/sceta.org/footer_main_2.php'; ?>
+			<?php include '../../../inc/sceta.org/footer_subLevel_2.php'; ?>
+		</div>
 
-			<!-- Back to Top -->
-			<a href="#top" class="cd-top">Top</a>
-			<script src="../../js/top.js"></script>
+		<?php include '../../../inc/sceta.org/commonScripts_subLevel_2.php'; ?>
 	</body>
 </html>
