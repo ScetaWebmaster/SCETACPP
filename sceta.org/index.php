@@ -12,10 +12,11 @@
 		<!-- Always Force Latest IE Rendering Engine (even in intranet) & Chrome Frame -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>SCETA</title>
+		<title>SCETA &ndash; Official Home Page</title>
 
-		<meta name="description" content="SCETA (Southern California Engineering Technologists Association) has been networking with engineering alumni who have been working in the engineering field since 1983. SCETA is an association of students interested in life-long learning and the sharing of knowledge among the various engineering disciplines. One of our goals is to establish a social network for current/future students and alumni.">
-		<meta name="keywords" content="SCETA, engineering, technology, networking">
+		<meta name="description" content="SCETA is an association of students interested in life-long learning 
+			and the sharing of knowledge among the various engineering disciplines.">
+		<meta name="keywords" content="SCETA, engineering, technology, networking, cpp">
 		<meta name="author" content="www.sceta.org">
 		<meta http-equiv="cleartype" content="on">
 

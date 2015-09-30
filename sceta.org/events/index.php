@@ -14,8 +14,8 @@
 
 		<title>Events &ndash; SCETA</title>
 
-		<meta name="description" content="SCETA (Southern California Engineering Technologists Association) has been networking with engineering alumni who have been working in the engineering field since 1983. SCETA is an association of students interested in life-long learning and the sharing of knowledge among the various engineering disciplines. One of our goals is to establish a social network for current/future students and alumni.">
-		<meta name="keywords" content="SCETA, engineering, technology, networking">
+		<meta name="description" content="Stay involved by seeing everything that we're up to.">
+		<meta name="keywords" content="SCETA, engineering, technology, networking, cpp">
 		<meta name="author" content="www.sceta.org">
 		<meta http-equiv="cleartype" content="on">
 
@@ -65,10 +65,13 @@
 			<div class="container">
 				<div class="content">
 					<p class="intro">
-						If you're interested in getting involved, then look no further. Below you will find all the events
-						that SCETA has to offer. We look forward to seeing you at as many of them as possible!
+						Stay involved by seeing everything that we're up to.
 					</p>
+				</div>
+			</div>
 
+			<div class="container gray">
+				<div class="content">
 					<div class="section group colorful">
 						<div class="col span_1_of_2 red"><a href="#workshops" target="_blank">Workshops</a></div>
 						<div class="col span_1_of_2 blue"><a href="#tours">Tours</a></div>
@@ -88,11 +91,12 @@
 						<div class="col span_1_of_2 teal"><a href="#signups">Signups</a></div>
 						<div class="col span_1_of_2 bluegrey"><a href="#participants">Participants</a></div>
 					</div>
+				</div>
+			</div>
 
-					<br><br>
-
-					<a name="calendar"></a>
-
+			<a name="calendar"></a>
+			<div class="container">
+				<div class="content">
 					<h2>Full Calendar</h2><br>
 
 					<iframe src="https://www.google.com/calendar/embed?showTabs=0&amp;showCalendars=0&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=scetacpp%40gmail.com&amp;color=%23125A12&amp;ctz=America%2FLos_Angeles" 
