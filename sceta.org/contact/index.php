@@ -62,7 +62,7 @@
 			<div class="container">
 				<div class="content">
 					<p class="intro">
-						Reach us anywhere at anytime using the contact information below.
+						Reach us anywhere at anytime.
 					</p>
 				</div>
 			</div>
