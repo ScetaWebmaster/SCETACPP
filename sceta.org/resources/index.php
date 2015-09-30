@@ -14,8 +14,9 @@
 
 		<title>Resources &ndash; SCETA</title>
 
-		<meta name="description" content="SCETA (Southern California Engineering Technologists Association) has been networking with engineering alumni who have been working in the engineering field since 1983. SCETA is an association of students interested in life-long learning and the sharing of knowledge among the various engineering disciplines. One of our goals is to establish a social network for current/future students and alumni.">
-		<meta name="keywords" content="SCETA, engineering, technology, networking">
+		<meta name="description" content="Stop wandering for information and view helpful resources within a 
+			single page.">
+		<meta name="keywords" content="SCETA, engineering, technology, networking, cpp">
 		<meta name="author" content="www.sceta.org">
 		<meta http-equiv="cleartype" content="on">
 
@@ -62,10 +63,13 @@
 			<div class="container">
 				<div class="content">
 					<p class="intro">
-						Stop wondering and stop by this single point of reference resources page anytime you need
-						information that doesn't fall in any of the other categories.
+						Stop wandering for information and view helpful resources within a single page.
 					</p>
+				</div>
+			</div>
 
+			<div class="container gray">
+				<div class="content">
 					<div class="section group colorful">
 						<div class="col span_1_of_2 red"><a href="http://blog.sceta.org" target="_blank">Blog</a></div>
 						<div class="col span_1_of_2 blue"><a href="#gallery">Gallery</a></div>
