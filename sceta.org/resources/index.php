@@ -88,6 +88,11 @@
 					<h2>Gallery</h2>
 
 					<ul>
+						<li><a href="javascript:void(0);" id="btn_gallery_2015">2015 - 2016</a>
+							<ul class="gallery_2015">
+								<li><a href="../gallery/2015/10/pumpkin-festival/">Oct. 17, 2015 - Pumpkin Festival</a></li>
+							</ul>
+						</li>
 						<li><a href="javascript:void(0);" id="btn_gallery_2014">2014 - 2015</a>
 							<ul class="gallery_2014">
 								<li><a href="http://gcphotobooth.smugmug.com/ET-Department-Banquet-2015/" target="_blank">Jun 04, 2015 - ET Department Banquet</a></li>
