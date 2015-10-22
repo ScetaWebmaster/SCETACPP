@@ -75,11 +75,11 @@
 					<h2>Hours of Operation</h2>
 
 					<ul>
-						<li><b>Monday:</b> N/A</li>
-						<li><b>Tuesday:</b> N/A</li>
-						<li><b>Wednesday:</b> N/A</li>
-						<li><b>Thursday:</b> N/A</li>
-						<li><b>Friday:</b> N/A</li>
+						<li><b>Monday:</b> 10:00 AM - 1:30 PM</li>
+						<li><b>Tuesday:</b> Closed</li>
+						<li><b>Wednesday:</b> 8:30 AM - 12:30 PM</li>
+						<li><b>Thursday:</b> 8:00 AM - 2:30 PM</li>
+						<li><b>Friday:</b> 12:00 PM - 12:30 PM</li>
 					</ul>
 
 					<p>
