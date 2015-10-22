@@ -276,7 +276,7 @@
 
 							"Name[0]" : "CES 2016",
 							"Date[0]" : "01/07/2016",
-							"Priority[0]" : "false",
+							"Priority[0]" : "true",
 							"Legend[0]" : "",
 							"ID[0]" : "1I0Tw3odhhYM4jfIF_7BWC9f2k0K6cVYI_0TibHUOaiA"
 						}

@@ -225,6 +225,15 @@
 			<a name="upload"></a>
 			<div class="container red">
 				<div class="content">
+					<!--
+					<h2>We are sorry. Our printer is currently out of service.</h2>
+
+					<p>
+						Our printer is currently under maintenance. We apologize for any inconvenience this
+						may cause and will open up the upload form again when the printer is ready. 
+					</p>
+					-->
+					
 					<h2>Upload Your Design</h2>
 
 					<p>
