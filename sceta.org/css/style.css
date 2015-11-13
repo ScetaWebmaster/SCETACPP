@@ -1100,6 +1100,23 @@ body {
 		color: #fff;
 	}
 
+	ul.meetings_spring2015,
+	ul.meetings_winter2015,
+	ul.meetings_fall2014 {
+		display: none;
+	}
+
+	#powerpoint {
+		width: 100%;
+		min-height: 560px;
+	}
+
+	@media only screen and (max-width: 600px) {
+		#powerpoint {
+			min-height: 300px;
+		}
+	}
+
 	/* Specific Page: Services */
 
 	.container#services {

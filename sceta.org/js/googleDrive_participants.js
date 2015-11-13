@@ -112,9 +112,9 @@ $(document).ready(function() {
 					if (data.feed.entry == null) {
 						$('ol.event' + counter).append(
 							'<p class="eventsListContent">There are currently no participants signed'
-							+ 'up for this event. If you' + "'" 
+							+ 'up for this event.</p><p class="eventsListContent">If you' + "'" 
 							+ 'd like to sign up for this event, please sign up through our '
-							+ '<a href="../signups/">Signups page</a>.</p>'
+							+ '<a href="#signups">Signups page</a>.</p>'
 						);
 					}
 
