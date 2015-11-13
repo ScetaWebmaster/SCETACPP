@@ -334,7 +334,7 @@ $(document).ready(function() {
 			}
 
 			else {
-				container.SPEAKERS.object.last().before(workshops);
+				container.SPEAKERS.object.last().before(speakers);
 			}
 
 			if (activities == '') {
@@ -342,7 +342,7 @@ $(document).ready(function() {
 			}
 
 			else {
-				container.ACTIVITIES.object.last().before(workshops);
+				container.ACTIVITIES.object.last().before(activities);
 			}
 
 			if (cpp == '') {

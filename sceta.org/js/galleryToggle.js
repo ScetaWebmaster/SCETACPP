@@ -11,6 +11,7 @@ $(document).ready(function() {
 	var gallery_2012 = $('ul.gallery_2012');
 	var gallery_2013 = $('ul.gallery_2013');
 	var gallery_2014 = $('ul.gallery_2014');
+	var gallery_2015 = $('ul.gallery_2015');
 
 	<!-- Galleries - 2005 - 2006 -->
 	$('#btn_gallery_2005').on('click', function(e) {
@@ -60,6 +61,12 @@ $(document).ready(function() {
 		return false;
 	});
 
+	<!-- Galleries - 2015 - 2016 -->
+	$('#btn_gallery_2015').on('click', function(e) {
+		gallery_2015.toggle('Blind');
+		return false;
+	});
+
 	<!-- Galleries - Show All -->
 	$('#btn_showGalleries').on('click', function(e) {
 		gallery_2005.show('Blind');
@@ -70,6 +77,7 @@ $(document).ready(function() {
 		gallery_2012.show('Blind');
 		gallery_2013.show('Blind');
 		gallery_2014.show('Blind');
+		gallery_2015.show('Blind');
 	});
 
 	<!-- Galleries - Hide All -->
@@ -82,5 +90,6 @@ $(document).ready(function() {
 		gallery_2012.hide('Blind');
 		gallery_2013.hide('Blind');
 		gallery_2014.hide('Blind');
+		gallery_2015.hide('Blind');
 	});
 });

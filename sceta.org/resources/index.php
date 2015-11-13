@@ -71,8 +71,8 @@
 			<div class="container gray">
 				<div class="content">
 					<div class="section group colorful">
-						<div class="col span_1_of_2 red"><a href="http://blog.sceta.org" target="_blank">Blog</a></div>
-						<div class="col span_1_of_2 blue"><a href="#gallery">Gallery</a></div>
+						<div class="col span_1_of_2 red"><a href="#gallery">Gallery</a></div>
+						<div class="col span_1_of_2 blue"><a href="#meetings">Meetings</a></div>
 					</div>
 
 					<div class="section group colorful">
@@ -83,11 +83,16 @@
 			</div>
 
 			<a name="gallery"></a>
-			<div class="container blue" id="gallery">
+			<div class="container red" id="gallery">
 				<div class="content">
 					<h2>Gallery</h2>
 
 					<ul>
+						<li><a href="javascript:void(0);" id="btn_gallery_2015">2015 - 2016</a>
+							<ul class="gallery_2015">
+								<li><a href="../gallery/2015/10/pumpkin-festival/">Oct. 17, 2015 - Pumpkin Festival</a></li>
+							</ul>
+						</li>
 						<li><a href="javascript:void(0);" id="btn_gallery_2014">2014 - 2015</a>
 							<ul class="gallery_2014">
 								<li><a href="http://gcphotobooth.smugmug.com/ET-Department-Banquet-2015/" target="_blank">Jun 04, 2015 - ET Department Banquet</a></li>
@@ -150,6 +155,55 @@
 				</div>
 			</div>
 
+			<a name="meetings"></a>
+			<div class="container blue">
+				<div class="content">
+					<h2>Meetings</h2>
+
+					<ul>
+						<li><a href="javascript:void(0);" id="btn_meetings_fall2015">Fall 2015</a>
+							<ul class="meetings_fall2015">
+								<li><a href="../meetings/2015/11/05/">Meeting 3 - 11/05/2015</a></li>
+								<li><a href="../meetings/2015/10/22/">Meeting 2 - 10/22/2015</a></li>
+							</ul>
+						</li>
+
+						<li><a href="javascript:void(0);" id="btn_meetings_spring2015">Spring 2015</a>
+							<ul class="meetings_spring2015">
+								<li><a href="../meetings/2015/06/04/">Meeting 5 - 06/04/2015</a></li>
+								<li><a href="../meetings/2015/05/21/">Meeting 4 - 05/21/2015</a></li>
+								<li><a href="../meetings/2015/05/07/">Meeting 3 - 05/07/2015</a></li>
+								<li><a href="../meetings/2015/04/09/">Meeting 1 - 04/09/2015</a></li>
+							</ul>
+						</li>
+
+						<li><a href="javascript:void(0);" id="btn_meetings_winter2015">Winter 2015</a>
+							<ul class="meetings_winter2015">
+								<li><a href="../meetings/2015/03/12/">Meeting 5 - 03/12/2015</a></li>
+								<li><a href="../meetings/2015/02/26/">Meeting 4 - 02/26/2015</a></li>
+								<li><a href="../meetings/2015/02/12/">Meeting 3 - 02/12/2015</a></li>
+								<li><a href="../meetings/2015/01/29/">Meeting 2 - 01/29/2015</a></li>
+								<li><a href="../meetings/2015/01/15/">Meeting 1 - 01/15/2015</a></li>
+							</ul>
+						</li>
+
+						<li><a href="javascript:void(0);" id="btn_meetings_fall2014">Fall 2014</a>
+							<ul class="meetings_fall2014">
+								<li><a href="../meetings/2014/12/04/">Meeting 5 - 12/04/2015</a></li>
+								<li><a href="../meetings/2014/11/20/">Meeting 4 - 11/20/2015</a></li>
+								<li><a href="../meetings/2014/11/06/">Meeting 3 - 11/06/2015</a></li>
+								<li><a href="../meetings/2014/10/23/">Meeting 2 - 10/23/2015</a></li>
+								<li><a href="../meetings/2014/10/09/">Meeting 1 - 10/09/2015</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<p>
+						<a href="javascript:void(0);" class="button" id="btn_showMeetings">Show All</a> <a href="javascript:void(0);" class="button" id="btn_hideMeetings">Hide All</a>
+					</p>
+				</div>
+			</div>
+
 			<a name="scholarships"></a>
 			<div class="container green">
 				<div class="content">
@@ -207,5 +261,8 @@
 
 		<!-- Gallery Toggle -->
 		<script src="../js/galleryToggle.js"></script>
+
+		<!-- Meetings Toggle -->
+		<script src="../js/meetingsToggle.js"></script>
 	</body>
 </html>

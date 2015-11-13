@@ -1083,6 +1083,7 @@ body {
 			color: #fff;
 		}
 
+	ul.gallery_2015,
 	ul.gallery_2014,
 	ul.gallery_2013,
 	ul.gallery_2012,
@@ -1097,6 +1098,23 @@ body {
 
 	.gallery h2 {
 		color: #fff;
+	}
+
+	ul.meetings_spring2015,
+	ul.meetings_winter2015,
+	ul.meetings_fall2014 {
+		display: none;
+	}
+
+	#powerpoint {
+		width: 100%;
+		min-height: 560px;
+	}
+
+	@media only screen and (max-width: 600px) {
+		#powerpoint {
+			min-height: 300px;
+		}
 	}
 
 	/* Specific Page: Services */

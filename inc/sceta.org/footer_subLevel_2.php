@@ -12,14 +12,15 @@
 							<li><a href="../../about/">ABOUT</a></li>
 							<li><a href="../../events/">EVENTS</a></li>
 							<li><a href="../../resources/">RESOURCES</a></li>
+							<li><a href="../../services/">SERVICES</a></li>
 						</ul>
 					</div>
 
 					<div class="col span_1_of_2">
 						<ul>
-							<li><a href="../../services/">SERVICES</a></li>
 							<li><a href="../../join/">JOIN</a></li>
 							<li><a href="../../contact/">CONTACT</a></li>
+							<li><a href="http://blog.sceta.org" target="_blank">BLOG</a></li>
 						</ul>
 					</div>
 				</div>

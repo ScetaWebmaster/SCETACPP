@@ -6,6 +6,7 @@
 	<a href="services/" class="navigation" data-link="services">Services</a>
 	<a href="join/" class="navigation" data-link="join">Join</a>
 	<a href="contact/" class="navigation" data-link="contact">Contact</a>
+	<a href="http://blog.sceta.org" target="_blank">Blog</a>
 </nav>
 
 <!-- SCETA Logo & Navigation Toggle -->
