@@ -121,9 +121,8 @@
 						Pomona, CA 91768
 					</p>
 
-					<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-						width="100%" height="400" 
-						src="https://maps.google.com/maps?hl=en&q=3801 West Temple Avenue, Pomona, CA 91768&ie=UTF8&t=roadmap&z=13&iwloc=B&output=embed">
+					<iframe width="100%" height="450" frameborder="0" style="border:0" 
+						src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJW67rbKguw4AR4jc35Oe1P0c&key=AIzaSyDv3vWvkvJtL7eW4EhQDZfocS_bFuPihso" allowfullscreen>
 					</iframe>
 				</div>
 			</div>
