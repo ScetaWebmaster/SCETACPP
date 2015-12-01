@@ -233,7 +233,6 @@
 						to stay tuned for e-mail updates as your desired event draws near.
 
 						<ul>
-							<li><a href="https://docs.google.com/forms/d/1qYhiA52Th9cc_ZMfYgzm806lE_rU5dJrYrFnEBtVXO4/viewform" target="_blank">[11/13/2015] Laser Tag Social</a></li>
 							<li><a href="https://docs.google.com/forms/d/16g6Wkzpl9CrgUaogIzeit5zsSBmAkE-z7PNQWNTfxyk/viewform" target="_blank">[01/07/2016] CES 2016</a></li>
 						</ul>
 					</p>
@@ -273,19 +272,13 @@
 					<img id="img_participants" style="margin-left: 24px;" src="../img/ic_loading.gif">
 					<script id="gdrive_participants" src="../js/googleDrive_participants.js">
 						{
-							"NumEvents" : 2,
+							"NumEvents" : 1,
 
-							"Name[0]" : "Laser Tag Social",
-							"Date[0]" : "11/13/2015",
-							"Priority[0]" : "false",
+							"Name[0]" : "CES 2016",
+							"Date[0]" : "01/07/2016",
+							"Priority[0]" : "true",
 							"Legend[0]" : "",
-							"ID[0]" : "1Vn0F0SVG9Pc_dglL9QbdL2vgM9ZBFWB5uN24CM3qcVM",
-
-							"Name[1]" : "CES 2016",
-							"Date[1]" : "01/07/2016",
-							"Priority[1]" : "true",
-							"Legend[1]" : "",
-							"ID[1]" : "1I0Tw3odhhYM4jfIF_7BWC9f2k0K6cVYI_0TibHUOaiA"
+							"ID[0]" : "1I0Tw3odhhYM4jfIF_7BWC9f2k0K6cVYI_0TibHUOaiA"
 						}
 					</script>
 				</div>
