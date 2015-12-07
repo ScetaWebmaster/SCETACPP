@@ -62,7 +62,7 @@
 			<div class="container">
 				<div class="content">
 					<p class="intro">
-						Reach us anywhere at anytime.
+						Reach us anywhere anytime.
 					</p>
 				</div>
 			</div>
@@ -71,48 +71,39 @@
 				<div class="content">
 					<h2>General Inquiries & Comments</h2>
 
-					<ul>
-						<li><b>Contact:</b> SCETA</li>
-						<li><b>E-mail:</b> <a href="mailto:contact@sceta.org">contact@sceta.org</a></li>
-					</ul>
+					<p>
+						<b>Contact:</b> SCETA<br>
+						<b>E-mail:</b> <a href="mailto:contact@sceta.org">contact@sceta.org</a><br>
+					</p>
 
 					<h2>Industry Partnership Opportunities</h2>
 
-					<ul>
-						<li><b>Contact:</b> SCETA Industry Representative</li>
-						<li><b>E-mail:</b> <a href="mailto:industry@sceta.org">industry@sceta.org</a></li>
-					</ul>
+					<p>
+						<b>Contact:</b> SCETA Industry Representative<br>
+						<b>E-mail:</b> <a href="mailto:industry@sceta.org">industry@sceta.org</a><br>
+					</p>
 
 					<h2>Website Feedback</h2>
 
-					<ul>
-						<li><b>Contact:</b> SCETA Webmaster</li>
-						<li><b>E-mail:</b> <a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a></li>
-					</ul>
+					<p>
+						<b>Contact:</b> SCETA Webmaster<br>
+						<b>E-mail:</b> <a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a><br>
+					</p>
 
-					<h2>Officer Contacts</h2>
+					<h2>Individual Officer Contacts</h2>
 
-					<ul>
-						<li><b>President:</b> <a href="mailto:president@sceta.org">president@sceta.org</a></li>
-						<li><b>Vice President:</b> <a href="mailto:vp@sceta.org">vp@sceta.org</a></li>
-						<li><b>Secretary:</b> <a href="mailto:secretary@sceta.org">secretary@sceta.org</a></li>
-						<li><b>Treasurer:</b> <a href="mailto:treasurer@sceta.org">treasurer@sceta.org</a></li>
-						<li><b>Industry Representative:</b> <a href="mailto:industry@sceta.org">industry@sceta.org</a></li>
-						<li><b>Events & Development:</b> <a href="mailto:events@sceta.org">events@sceta.org</a></li>
-						<li><b>Engineering Council Representative:</b> <a href="mailto:ecouncil@sceta.org">ecouncil@sceta.org</a></li>
-						<li><b>Webmaster:</b> <a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a></li>
-						<li><b>Media & Outreach:</b> <a href="mailto:media@sceta.org">media@sceta.org</a></li>
-						<li><b>3D Technicians:</b> <a href="mailto:3d@sceta.org">3d@sceta.org</a></li>
-					</ul>
+					<p>
+						Please view our <a href="../about/">About page</a> for individual officer contacts.
+					</p>
 				</div>
 			</div>
 
 			<div class="container">
 				<div class="content">
-					<h2>Find & Visit Us</h2>
+					<h2>Visit Us</h2>
 
 					<p>
-						Southern California Engineering Technologists Association<br>
+						<b>Southern California Engineering Technologists Association</b><br>
 						Building 9, Room 257<br>
 						Department of Engineering Technology<br>
 						College of Engineering<br>
@@ -122,7 +113,7 @@
 					</p>
 
 					<iframe width="100%" height="450" frameborder="0" style="border:0" 
-						src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJW67rbKguw4AR4jc35Oe1P0c&key=AIzaSyDv3vWvkvJtL7eW4EhQDZfocS_bFuPihso" allowfullscreen>
+						src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJW67rbKguw4AR4jc35Oe1P0c&key=AIzaSyDvZ3SJpUg6IMFaAIAZ_RNrJnuSFABkfjw" allowfullscreen>
 					</iframe>
 				</div>
 			</div>
