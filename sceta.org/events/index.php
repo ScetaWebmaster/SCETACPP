@@ -14,7 +14,7 @@
 
 		<title>Events &ndash; SCETA</title>
 
-		<meta name="description" content="Stay involved by seeing everything that we're up to.">
+		<meta name="desfcription" content="Stay involved by seeing everything that we're up to.">
 		<meta name="keywords" content="SCETA, engineering, technology, networking, cpp">
 		<meta name="author" content="www.sceta.org">
 		<meta http-equiv="cleartype" content="on">
@@ -232,9 +232,12 @@
 						information will be presented above as well as within the online forms, but please be sure
 						to stay tuned for e-mail updates as your desired event draws near.
 
+						<!--
 						<ul>
 							<li><a href="https://docs.google.com/forms/d/16g6Wkzpl9CrgUaogIzeit5zsSBmAkE-z7PNQWNTfxyk/viewform" target="_blank">[01/07/2016] CES 2016</a></li>
 						</ul>
+					-->
+						<h3>There are no signups. Please stay tuned for any future announcements.</h3>
 					</p>
 				</div>
 			</div>
