@@ -1083,7 +1083,6 @@ body {
 			color: #fff;
 		}
 
-	ul.gallery_2015,
 	ul.gallery_2014,
 	ul.gallery_2013,
 	ul.gallery_2012,
@@ -1100,6 +1099,7 @@ body {
 		color: #fff;
 	}
 
+	ul.meetings_fall2015,
 	ul.meetings_spring2015,
 	ul.meetings_winter2015,
 	ul.meetings_fall2014 {
