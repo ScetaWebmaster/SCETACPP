@@ -69,28 +69,29 @@
 
 			<div class="container gray">
 				<div class="content">
-					<h2>General Inquiries & Comments</h2>
+					<h2>Contact Us</h2>
+
+					<p></p>
+
+					<h3>General Inquiries & Comments</h3>
 
 					<p>
-						<b>Contact:</b> SCETA<br>
-						<b>E-mail:</b> <a href="mailto:contact@sceta.org">contact@sceta.org</a><br>
+						<a href="mailto:contact@sceta.org">contact@sceta.org</a>
 					</p>
 
-					<h2>Industry Partnership Opportunities</h2>
+					<h3>Industry Partnership Opportunities</h3>
 
 					<p>
-						<b>Contact:</b> SCETA Industry Representative<br>
-						<b>E-mail:</b> <a href="mailto:industry@sceta.org">industry@sceta.org</a><br>
+						<a href="mailto:industry@sceta.org">industry@sceta.org</a>
 					</p>
 
-					<h2>Website Feedback</h2>
+					<h3>Website Feedback</h3>
 
 					<p>
-						<b>Contact:</b> SCETA Webmaster<br>
-						<b>E-mail:</b> <a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a><br>
+						<a href="mailto:webmaster@sceta.org">webmaster@sceta.org</a>
 					</p>
 
-					<h2>Individual Officer Contacts</h2>
+					<h3>Individual Officer Contacts</h3>
 
 					<p>
 						Please view our <a href="../about/">About page</a> for individual officer contacts.

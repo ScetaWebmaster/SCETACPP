@@ -232,12 +232,12 @@
 						information will be presented above as well as within the online forms, but please be sure
 						to stay tuned for e-mail updates as your desired event draws near.
 
-						<!--
+						
 						<ul>
-							<li><a href="https://docs.google.com/forms/d/16g6Wkzpl9CrgUaogIzeit5zsSBmAkE-z7PNQWNTfxyk/viewform" target="_blank">[01/07/2016] CES 2016</a></li>
+							<li><a href="https://docs.google.com/forms/d/11LGuq9OH-EoAhNT7SSJ3jWZyHCx2AQ7G7slmc54E43M/viewform" target="_blank">[01/30/2016] Winter 2016 GRID Alternatives Solar Install</a></li>
 						</ul>
-					-->
-						<h3>There are no signups. Please stay tuned for any future announcements.</h3>
+					
+						<!--<h3>There are no signups. Please stay tuned for any future announcements.</h3>-->
 					</p>
 				</div>
 			</div>
@@ -277,11 +277,11 @@
 						{
 							"NumEvents" : 1,
 
-							"Name[0]" : "CES 2016",
-							"Date[0]" : "01/07/2016",
+							"Name[0]" : "Winter 2016 GRID Alternatives Solar Install",
+							"Date[0]" : "01/30/2016",
 							"Priority[0]" : "true",
 							"Legend[0]" : "",
-							"ID[0]" : "1I0Tw3odhhYM4jfIF_7BWC9f2k0K6cVYI_0TibHUOaiA"
+							"ID[0]" : "1Q5fVmYL767D1J95q8XU_bjCfBa_wMK9TqXZ762SGlWw"
 						}
 					</script>
 				</div>

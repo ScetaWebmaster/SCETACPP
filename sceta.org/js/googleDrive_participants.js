@@ -111,7 +111,7 @@ $(document).ready(function() {
 					// If there is no data, then display the no participants message.
 					if (data.feed.entry == null) {
 						$('ol.event' + counter).append(
-							'<p class="eventsListContent">There are currently no participants signed'
+							'<p class="eventsListContent">There are currently no participants signed '
 							+ 'up for this event.</p><p class="eventsListContent">If you' + "'" 
 							+ 'd like to sign up for this event, please sign up through our '
 							+ '<a href="#signups">Signups page</a>.</p>'
