@@ -235,6 +235,7 @@
 						
 						<ul>
 							<li><a href="https://docs.google.com/forms/d/11LGuq9OH-EoAhNT7SSJ3jWZyHCx2AQ7G7slmc54E43M/viewform" target="_blank">[01/30/2016] Winter 2016 GRID Alternatives Solar Install</a></li>
+							<li><a href="https://docs.google.com/forms/d/1qPymE2J45fVVd6_DCr1r50wHdw4VPL_Y9sE4L0H12qQ/viewform" target="_blank">[02/11/2016] Bowling Social</a></li>
 						</ul>
 					
 						<!--<h3>There are no signups. Please stay tuned for any future announcements.</h3>-->
@@ -275,13 +276,19 @@
 					<img id="img_participants" style="margin-left: 24px;" src="../img/ic_loading.gif">
 					<script id="gdrive_participants" src="../js/googleDrive_participants.js">
 						{
-							"NumEvents" : 1,
+							"NumEvents" : 2,
 
 							"Name[0]" : "Winter 2016 GRID Alternatives Solar Install",
 							"Date[0]" : "01/30/2016",
 							"Priority[0]" : "true",
 							"Legend[0]" : "",
-							"ID[0]" : "1Q5fVmYL767D1J95q8XU_bjCfBa_wMK9TqXZ762SGlWw"
+							"ID[0]" : "1Q5fVmYL767D1J95q8XU_bjCfBa_wMK9TqXZ762SGlWw",
+
+							"Name[1]" : "Bowling Social",
+							"Date[1]" : "02/11/2016",
+							"Priority[1]" : "false",
+							"Legend[1]" : "",
+							"ID[1]" : "1PYez4I5-47Ow9WDKUhtODlOblXiZoaz238Ic_cbeXMQ"
 						}
 					</script>
 				</div>
