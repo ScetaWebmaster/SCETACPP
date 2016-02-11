@@ -163,6 +163,7 @@
 					<ul>
 						<li><a href="javascript:void(0);" id="btn_meetings_winter2016">Winter 2016</a>
 							<ul class="meetings_winter2016">
+								<li><a href="../meetings/2016/02/11/">Meeting 3 - 02/11/2016</a></li>
 								<li><a href="../meetings/2016/01/28/">Meeting 2 - 01/28/2016</a></li>
 								<li><a href="../meetings/2016/01/14/">Meeting 1 - 01/14/2016</a></li>
 							</ul>
