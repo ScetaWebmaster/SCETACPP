@@ -90,6 +90,7 @@
 					<ul>
 						<li><a href="javascript:void(0);" id="btn_gallery_2015">2015 - 2016</a>
 							<ul class="gallery_2015">
+								<li><a href="../gallery/2016/01/winter2016-grid-alternatives/">Jan. 30, 2016 - Winter 2016 GRID Alternatives</a></li>
 								<li><a href="../gallery/2015/10/pumpkin-festival/">Oct. 17, 2015 - Pumpkin Festival</a></li>
 							</ul>
 						</li>
