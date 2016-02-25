@@ -233,11 +233,13 @@
 						to stay tuned for e-mail updates as your desired event draws near.
 
 						
+						<!--
 						<ul>
 							<li><a href="https://docs.google.com/forms/d/1qPymE2J45fVVd6_DCr1r50wHdw4VPL_Y9sE4L0H12qQ/viewform" target="_blank">[02/11/2016] Bowling Social</a></li>
 						</ul>
+					-->
 					
-						<!--<h3>There are no signups. Please stay tuned for any future announcements.</h3>-->
+						<h3>There are no signups. Please stay tuned for any future announcements.</h3>
 					</p>
 				</div>
 			</div>
@@ -275,7 +277,7 @@
 					<img id="img_participants" style="margin-left: 24px;" src="../img/ic_loading.gif">
 					<script id="gdrive_participants" src="../js/googleDrive_participants.js">
 						{
-							"NumEvents" : 1,
+							"NumEvents" : 0,
 
 							"Name[0]" : "Bowling Social",
 							"Date[0]" : "02/11/2016",

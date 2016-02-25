@@ -90,6 +90,7 @@
 					<ul>
 						<li><a href="javascript:void(0);" id="btn_gallery_2015">2015 - 2016</a>
 							<ul class="gallery_2015">
+								<li><a href="../gallery/2016/02/led-cube-workshop/">Feb. 20, 2016 - LED Cube Workshop</a></li>
 								<li><a href="../gallery/2016/01/winter2016-grid-alternatives/">Jan. 30, 2016 - Winter 2016 GRID Alternatives</a></li>
 								<li><a href="../gallery/2015/10/pumpkin-festival/">Oct. 17, 2015 - Pumpkin Festival</a></li>
 							</ul>
@@ -164,6 +165,7 @@
 					<ul>
 						<li><a href="javascript:void(0);" id="btn_meetings_winter2016">Winter 2016</a>
 							<ul class="meetings_winter2016">
+								<li><a href="../meetings/2016/02/25/">Meeting 4 - 02/25/2016</a></li>
 								<li><a href="../meetings/2016/02/11/">Meeting 3 - 02/11/2016</a></li>
 								<li><a href="../meetings/2016/01/28/">Meeting 2 - 01/28/2016</a></li>
 								<li><a href="../meetings/2016/01/14/">Meeting 1 - 01/14/2016</a></li>
