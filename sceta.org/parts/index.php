@@ -71,20 +71,22 @@
 			<div class="container gray">
 				<div class="content">
 					<h2>Store Policy</h2>
-
 					<p>
 						Parts sales are conducted at the SCETA office (Building 9, Room 257), but be quick for
 						many parts are becoming rarer and may soon be out-of-stock permanently.
 					</p>
-
 					<p>
 						While shopping for your electronics supplies here at SCETA, please keep in mind the following:
-
 						<ul>
 							<li>Discounts are available with a SCETA membership.</li>
 							<li>All sales are final, which means no refunds or returns will be provided.</li>
 							<li>All prices are subject to change.</li>
 						</ul>
+					</p>
+
+					<h2>Hours & Contact Information</h2>
+					<p>
+						For hours and contact information, please view the <a href="../services/">Services page</a>.
 					</p>
 				</div>
 			</div>

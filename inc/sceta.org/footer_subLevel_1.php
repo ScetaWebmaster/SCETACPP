@@ -62,7 +62,8 @@
 		<hr>
 
 		<p class="center">
-			Copyright &copy; 2014-<?php echo date("Y"); ?> Southern California Engineering Technologists Assocation. All rights reserved.
+			Copyright &copy; 2014-<?php echo date("Y"); ?> Southern California Engineering Technologists Assocation. All rights reserved.<br>
+			Website Designed and Built by <a href="http://www.byronphung.com" target="_blank">Byron Phung</a>
 		</p>
 	</div>
 </div>
